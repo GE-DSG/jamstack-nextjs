@@ -23,7 +23,7 @@ const Layout = props => (
     <Header />
     <div className="page ge-page landing-page">
       <NavBar />
-      <main class="ge-main" role="main">
+      <main className="ge-main" role="main">
           {props.children}
       </main>
     </div>
