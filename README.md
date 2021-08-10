@@ -42,5 +42,20 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-###
+## Notes
+On a Windows environment, the application may stall during the GitHub Authentication with a page displaying `Authorizing with GitHub, please wait...`.
+and you find the following message in your console when running your development server:
+```bash
+(node:11532) UnhandledPromiseRejectionWarning: Error: unable to get local issuer certificate
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1501:34)
+    at TLSSocket.emit (events.js:315:20)
+    at TLSSocket._finishInit (_tls_wrap.js:936:8)
+    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:710:12)
+```
+
+
+Add the following to your windows environment variables:
+
+`NODE_TLS_REJECT_UNAUTHORIZED=0`
+
 
