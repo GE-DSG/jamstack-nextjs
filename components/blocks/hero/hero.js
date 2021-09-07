@@ -1,12 +1,12 @@
 import * as React from "react";
-import { ThemeContext } from "../utilities/theme";
+import { ThemeContext } from "../../utilities/theme";
 import {
   InlineGroup,
   BlocksControls,
   InlineTextarea,
 } from "react-tinacms-inline";
-import { ACTION_FIELDS, Actions } from "../utilities/actions";
-import { Section, SectionFields } from "../utilities/section";
+import { ACTION_FIELDS, Actions } from "../../utilities/actions";
+import { Section, SectionFields } from "../../utilities/section";
 
 export const Hero = ({ data }) => {
   const theme = React.useContext(ThemeContext);

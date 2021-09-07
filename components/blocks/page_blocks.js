@@ -1,9 +1,9 @@
 
-import { HeroBlock, hero_template } from "./hero";
+import { HeroBlock, hero_template } from "./hero/hero";
 import {
   TestimonialBlock,
   testimonial_template,
-} from "./testimonial";
+} from "./testimonial/testimonial";
 
 
 export const PAGE_BLOCKS = {

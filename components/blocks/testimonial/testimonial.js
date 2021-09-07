@@ -1,6 +1,6 @@
 import * as React from "react";
-import { ThemeContext } from "../utilities/theme";
-import { Section, SectionFields } from "../utilities/section";
+import { ThemeContext } from "../../utilities/theme";
+import { Section, SectionFields } from "../../utilities/section";
 import {
   BlocksControls,
   InlineText,
