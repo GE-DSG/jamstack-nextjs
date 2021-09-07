@@ -11,11 +11,8 @@ import Layout from "../components/layout/Layout";
 import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { Theme } from "../components/utilities/theme";
-import { HeroBlock, hero_template } from "../components/blocks/hero";
-import {
-  TestimonialBlock,
-  testimonial_template,
-} from "../components/blocks/testimonial";
+
+import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
 
 
 //export default function Home({ file, preview }) {
@@ -88,16 +85,7 @@ const Home = ({ file, preview }) => {
   )
 }
 
-const PAGE_BLOCKS = {
-  hero: {
-    Component: HeroBlock,
-    template: hero_template,
-  },
-  testimonial: {
-    Component: TestimonialBlock,
-    template: testimonial_template,
-  },
-};
+
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode
