@@ -1,31 +1,49 @@
+import * as React from "react";
+
 import Head from 'next/head'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-import { usePlugin } from "tinacms"
+//import { usePlugin } from "tinacms"
+
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import Layout from "../components/layout/Layout";
 
+import { useCMS, withTina, useForm, usePlugin } from "tinacms";
+import { InlineForm, InlineBlocks } from "react-tinacms-inline";
+import { Theme } from "../components/utilities/theme";
+import { HeroBlock, hero_template } from "../components/blocks/hero";
+import {
+  TestimonialBlock,
+  testimonial_template,
+} from "../components/blocks/testimonial";
+
+
 //export default function Home({ file, preview }) {
-const Home = ({ file, preview }) => {  
+const Home = ({ file, preview }) => {
   const formOptions = {
     label: 'Home Page',
     fields: [
-              { label: 'Title', name: 'title', component: 'text' },
-              { label: 'Description', name: 'description', component: 'textarea' },
-              { label: 'Price', name: 'price', component: 'number'},
-              { label: 'Hero Image',
-                name: 'hero_image', 
-                component: 'image',
-                // Generate the frontmatter value based on the filename
-                parse: media => `/static/${media.filename}`,
+      { label: 'Title', name: 'title', component: 'text' },
+      { label: 'Description', name: 'description', component: 'textarea' },
+      { label: 'Price', name: 'price', component: 'number'},
+      { label: 'Hero Image',
+        name: 'hero_image',
+        component: 'image',
+        // Generate the frontmatter value based on the filename
+        parse: media => `/static/${media.filename}`,
 
-                // Decide the file upload directory for the post
-                uploadDir: () => '/public/static/',
+        // Decide the file upload directory for the post
+        uploadDir: () => '/public/static/',
 
-                // Generate the src attribute for the preview image.
-                previewSrc: fullSrc => fullSrc.replace('/public', ''),}
-            ],
+        // Generate the src attribute for the preview image.
+        previewSrc: fullSrc => fullSrc.replace('/public', ''),}
+    ],
+    onSubmit: (values) => {
+      setShowModal(true);
+    },
   }
+
+  const [showModal, setShowModal] = React.useState(false);
 
   /*
    ** Register a JSON Tina Form
@@ -34,7 +52,7 @@ const Home = ({ file, preview }) => {
   usePlugin(form)
 
   useGithubToolbarPlugins()
-  
+
   const backgroundImage = {
     backgroundImage: 'url(' + data.hero_image + ')',
   }
@@ -53,9 +71,33 @@ const Home = ({ file, preview }) => {
           </div>
         </div>
       </section>
+      <InlineForm form={form}>
+        <Theme>
+          <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
+        </Theme>
+      </InlineForm>
+      {showModal && (
+        <TinaModal
+          data={data}
+          close={() => {
+            setShowModal(false);
+          }}
+        />
+      )}
     </Layout>
   )
 }
+
+const PAGE_BLOCKS = {
+  hero: {
+    Component: HeroBlock,
+    template: hero_template,
+  },
+  testimonial: {
+    Component: TestimonialBlock,
+    template: testimonial_template,
+  },
+};
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode
