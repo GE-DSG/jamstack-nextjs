@@ -8,12 +8,12 @@ import {
 export const GETitledParagraph = ({ data }) => {
 
   return (
-    <section>
+    <section data-section-id="data-section-id" className="wp-block-custom-ge-titled-paragraph undefined alignfull" style={{ backgroundColor: "transparent" }}>
       <div className="container-fluid-custom">
         <div className="row">      
           <div className="content-row col-12 col-lg-9">
-            <h5><InlineTextarea name="title" /></h5>
-            <h5><InlineTextarea name="content" /></h5>            
+            <h5 style={{ color: "var(--ge-primary-blue)", backgroundColor: "transparent", textAlign: "left", fontSize: "20px" }}><InlineTextarea name="title" /></h5>
+            <h2 style={{ color: "var(--ge-dark-blue-grey)", backgroundColor: "transparent", textAlign: "left", fontSize: "42px" }}><InlineTextarea name="content" /></h2>
           </div>
         </div>
       </div>
