@@ -44,7 +44,8 @@
         "src": "../static/ge-left-right.jpg",
         "alt": "Photo from Unsplash"
       },
-      "text": "Learn more"
+      "text": "Learn more",
+      "button_text": "Learn more"
     }
   ]
 }
