@@ -24,6 +24,7 @@
     "@types/node": "^15.12.2",
     "@types/react": "^17.0.11",
     "hygen-next-tinacms-github": "https://github.com/dwalkr/hygen-next-tinacms-github",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "url-loader": "^4.1.1"
   }
 }
