@@ -33,12 +33,9 @@
       }
     },
     {
-      "_template": "testimonial",
-      "quote": "There are only two hard things in Computer Science: cache invalidation and naming things.",
-      "author": "Phil Karlton",
-      "style": {
-        "color": "primary"
-      }
+      "_template": "ge_content_left_right_image",
+      "title": "GE's leadership",
+      "content": "GE’s people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission."
     }
   ]
 }
