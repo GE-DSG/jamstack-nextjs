@@ -11,7 +11,7 @@ import {
 export const GEContentLeftRightImage = ({ data }) => {
 
   return (
-    <section variant={data.style.color}>
+    <section>
       <div className="container-fluid-custom">
         <div className="row">      
           <div className="content-row col-12 col-lg-9">
