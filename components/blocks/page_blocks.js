@@ -1,8 +1,8 @@
 
 import { HeroBlock, hero_template } from "./hero/hero";
 import { TestimonialBlock, testimonial_template } from "./testimonial/testimonial";
-import { GETitledParagraphBlock, getitledparagraph_template } from "./ge_titled_paragraph/ge_titled_paragraph";
-import {GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
+import { GETitledParagraphBlock, getitledparagraph_template } from "./ge-titled-paragraph/ge-titled-paragraph";
+import { GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
 
 export const PAGE_BLOCKS = {
   hero: {
