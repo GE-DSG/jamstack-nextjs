@@ -11,37 +11,38 @@ import styles from "./ge-content-left-right-image.module.scss";
 
 
 export const GEContentLeftRightImage = ({ data, index }) => {
-  const cms = useCMS()
+  const cms = useCMS();
+
   return (
     <section className={styles.geContentLeftRightImage}>
       <div className="container-fluid-custom">
-        <div>  
+        <div>
         <section className={"image-left"}>
             <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
-                <main>                
+                <main>
                     <h3 className="has-text-color Large-Title-ESG"><InlineTextarea name="title" /></h3>
                     <p className="has-text-color"><InlineTextarea name="content" />​</p>
                     <div className="wp-block-button">
-                     <button><InlineText name="text"  /></button>                     
-                      
+                     <button><InlineTextarea name="button_text"  /></button>
+
                       </div>
                 </main>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 image-wrapper">
                 <div className="image-feature">
-                   <InlineGroup 
-                    name="src"
+                   <InlineGroup
+                    name="image"
                     focusRing={{ offset: 0, borderRadius: 0 }}
-                  insetControls={true}
-                  fields={IMAGE_FIELDS}
+                    insetControls={true}
+                    fields={IMAGE_FIELDS}
                   >
                   <img
                     className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
-                    alt={data.image.alt}
-                    src={data.image.src}
+                    /*src={data.image.src}
+                    alt={data.image.alt}*/
                   />
                     </InlineGroup>
-                    
+
 
                     {/* <InlineImage
                     name="src"
@@ -57,9 +58,9 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                 </div>
             </div>
         </section>
-    </div>      
+    </div>
       </div>
-    </section>         
+    </section>
   );
 };
 
@@ -90,16 +91,16 @@ export const IMAGE_FIELDS = [
 
 
 export const GEContentLeftRightImage_template = {
-  label: "GE Content Left Right  Image 1",
+  label: "GE Content Left Right Image 1",
   defaultItem: {
     title: "GE's leadership",
     content:
-    "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.", 
-    text:"Learn more",  
+    "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
+    button_text: "Learn more",
     image: {
       src: "../static/ge-left-right.jpg",
       alt: "Photo from Unsplash",
-    },    
+    },
     // actions: [
     //   {
     //     label: "Primary Action",
@@ -115,12 +116,6 @@ export const GEContentLeftRightImage_template = {
 
   fields: [
     {
-      name: "text",
-      label: "Text",
-      value:"Learn more",
-      component: "text",
-    },
-    {
       name: "title",
       label: "Title",
       component: "text",
@@ -131,8 +126,8 @@ export const GEContentLeftRightImage_template = {
       component: "textarea",
     },
     {
-      name: "text",
-      label: "Text",
+      name: "button_text",
+      label: "Button text",
       component: "text",
     },
     {
