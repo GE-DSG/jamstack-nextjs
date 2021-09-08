@@ -5,6 +5,10 @@ import { GETitledParagraphBlock, getitledparagraph_template } from "./ge-titled-
 import { GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
 
 export const PAGE_BLOCKS = {
+  ge_content_left_right_image: {
+    Component: GEContentLeftRightImageBlock,
+    template: GEContentLeftRightImage_template,
+  },
   hero: {
     Component: HeroBlock,
     template: hero_template,
@@ -17,8 +21,5 @@ export const PAGE_BLOCKS = {
     Component: GETitledParagraphBlock,
     template: getitledparagraph_template,
   },
-  ge_content_left_right_image: {
-    Component: GEContentLeftRightImageBlock,
-    template: GEContentLeftRightImage_template,
-  },
+ 
 };
