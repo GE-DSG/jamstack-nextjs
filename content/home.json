@@ -35,7 +35,11 @@
     {
       "_template": "ge_content_left_right_image",
       "title": "GE's leadership",
-      "content": "GE’s people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission."
+      "content": "GE’s people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
+      "src": {
+        "alt": "Photo from Unsplash",
+        "src": "../static/ge-left-right.jpg"
+      }
     }
   ]
 }
