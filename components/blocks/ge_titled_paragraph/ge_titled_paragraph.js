@@ -1,3 +1,4 @@
+import styles from './styles.module.scss';
 import {
   BlocksControls,
   InlineText,

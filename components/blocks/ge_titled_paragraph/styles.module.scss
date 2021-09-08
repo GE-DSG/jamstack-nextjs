@@ -1,0 +1,44 @@
+// The class name needs to match the names of the category and block
+.wp-block-custom-ge-titled-paragraph {
+
+  position: relative;
+
+
+  @media only screen and (min-width: 1920px) {
+
+    h5 {
+      font-size     : 24px;
+      line-height   : 16px;
+     
+    }
+  }
+
+  @media only screen and (min-width: 1366px) {
+    h5 {
+      font-size: 20px;
+      letter-spacing: 3.43px;
+    }
+  } 
+
+  @media only screen and (max-width: 991px) {
+    h5 {
+      letter-spacing: 2px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    h5 {
+      letter-spacing: 1.57px;
+    }
+  }
+
+  div.content-row {
+    margin-top   : 15px;
+    margin-bottom: 15px;
+
+    h2 {
+      margin-top: 20px;
+    }
+  }
+
+}

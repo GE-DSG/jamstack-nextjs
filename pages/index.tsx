@@ -3,7 +3,6 @@ import * as React from "react";
 import Head from 'next/head'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-//import { usePlugin } from "tinacms"
 
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import Layout from "../components/layout/Layout";
@@ -13,7 +12,6 @@ import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { Theme } from "../components/utilities/theme";
 
 import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
-
 
 //export default function Home({ file, preview }) {
 const Home = ({ file, preview }) => {
