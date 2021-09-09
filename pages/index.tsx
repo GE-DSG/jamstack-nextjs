@@ -26,13 +26,13 @@ const Home = ({ file, preview }) => {
         name: 'hero_image',
         component: 'image',
         // Generate the frontmatter value based on the filename
-        parse: media => `/static/${media.filename}`,
+        parse: media => `/public/static/${media.filename}`,
 
         // Decide the file upload directory for the post
         uploadDir: () => '/public/static/',
 
         // Generate the src attribute for the preview image.
-        previewSrc: fullSrc => fullSrc.replace('/public', ''),}
+        previewSrc: fullSrc => fullSrc.replace('/public/static', ''),}
     ],
     onSubmit: (values) => {
       setShowModal(true);

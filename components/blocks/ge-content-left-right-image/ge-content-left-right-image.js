@@ -24,7 +24,14 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                     <h3 className="has-text-color Large-Title-ESG"><InlineTextarea name="title" /></h3>
                     <p className="has-text-color"><InlineTextarea name="content" />​</p>
                     <div className="wp-block-button">
-                     <button><InlineTextarea name="button_text"  /></button>
+                     <button><InlineTextarea name="button_text"  
+                      focusRing={{ offset: { x: 16, y: 8 } }}
+                      insetControls={true}
+                      fields={ACTION_FIELDS}
+                     >      
+                     </InlineTextarea>
+                     
+                     </button>
 
                       </div>
                 </main>
@@ -90,6 +97,43 @@ export const IMAGE_FIELDS = [
 ];
 
 
+export const ACTION_FIELDS = [
+  {
+    label: "Actions",
+    name: "actions",
+    component: "group-list",
+    itemProps: (item) => ({
+      label: item.label,
+    }),
+    defaultItem: () => ({
+      label: "Action Label",
+      type: "button",
+    }),
+    fields: [
+      {
+        label: "Label",
+        name: "label",
+        component: "text",
+      },
+      {
+        label: "Type",
+        name: "type",
+        component: "radio-group",
+        variant: "button",
+        options: [
+          { label: "Button", value: "button" },
+          { label: "Link", value: "link" },
+        ],
+      },
+      {
+        label: "Icon",
+        name: "icon",
+        component: "toggle",
+      },
+    ],
+  },
+];
+
 export const GEContentLeftRightImage_template = {
   label: "GE Content Left Right Image 1",
   defaultItem: {
@@ -127,8 +171,10 @@ export const GEContentLeftRightImage_template = {
     },
     {
       name: "button_text",
-      label: "Button text",
-      component: "text",
+      type:"button",
+      label: "Button",
+      component: "group",
+      fields: ACTION_FIELDS,
     },
     {
       name: "image",
