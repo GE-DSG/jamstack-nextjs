@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './ge-titled-paragraph.module.scss';
 import {
   BlocksControls,
   InlineText,
