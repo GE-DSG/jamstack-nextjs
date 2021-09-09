@@ -3,6 +3,8 @@ import '../styles/css/ge_unified.style.css'
 import '../styles/css/iconography.css'
 import '../styles/css/styles.css'
 
+import '../styles/css/social_media_links.theme.css'
+
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
   GithubClient,
