@@ -8,7 +8,22 @@
   .wp-block-button a:hover, 
   .wp-block-button a:link, 
   .wp-block-button a:visited {
-color: #fff  !important;
+  color: #fff  !important;
+  }
+
+  
+  .image-feature {
+    position: relative;
+    width: 120%;
+    height: auto;
+
+   
+  }
+
+  img.image {
+    border: 0;
+    width: 100%;
+    height: auto;
   }
   // overlay
   .bg-overlay {

@@ -8,6 +8,7 @@ import {
 import { useCMS } from 'tinacms';
 
 import styles from "./ge-content-left-right-image.module.scss";
+import { features } from "process";
 
 
 export const GEContentLeftRightImage = ({ data, index }) => {
@@ -16,7 +17,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
   return (
     <section className={styles.geContentLeftRightImage}>
       <div className="container-fluid-custom">
-        <div>
+       
         <section className={"image-left"}>
             <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
                 <main>
@@ -29,17 +30,16 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                 </main>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 image-wrapper">
-                <div className="image-feature">
+                <div className={styles.imagefeature}>
                    <InlineGroup
                     name="image"
                     focusRing={{ offset: 0, borderRadius: 0 }}
                     insetControls={true}
                     fields={IMAGE_FIELDS}
                   >
-                  <img
-                    className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
-                    /*src={data.image.src}
-                    alt={data.image.alt}*/
+                  <img className={styles.image} 
+                  src={data.image.src}
+                  alt={data.image.alt}
                   />
                     </InlineGroup>
 
@@ -58,7 +58,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                 </div>
             </div>
         </section>
-    </div>
+    
       </div>
     </section>
   );
