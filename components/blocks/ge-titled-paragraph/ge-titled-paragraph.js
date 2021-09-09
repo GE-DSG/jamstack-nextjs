@@ -9,7 +9,7 @@ import {
 export const GETitledParagraph = ({ data }) => {
 
   return (
-    <section data-section-id="data-section-id" className="wp-block-custom-ge-titled-paragraph undefined alignfull" style={{ backgroundColor: "transparent" }}>
+    <section data-section-id="data-section-id" className={ styles.geTitledParagraph } style={{ backgroundColor: "transparent" }}>
       <div className="container-fluid-custom">
         <div className="row">      
           <div className="content-row col-12 col-lg-9">
