@@ -2,7 +2,7 @@
   "title": "Title Text",
   "description": "What the world needs now is people who see things a little bit differently. Seeing how healthcare can be more precise, energy can be modfsgsdre sustainable, and flight can be more efficientsdfgsd. -another test\n\n",
   "price": 1234,
-  "hero_image": "/static/iceland-1.jpg",
+  "hero_image": "/public/static/iceland-1.jpg",
   "header_image": {
     "id": "NewGblox_TabbedContent02.PNG",
     "filename": "NewGblox_TabbedContent02.PNG",
