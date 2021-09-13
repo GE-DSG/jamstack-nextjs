@@ -1,3 +1,5 @@
+import styles from './ge-fact-card-variant-2.module.scss';
+
 import {
   BlocksControls,
   InlineTextarea,
@@ -8,7 +10,7 @@ import {
 export const GEFactCardVariant2 = ({ data }) => {
   return (
     
-    <div className="wp-block-custom-ge-fact-card-variant-2 undefined  col-sm-12 col-md-6 col-lg-4" style={{ backgroundColor: "#f0f3f7" }}>
+    <div className={ styles.geFactCardVariant2 } style={{ backgroundColor: "#f0f3f7" }}>
     
       <div className="theme-light">
         <h4 className="title" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="title" /></h4>

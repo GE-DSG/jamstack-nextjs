@@ -1,3 +1,5 @@
+import styles from './ge-grid.module.scss';
+
 import { GESmallArticle, gesmallarticle_template } from "./ge-small-article/ge-small-article";
 import { GEFactCardVariant2, gefactcardvariant2_template } from "./ge-fact-card-variant-2/ge-fact-card-variant-2";
 import {
@@ -9,7 +11,7 @@ import {
 
 export const GEGrid = ({ data }) => {
   return (
-    <section id="ge-all-businesses" className="wp-block-custom-ge-grid undefined alignfull" style={{ backgroundColor: "transparent" }}>
+    <section id="ge-all-businesses" className={ styles.geGrid } style={{ backgroundColor: "transparent" }}>
       <div className="grid-stack light-container container-fluid-custom">
         <div className="grid-title row"><h2 className="title col-12" style={{ color: "var(--ge-dark-blue-grey)" }}><InlineTextarea name="title" /></h2></div>
         <div className="grid-items row">
@@ -73,9 +75,7 @@ export const gegrid_template = {
       label: "GE Grid Items",
       component: "blocks",
       itemProps: (item) => ({
-        label: item.title, 
-        //description: item.description,
-        //component: item.component,
+        label: item.title,
       }),
       templates: {
         ge_small_article: gesmallarticle_template,

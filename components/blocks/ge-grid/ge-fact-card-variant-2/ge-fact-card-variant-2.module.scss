@@ -1,0 +1,133 @@
+// The class name needs to match the names of the category and block
+.geFactCardVariant2 {
+  position  : relative;
+  height    : auto;
+  overflow  : hidden;
+  min-height: 400px;
+
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    text-decoration: none;
+    cursor         : pointer;
+    color          : inherit;
+  }
+
+  .body-2 {
+    margin-bottom: 2em;
+  }
+
+  .call-to-action {
+    font-family    : gesans-bold;
+    padding        : 0;
+    text-decoration: none;
+    border         : none;
+    letter-spacing : 2px;
+    box-shadow     : none;
+    text-align     : left;
+    border-radius  : 0;
+    text-transform : uppercase;
+    font-size      : 14px;
+    line-height    : 40px;
+    height         : 40px;
+    background     : transparent !important;
+    border-bottom  : 2px solid rgba(var(--rgb-ge-dark-blue-grey), .4);
+    text-decoration: none;
+
+    &:hover {
+      border-bottom  : 2px solid var(--ge-dark-blue-grey);
+      text-decoration: none;
+    }
+  }
+
+  span.call-to-action a,
+  span.call-to-action {
+    padding-bottom: 11px !important;
+  }
+
+  .title {
+    margin-bottom: 1em;
+
+    &:not(.noeyebrow)::before {
+      content      : '';
+      border-top   : solid 6px #0870d8;
+      margin-bottom: 1.5em;
+      display      : block;
+      width        : 48px;
+      border-radius: 20px;
+    }
+  }
+
+  .theme-dark {
+    .call-to-action {
+      color        : var(--ge-white) !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+
+      &:hover {
+        border-bottom  : 2px solid rgba(255, 255, 255, 1);
+        text-decoration: none;
+      }
+    }
+
+    .title {
+      &:not(.noeyebrow)::before {
+        border-top: solid 6px #00B5E2;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+
+    .call-to-action {
+      font-size     : 11px;
+      letter-spacing: 1.57px;
+    }
+
+    .title {
+      &:not(.noeyebrow)::before {
+        border-top: solid 4px #0870d8;
+        width     : 30px;
+      }
+    }
+  }
+
+  .theme-light {
+    padding: 0 2em 6em 0;
+
+    .call-to-action a {
+      color          : var(--ge-dark-blue-grey);
+      text-decoration: none;
+    }
+  }
+
+  .theme-dark {
+    padding: 0 2em 6em 0;
+
+    .call-to-action a {
+      color          : var(--ge-white);
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    min-height: inherit;
+
+    .theme-dark,
+    .theme-light {
+      padding: 0 0em 5em 0;
+  }
+
+    .body-2 {
+      margin-bottom: 1em;
+    }
+
+    .title {
+      margin-bottom: 0.5em;
+    }
+
+    .title:not(.noeyebrow)::before {
+      margin-bottom: 0.9em;
+    }
+  }
+}

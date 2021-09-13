@@ -1,3 +1,5 @@
+import styles from './ge-small-article.module.scss';
+
 import {
   BlocksControls,
   InlineTextarea,
@@ -8,7 +10,7 @@ import {
 export const GESmallArticle = ({ data }) => {
   return (
     
-    <section id="ge-all-businesses" className="wp-block-custom-ge-small-article undefined col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <section id="ge-all-businesses" className={ styles.geSmallArticle }>
       <div className="card-container card_wrapper" style={{ backgroundColor: "#f0f3f7" }}>
         <div className="article-media col-sm-5">
           <div className="media-bg" style={{ backgroundColor: "#f0f3f7" }}></div>
