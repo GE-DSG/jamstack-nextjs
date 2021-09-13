@@ -23,17 +23,20 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                 <main>
                     <h3 className="has-text-color Large-Title-ESG"><InlineTextarea name="title" /></h3>
                     <p className="has-text-color"><InlineTextarea name="content" />​</p>
-                    <div className="wp-block-button">
-                     <button><InlineTextarea name="button_text"  
-                      focusRing={{ offset: { x: 16, y: 8 } }}
+                  
+                    <div  className="link-secondary-light">
+                     <InlineGroup name="button_text"  
+                     focusRing={{ offset:10, borderRadius: 0 }}
                       insetControls={true}
                       fields={ACTION_FIELDS}
                      >      
-                     </InlineTextarea>
+                     <h6>
+                  <a href={data.button_text.href} target={data.button_text.target}>{data.button_text.link} </a>
+                  </h6> </InlineGroup>
                      
-                     </button>
+                     </div>
 
-                      </div>
+                     
                 </main>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 image-wrapper">
@@ -64,8 +67,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
 
                 </div>
             </div>
-        </section>
-    
+        </section>    
       </div>
     </section>
   );
@@ -96,43 +98,23 @@ export const IMAGE_FIELDS = [
   },
 ];
 
-
 export const ACTION_FIELDS = [
   {
-    label: "Actions",
-    name: "actions",
-    component: "group-list",
-    itemProps: (item) => ({
-      label: item.label,
-    }),
-    defaultItem: () => ({
-      label: "Action Label",
-      type: "button",
-    }),
-    fields: [
-      {
-        label: "Label",
-        name: "label",
-        component: "text",
-      },
-      {
-        label: "Type",
-        name: "type",
-        component: "radio-group",
-        variant: "button",
-        options: [
-          { label: "Button", value: "button" },
-          { label: "Link", value: "link" },
-        ],
-      },
-      {
-        label: "Icon",
-        name: "icon",
-        component: "toggle",
-      },
-    ],
+    name: "href",
+    label: "Hyperlink URL",
+    component: "text",
   },
-];
+  {
+    name: "link",
+    label: "Hyperlink Text",
+    component: "text",
+  },
+  {
+    name: "target",
+    label: "Target",
+    component: "text",
+  },
+  ];
 
 export const GEContentLeftRightImage_template = {
   label: "GE Content Left Right Image 1",
@@ -140,22 +122,15 @@ export const GEContentLeftRightImage_template = {
     title: "GE's leadership",
     content:
     "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
-    button_text: "Learn more",
+    button_text:{
+      link: "Learn More..",
+      href: "www.google.com",
+      target:"_blank"
+    },
     image: {
       src: "../static/ge-left-right.jpg",
       alt: "Photo from Unsplash",
     },
-    // actions: [
-    //   {
-    //     label: "Primary Action",
-    //     type: "button",
-    //     icon: "true",
-    //   },
-    //   {
-    //     label: "Learn More",
-    //     type: "link",
-    //   },
-    // ],
   },
 
   fields: [
