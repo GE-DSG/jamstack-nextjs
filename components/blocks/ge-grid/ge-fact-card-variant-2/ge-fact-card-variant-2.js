@@ -1,0 +1,53 @@
+import {
+  BlocksControls,
+  InlineTextarea,
+  InlineBlocks,
+} from "react-tinacms-inline";
+
+
+export const GEFactCardVariant2 = ({ data }) => {
+  return (
+    
+    <div className="wp-block-custom-ge-fact-card-variant-2 undefined  col-sm-12 col-md-6 col-lg-4" style={{ backgroundColor: "#f0f3f7" }}>
+    
+      <div className="theme-light">
+        <h4 className="title" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="title" /></h4>
+        <p className="description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p>
+        <span className="call-to-action" style={{ color: "var(--ge-dark-blue-grey)" }}>Read more</span>
+      </div>
+            
+    </div>
+  );
+};
+
+export function GEFactCardVariant2Block({ data, index }) {
+  return (
+    <BlocksControls
+      index={index}
+      focusRing={{ offset: -12 }}
+      insetControls={true}
+    >
+      <GEFactCardVariant2 data={data} />
+    </BlocksControls>
+  );
+}
+
+export const gefactcardvariant2_template = {
+  label: "'GE Fact Card Variant 2",
+  defaultItem: {
+    title: "Stock information",
+    description: "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
+  },
+  fields: [
+    {
+      name: "title",
+      label: "Title",
+      component: "text",
+    },
+    {
+      name: "description",
+      label: "Description",
+      component: "textarea",
+    },        
+  ],
+};
