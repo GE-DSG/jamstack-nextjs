@@ -124,7 +124,7 @@ export const GEContentLeftRightImage_template = {
     "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
     button_text:{
       link: "Learn More..",
-      href: "www.google.com",
+      href: "https://www.google.com",
       target:"_blank"
     },
     image: {
