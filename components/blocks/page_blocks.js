@@ -3,6 +3,7 @@ import { HeroBlock, hero_template } from "./hero/hero";
 import { TestimonialBlock, testimonial_template } from "./testimonial/testimonial";
 import { GETitledParagraphBlock, getitledparagraph_template } from "./ge-titled-paragraph/ge-titled-paragraph";
 import { GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
+import { GEGridBlock, gegrid_template } from "./ge-grid/ge-grid";
 
 export const PAGE_BLOCKS = {
   ge_content_left_right_image: {
@@ -21,5 +22,8 @@ export const PAGE_BLOCKS = {
     Component: GETitledParagraphBlock,
     template: getitledparagraph_template,
   },
- 
+  ge_grid: {
+    Component: GEGridBlock,
+    template: gegrid_template,
+  },
 };
