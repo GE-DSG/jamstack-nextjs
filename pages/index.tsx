@@ -55,18 +55,6 @@ const Home = ({ file, preview }) => {
 
   return (
     <Layout>
-      <section className="wp-block-custom-ge-hero-landing-v1 undefined alignfull" id="ge-heroLanding">
-        <div className="mask-top"></div>
-          <div className="video_wrapper hide-default">
-            <div className="article-media" style={backgroundImage}></div>
-              <div className="text-wrapper text-white pl-0">
-              <h1>{data.title}</h1>
-              <p className="has-medium-font-size">
-                <em>{data.description}</em>
-              </p>
-          </div>
-        </div>
-      </section>
       <InlineForm form={form}>
         <Theme>
           <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
