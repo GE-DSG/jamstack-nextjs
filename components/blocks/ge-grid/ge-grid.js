@@ -21,7 +21,7 @@ export const GEGrid = ({ data }) => {
           />
         </div>
         <div className="grid-footer row">
-          <h6 className="title col-12" style={{ color: "var(--ge-dark-blue-grey)" }}>            
+          <h6 className="title col-12" style={{ color: "var(--ge-dark-blue-grey)" }}>
             <a href="https://www.google.com" target="_blank"><InlineTextarea name="calltoaction" /></a>
           </h6>
         </div>
@@ -46,6 +46,20 @@ export const gegrid_template = {
   label: "GE Grid",
   defaultItem: {
     title: "More on Investor Relations",
+    items: [
+      {
+        _template: "ge_small_article",
+        title: "Longer Information 1",
+        description:
+          "By eleven o'clock the next day we were well upon our way to the old English capital.",
+      },
+      {
+        _template: "ge_fact_card_variant_2",
+        title: "Longer Information 2",
+        description:
+          "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+      },
+    ],
     calltoaction: "CALL TO ACTION",
   },
   fields: [
@@ -55,10 +69,24 @@ export const gegrid_template = {
       component: "text",
     },
     {
+      name: "items",
+      label: "GE Grid Items",
+      component: "blocks",
+      itemProps: (item) => ({
+        label: item.title, 
+        //description: item.description,
+        //component: item.component,
+      }),
+      templates: {
+        ge_small_article: gesmallarticle_template,
+        ge_fact_card_variant_2: gefactcardvariant2_template,
+      },
+    },
+    {
       name: "calltoaction",
       label: "Call to action",
       component: "text",
-    },        
+    },
   ],
 };
 
