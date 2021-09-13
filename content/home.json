@@ -45,6 +45,11 @@
         "src": "../static/ge-left-right.jpg",
         "alt": "Photo from Unsplash"
       }
+    },
+    {
+      "_template": "ge_grid",
+      "title": "More on Investor Relations",
+      "calltoaction": "CALL TO ACTION"
     }
   ]
 }
