@@ -17,10 +17,10 @@ export const GESmallArticle = ({ data, index }) => {
 
     <section className={ styles.geSmallArticle }>
       <div className="card-container card_wrapper" style={{ backgroundColor: "#f0f3f7" }}>
-        <div className="article-media col-sm-5">
+        <div className="article-media">
           <div className="media-bg" style={{ backgroundColor: "#f0f3f7" }}></div>
         </div>
-        <a href="" target="_self" className="col-md-7">
+        <a href="" target="_self" className="">
           <div className="card-stack article-content" style={{ backgroundColor: "#f0f3f7" }}>
             <div className="card-title"><h6 className="title" style={{ color: "var(--ge-primary-blue)", textAlign: "left" }}><InlineTextarea name="title" /></h6></div>
             <div className="card-description"><p className="ge-small-article-para description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p></div>

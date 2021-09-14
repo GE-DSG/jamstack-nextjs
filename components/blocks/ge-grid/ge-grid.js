@@ -12,9 +12,9 @@ import {
 export const GEGrid = ({ data }) => {
   return (
     <section id="ge-all-businesses" className={ styles.geGrid } style={{ backgroundColor: "transparent" }}>
-      <div className="grid-stack light-container container-fluid-custom">
-        <div className="grid-title row"><h2 className="title col-12" style={{ color: "var(--ge-dark-blue-grey)" }}><InlineTextarea name="title" /></h2></div>
-        <div className="grid-items row">
+      <div className="grid-stack light-container">
+        <div className="grid-title"><h2 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}><InlineTextarea name="title" /></h2></div>
+        <div className="grid-items">
           <InlineBlocks
             direction="horizontal"
             className="flex flex-wrap text-left"
@@ -22,8 +22,8 @@ export const GEGrid = ({ data }) => {
             blocks={GEGRIDITEM_BLOCKS}
           />
         </div>
-        <div className="grid-footer row">
-          <h6 className="title col-12" style={{ color: "var(--ge-dark-blue-grey)" }}>
+        <div className="grid-footer">
+          <h6 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}>
             <a href="https://www.google.com" target="_blank"><InlineTextarea name="calltoaction" /></a>
           </h6>
         </div>
