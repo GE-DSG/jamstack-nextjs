@@ -7,10 +7,15 @@ import {
 } from "react-tinacms-inline";
 
 
-export const GESmallArticle = ({ data }) => {
+export const GESmallArticle = ({ data, index }) => {
   return (
-    
-    <section id="ge-all-businesses" className={ styles.geSmallArticle }>
+    <BlocksControls
+      index={index}
+      focusRing={{ offset: 10 }}
+      insetControls={true}
+    >
+
+    <section className={ styles.geSmallArticle }>
       <div className="card-container card_wrapper" style={{ backgroundColor: "#f0f3f7" }}>
         <div className="article-media col-sm-5">
           <div className="media-bg" style={{ backgroundColor: "#f0f3f7" }}></div>
@@ -22,24 +27,16 @@ export const GESmallArticle = ({ data }) => {
             <div className="cta-container" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}>
               <div className="call-to-action arrow-right ficon-lg-arrow-right"></div>
             </div>
-          </div>        
+          </div>
         </a>
-      </div>      
+      </div>
     </section>
+
+    </BlocksControls>
+
   );
 };
 
-export function GESmallArticleBlock({ data, index }) {
-  return (
-    <BlocksControls
-      index={index}
-      focusRing={{ offset: -12 }}
-      insetControls={true}
-    >
-      <GESmallArticle data={data} />
-    </BlocksControls>
-  );
-}
 
 export const gesmallarticle_template = {
   label: "GE Small Article",
@@ -57,7 +54,7 @@ export const gesmallarticle_template = {
       name: "description",
       label: "Description",
       component: "textarea",
-    },        
+    },
   ],
 };
 

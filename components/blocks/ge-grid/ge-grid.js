@@ -36,7 +36,7 @@ export function GEGridBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: -12 }}
+      focusRing={{ offset: 10 }}
       insetControls={true}
     >
       <GEGrid data={data} />
