@@ -18,22 +18,6 @@ import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
 const Home = ({ file, preview }) => {
   const formOptions = {
     label: 'Home Page',
-    fields: [
-      { label: 'Title', name: 'title', component: 'text' },
-      { label: 'Description', name: 'description', component: 'textarea' },
-      { label: 'Price', name: 'price', component: 'number'},
-      { label: 'Hero Image',
-        name: 'hero_image',
-        component: 'image',
-        // Generate the frontmatter value based on the filename
-        parse: media => `/public/static/${media.filename}`,
-
-        // Decide the file upload directory for the post
-        uploadDir: () => '/public/static/',
-
-        // Generate the src attribute for the preview image.
-        previewSrc: fullSrc => fullSrc.replace('/public/static', ''),}
-    ],
     onSubmit: (values) => {
       setShowModal(true);
     },
@@ -48,10 +32,6 @@ const Home = ({ file, preview }) => {
   usePlugin(form)
 
   useGithubToolbarPlugins()
-
-  const backgroundImage = {
-    backgroundImage: 'url(' + data.hero_image + ')',
-  }
 
   return (
     <Layout>
