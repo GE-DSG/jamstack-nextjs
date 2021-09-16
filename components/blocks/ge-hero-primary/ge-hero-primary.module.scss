@@ -30,6 +30,7 @@ margin-bottom: 100px;
   background-position: left bottom;
   top                : 0;
   background-repeat  : no-repeat;
+  overflow: hidden;
 }
 
 
@@ -47,7 +48,7 @@ section {
   }
 }
 
-.intro-text {
+.introText {
   position: relative;   
   z-index : 3;
 
@@ -64,7 +65,7 @@ section {
   }
 }
 
-.header-image {
+.headerImage {
   position: absolute;
   display : block;
   clear   : both;
@@ -79,7 +80,7 @@ section {
     height  : auto;
   }
 
-  .image-gradient {
+  .imageGradient {
     z-index : 1;
     position: absolute;
     width   : 30%;
@@ -276,7 +277,7 @@ section {
     }
   }
 
-  .image-wrapper {
+  .imageWrapper {
     .header-image {
       max-height: 900px;
       overflow  : hidden;
@@ -328,8 +329,8 @@ section {
   background-color: #0d1623;
   padding-top     : 0;
 
-  .main-background,
-  .image-gradient {
+  .mainBackground,
+  .imageGradient {
     display: none !important;
   }
 
@@ -338,13 +339,13 @@ section {
   }
 
   /// image postion
-  .post-entry {
+  .postEntry {
     .image-wrapper {
       position: relative;
       display : block;
       flex    : none;
 
-      .header-image {
+      .headerImage {
         position: relative;
         width   : 108%;
         left    : -4%;
@@ -352,7 +353,7 @@ section {
       }
     }
 
-    .intro-text {
+    .introText {
       top    : 0;      
 
       main {
@@ -366,7 +367,7 @@ section {
       }
     }
 
-    .text-wrapper {
+    .textWrapper {
       order: 2;
       padding: 5rem 0;
     }
@@ -387,8 +388,8 @@ section {
 
 @media only screen and (max-width: 767px) {
 
-  .post-entry {
-    .text-wrapper {
+  .postEntry {
+    .textWrapper {
       order: 1;
       padding:4rem 0 1rem 0;
     }

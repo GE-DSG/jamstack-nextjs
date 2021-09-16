@@ -28,9 +28,9 @@ export const GEHeroPrimary = ({ data }) => {
 
       <div className="container-fluid-custom no-gutters p-0">
       {/* <div className="bg-overlay" ></div> */}
-        <div className="row pr-0 pl-0 no-gutters post-entry">
-          <div className="col-lg-6 col-md-12 col-sm-12 pr-0 pl-0 no-gutters text-wrapper">
-            <div className="intro-text">
+        <div className={`row pr-0 pl-0 no-gutters ${styles.postEntry}`}>
+          <div className={`col-lg-6 col-md-12 col-sm-12 pr-0 pl-0 no-gutters ${styles.imageWrapper}`}>
+            <div className={styles.introText}>
             <main>
             <h5 >
               <InlineTextarea name="tagline"   focusRing={{ offset: 10, borderRadius: 0 }}/>
@@ -48,19 +48,19 @@ export const GEHeroPrimary = ({ data }) => {
           </div>
 
     {/*  */}
-        <div className="col-lg-7 col-md-12 col-sm-12 bleed-end-col-lg-7 bleed-full-md bleed-col-12 image-wrapper">
+        <div className={`col-lg-7 col-md-12 col-sm-12 bleed-end-col-lg-7 bleed-full-md bleed-col-12 ${styles.imageWrapper}`}>
 
 
-        <div className="header-image">
-        <div className="image-gradient"></div>
-      <div className="image-feature post-image">
-          <picture>
-              <InlineGroup
-              name="image"
-              focusRing={{ offset: 0, borderRadius: 0 }}
-              insetControls={true}
-              fields={IMAGE_FIELDS}
-            >
+        <div className={styles.headerImage}>
+        <div className={styles.imageIradient}></div>
+    <div className={styles.imageFeature, styles.postImage}>
+        <picture>
+            <InlineGroup
+            name="image"
+            focusRing={{ offset: 0, borderRadius: 0 }}
+            insetControls={true}
+            fields={IMAGE_FIELDS}
+          >
         <img
           className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
           alt={data.image.alt}
@@ -69,7 +69,6 @@ export const GEHeroPrimary = ({ data }) => {
       </InlineGroup>
         </picture>
     </div>
-
 </div>
 
         </div>
