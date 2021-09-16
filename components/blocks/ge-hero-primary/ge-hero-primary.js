@@ -4,52 +4,80 @@ import {
   InlineGroup,
   BlocksControls,
   InlineTextarea,
+  InlineImage,
 } from "react-tinacms-inline";
 import { ACTION_FIELDS, Actions } from "../../utilities/actions";
 import { Section, SectionFields } from "../../utilities/section";
+
+import styles from "./ge-hero-primary.module.scss"
 
 export const GEHeroPrimary = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <Section variant={data.style.color}>
-      <div className="w-full pt-20 lg:py-56 lg:text-left">
-        <div className="px-8 pb-20 lg:pb-0 lg:w-1/2 lg:px-12">
-          <div className="max-w-3xl mx-auto">
-            <h5 className="w-full	mb-5 text-md font-bold tracking-wide title-font">
-              <InlineTextarea name="tagline" />
+    <section  className={styles.geHeroPrimary}>
+
+<div className={styles.mainBackground}>
+    <img
+    className={styles.mainBg}
+    alt={data.image.alt}
+    src={data.image.src}
+  />
+</div>
+
+
+      <div className="container-fluid-custom no-gutters p-0">
+      {/* <div className="bg-overlay" ></div> */}
+        <div className="row pr-0 pl-0 no-gutters post-entry">
+          <div className="col-lg-6 col-md-12 col-sm-12 pr-0 pl-0 no-gutters text-wrapper">
+            <div className="intro-text">
+            <main>
+            <h5 >
+              <InlineTextarea name="tagline"   focusRing={{ offset: 10, borderRadius: 0 }}/>
             </h5>
-            <h3
-              className={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
-            >
-       
-      
-                <InlineTextarea name="headline" />
-            
-            
-            </h3>
-            <p className="w-full max-w-xl mb-8 opacity-80 transition duration-150 ease-out text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
+            <h1>
+              <InlineTextarea name="headline"  focusRing={{ offset: 20, borderRadius: 0 }} />                    
+            </h1>
+            <p className="para">
               <InlineTextarea name="text" />
             </p>
+
             <Actions actions={data.actions} />
+            </main>
+            </div>          
           </div>
+
+    {/*  */}
+        <div className="col-lg-7 col-md-12 col-sm-12 bleed-end-col-lg-7 bleed-full-md bleed-col-12 image-wrapper">
+
+
+        <div className="header-image">
+        <div className="image-gradient"></div>
+      <div className="image-feature post-image">
+          <picture>
+              <InlineGroup
+              name="image"
+              focusRing={{ offset: 0, borderRadius: 0 }}
+              insetControls={true}
+              fields={IMAGE_FIELDS}
+            >
+        <img
+          className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
+          alt={data.image.alt}
+          src={data.image.src}
+        />
+      </InlineGroup>
+        </picture>
+    </div>
+
+</div>
+
         </div>
-        <div className="relative w-full h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-          <InlineGroup
-            name="image"
-            focusRing={{ offset: 0, borderRadius: 0 }}
-            insetControls={true}
-            fields={IMAGE_FIELDS}
-          >
-            <img
-              className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
-              alt={data.image.alt}
-              src={data.image.src}
-            />
-          </InlineGroup>
+        
+        
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 
@@ -57,7 +85,7 @@ export function GEHeroPrimaryBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: -12 }}
+      focusRing={{ offset: 20 }}
       insetControls={true}
     >
       <GEHeroPrimary data={data} />

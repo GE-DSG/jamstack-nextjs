@@ -1,0 +1,505 @@
+.geHeroPrimary{
+padding            : 12.4em 0 12.4em 0;
+position           : relative;
+color: #fff;
+background-color: #0d1623;
+overflow: hidden;
+margin-bottom: 100px;
+
+// overlay
+.bg-overlay {
+  position        : absolute;
+  z-index         : 1;
+  top             : 0;
+  bottom          : 0;
+  left            : 0;
+  right           : 0;
+  background-color: black;
+ opacity         : 0.5;
+  display         : none;
+  z-index         : 0;
+}
+
+.mainBg { width: 100%;}
+.mainBackground {
+  filter             : opacity(0.1) contrast(1) brightness(1.7) saturate(0);
+  width              : 100%;
+  height             : 100%;
+  position           : absolute;
+  background-size    : cover;
+  background-position: left bottom;
+  top                : 0;
+  background-repeat  : no-repeat;
+}
+
+
+
+// Content section
+section {
+  position: relative;
+  z-index : 10;
+  margin  : 0 auto;
+
+  &:after {
+    clear  : both;
+    display: block;
+    content: " ";
+  }
+}
+
+.intro-text {
+  position: relative;   
+  z-index : 3;
+
+  main {
+    position: relative;
+
+    h5 {
+      // color         : #00b5e2;
+      text-transform   : uppercase;
+      textarea {
+        text-transform: uppercase;
+    }
+    }
+  }
+}
+
+.header-image {
+  position: absolute;
+  display : block;
+  clear   : both;
+  width   : 100%;
+  height  : auto;
+  z-index : 2;
+
+  img {
+    border  : 0;
+    width   : 100%;
+    position: relative;
+    height  : auto;
+  }
+
+  .image-gradient {
+    z-index : 1;
+    position: absolute;
+    width   : 30%;
+    height  : 100%;
+    opacity : 0.5;
+
+
+    background-image: -moz-linear-gradient(left, rgba(23, 49, 78, 1) 0%, rgba(23, 49, 78, 0) 100%);
+    /* FF3.6-15 */
+    background-image: -webkit-linear-gradient(left,
+        rgba(23, 49, 78, 1) 0%,
+        rgba(23, 49, 78, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(to right,
+        rgba(23, 49, 78, 1) 0%,
+        rgba(23, 49, 78, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#17314e', endColorstr='#0017314e', GradientType=1);
+    /* IE6-9 */
+
+    // background: linear-gradient(to right, rgba(23, 49, 78, 0) 0%, rgba(23, 49, 78, 0) 100%);
+  }
+}
+
+/// image allignment
+
+.row {
+  margin-right: 0;
+  margin-left : 0;
+}
+
+.nopaddingbottom {
+  padding-bottom: 0 !important;
+}
+
+/* ***************************** media Query **************************************************/
+
+@media only screen and (min-width: 992px) {
+
+  .intro-text {
+    margin: 3em 0 3em 0;   
+    min-height: 18.75rem;
+
+    main {
+      h1 {
+        font-size     : 45px;
+        letter-spacing: -1px;
+        padding       : 0.3em 0 0.4em 0;
+        line-height   : 55px;
+      }
+
+      h5 {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .intro-text {
+    margin: 3em 0 4em 0;
+    min-height: 20.313rem;
+    main {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1070px) {
+  .intro-text {
+    min-height: 21.875rem;
+    main {
+      h1 {
+        font-size  : 50px;
+        line-height: 62px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .intro-text {
+    min-height: 25rem;
+    main {
+      h1 {
+        font-size: 52px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro-text {
+    min-height: 26.25rem;
+    main {
+      h1 {
+        font-size  : 60px;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .intro-text {
+    margin: 3em 0 6em 0;
+    min-height: 27.063rem;
+
+    main {
+
+      h5 {
+        font-size     : 20px;
+        letter-spacing: 3.43px;
+      }
+
+      h1 {
+        font-size     : 64px;
+        letter-spacing: -1px;
+        padding       : 0.3em 0 0.4em 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .intro-text {
+    main {
+      h1 {
+        font-size: 70px;
+        padding  : 0.4em 0 0.7em 0;
+
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .intro-text {
+    min-height: 32.188rem;
+    main {
+      h1 {
+        font-size     : 80px;
+        letter-spacing: -2px;
+        line-height   : 100px;
+        padding       : 0.4em 0;
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .intro-text {
+    main {
+      h1 {
+        font-size     : 84px;
+        letter-spacing: -3px;
+        line-height   : 105px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .intro-text {
+    main {
+      h1 {
+        font-size  : 87px;
+        line-height: 110px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .intro-text {
+    margin: 6em 0 10em 0;
+    min-height: 34rem;
+
+    main {
+      h5 {
+        font-size     : 24px;
+        line-height   : 16px;
+        letter-spacing: 3.43px;
+      }
+
+      h1 {
+        font-size     : 92px;
+        line-height   : 105px;
+        letter-spacing: -3.34px;
+      }
+    }
+  }
+
+  .image-wrapper {
+    .header-image {
+      max-height: 900px;
+      overflow  : hidden;
+    }
+  }
+
+  @media only screen and (min-width: 2100px) {
+    .intro-text {
+      h1 {
+        font-size: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .intro-text {
+    main {
+      h1 {
+        font-size: 108px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .intro-text {
+    main {
+      h1 {
+        font-size: 130px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2800px) {}
+
+/**********************************************/
+
+@mixin breakpoint() {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@include breakpoint() {
+
+  background-image: none !important;
+  background-color: #0d1623;
+  padding-top     : 0;
+
+  .main-background,
+  .image-gradient {
+    display: none !important;
+  }
+
+  .bg-overlay {
+    display: none !important;
+  }
+
+  /// image postion
+  .post-entry {
+    .image-wrapper {
+      position: relative;
+      display : block;
+      flex    : none;
+
+      .header-image {
+        position: relative;
+        width   : 108%;
+        left    : -4%;
+        height  : auto;
+      }
+    }
+
+    .intro-text {
+      top    : 0;      
+
+      main {
+        h1 {
+          padding: 0.4em 0;
+        }
+
+        h5 {
+          letter-spacing: 1.57px;
+        }
+      }
+    }
+
+    .text-wrapper {
+      order: 2;
+      padding: 5rem 0;
+    }
+  }
+
+  /**/
+  .wp-block-button {
+    float : left;
+    margin: 0 1.5em 0 0 !important;
+  }
+
+  main {
+    h1 {
+      letter-spacing: -1.76px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .post-entry {
+    .text-wrapper {
+      order: 1;
+      padding:4rem 0 1rem 0;
+    }
+
+    .intro-text {
+      margin : 0;  
+   
+
+      .wp-block-button {
+        float : inherit !important;
+        margin: 1.5em 0 !important;
+      }
+    }
+
+    .image-wrapper {
+      order   : 2;
+      position: relative;
+      left    : -3%;
+    }
+
+    .header-image {
+      top: 10%;
+    }
+  }
+
+}
+
+// editor styling
+
+.editor-rich-text {
+  h1 {
+    font-size     : 50px;
+    letter-spacing: -1px;
+    line-height   : 60px;
+  }
+
+}
+
+
+.header-image button.components-button.components-icon-button {
+  background: white;
+}
+
+.image-feature.post-image button.components-button.components-icon-button.components-toolbar__control {
+  top     : 0 !important;
+  position: relative;
+  left    : 0;
+  z-index : 3;
+}
+
+// button style is here
+
+
+
+.wp-block-button.primary {
+  margin-bottom: 1em;
+
+  .wp-block-button__link {
+    font-family     : gesans-bold;
+    text-transform  : uppercase;
+    letter-spacing  : 2px;
+    font-size       : 14px;
+    cursor          : pointer;
+    height          : 52px;
+    line-height     : 52px;
+    border-radius   : 26px;
+    padding         : 0 2em;
+    color           : var(--ge-white);
+    border          : 2px solid var(--ge-primary-blue);
+    background-color: var(--ge-primary-blue);
+    text-decoration : none;
+
+    &:hover {
+      border          : 2px solid rgba(var(--rgb-ge-primary-blue), .2);
+      background-color: rgba(var(--rgb-ge-primary-blue), .8)
+    }
+  }
+}
+
+.wp-block-button.secondary .wp-block-button__link {
+  font-family     : gesans-bold;
+  font-size       : 14px;
+  text-transform  : uppercase;
+  letter-spacing  : 2px;
+  height          : 52px;
+  line-height     : 52px;
+  border-radius   : 26px;
+  padding         : 0 2em;
+  color           : var(--ge-white);
+  border          : 2px solid rgba(var(--rgb-ge-white), .5);
+  background-color: transparent;
+  text-decoration : none;
+
+  &:hover {
+    color           : var(--ge-white);
+    border          : 2px solid var(--ge-white);
+    background-color: transparent
+  }
+}
+
+@media only screen and(max-width:1200px) {
+  .wp-block-button.primary .wp-block-button__link {
+    font-size  : 11px;
+    height     : 48px;
+    line-height: 44px;
+  }
+
+  .wp-block-button.secondary .wp-block-button__link {
+    font-size  : 11px;
+    height     : 48px;
+    line-height: 44px;
+  }
+}
+}
