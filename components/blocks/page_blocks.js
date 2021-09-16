@@ -10,6 +10,10 @@ export const PAGE_BLOCKS = {
     Component: GEContentLeftRightImageBlock,
     template: GEContentLeftRightImage_template,
   },
+  ge_titled_paragraph: {
+    Component: GETitledParagraphBlock,
+    template: getitledparagraph_template,
+  },
   hero: {
     Component: HeroBlock,
     template: hero_template,
@@ -17,10 +21,6 @@ export const PAGE_BLOCKS = {
   testimonial: {
     Component: TestimonialBlock,
     template: testimonial_template,
-  },
-  ge_titled_paragraph: {
-    Component: GETitledParagraphBlock,
-    template: getitledparagraph_template,
   },
   ge_grid: {
     Component: GEGridBlock,

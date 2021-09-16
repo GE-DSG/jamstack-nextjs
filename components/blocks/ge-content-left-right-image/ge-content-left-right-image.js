@@ -117,7 +117,7 @@ export const ACTION_FIELDS = [
   ];
 
 export const GEContentLeftRightImage_template = {
-  label: "GE Content Left Right Image 1",
+  label: "GE Content Left Right Image",
   defaultItem: {
     title: "GE's leadership",
     content:
