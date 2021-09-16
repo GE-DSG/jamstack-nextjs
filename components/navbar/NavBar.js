@@ -46,6 +46,11 @@ const NavBar = () => (
               </Link>
             </li>
             <li className="nav-item menu-level-one">
+              <Link href="/blogs">
+                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Blogs">Blogs</a>
+              </Link>
+            </li>
+            <li className="nav-item menu-level-one">
               <Link href="/about-us">
                 <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us">About us</a>
               </Link>
@@ -68,7 +73,7 @@ const NavBar = () => (
 				</li>
         <li className="nav-item header-stock-ticker">
           <a id="ge-stock-ticker" className="nav-link ge-stock-ticker" href="https://www.ge.com/investor-relations/stocks" target="_self">
-            GE <img src="/themes/custom/ge_unified/assets/images/arrow-up.png" width="11" height="8"/> <span className="stock-ticker__status"></span></a>
+            GE <img src="/images/arrow-up.png" width="11" height="8"/> <span className="stock-ticker__status">102.16</span></a>
         </li>
       </ul>
     </div>

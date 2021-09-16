@@ -1,4 +1,3 @@
-import * as React from "react";
 import Layout from "../../components/layout/Layout";
 import Link from 'next/link';
 
@@ -23,20 +22,26 @@ export const getStaticPaths = async () => {
 };
 
 
-export default ({ article }) => (
-  <Layout>
-    <section>
-      <h2>{ article.title }</h2>
-            
-      <p>{ article.description }</p>
-    </section>  
-    <div>
-      <Link href="/news">
-        <a>
-          <h6>View all articles</h6>
-        </a>
-      </Link>     
-    </div>
-  </Layout>
-  
-);
+const ArticleTemplate = ({ article }) => {
+
+  return (
+   <Layout>
+      <section>
+        <h2>{ article.title }</h2>
+        <div>{ new Date(article.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</div>
+        
+        <p>{ article.description }</p>
+        <h6>{ article.author }</h6>
+      </section>  
+      <div>
+        <Link href="/news">
+          <a>
+            <h6>View all articles</h6>
+          </a>
+        </Link>     
+      </div>
+    </Layout>
+  )
+};
+
+export default ArticleTemplate
