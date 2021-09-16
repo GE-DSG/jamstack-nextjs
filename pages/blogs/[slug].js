@@ -6,6 +6,7 @@ const BlogTemplate = ({ blog }) => {
 
   return (
    <Layout>
+      <section>
       </section>  
       <div>
         <Link href="/blogs">
