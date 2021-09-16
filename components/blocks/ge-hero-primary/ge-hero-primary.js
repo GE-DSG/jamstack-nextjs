@@ -8,7 +8,7 @@ import {
 import { ACTION_FIELDS, Actions } from "../../utilities/actions";
 import { Section, SectionFields } from "../../utilities/section";
 
-export const Hero = ({ data }) => {
+export const GEHeroPrimary = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
@@ -16,35 +16,17 @@ export const Hero = ({ data }) => {
       <div className="w-full pt-20 lg:py-56 lg:text-left">
         <div className="px-8 pb-20 lg:pb-0 lg:w-1/2 lg:px-12">
           <div className="max-w-3xl mx-auto">
-            <h2 className="w-full	mb-5 text-md font-bold tracking-wide title-font">
+            <h5 className="w-full	mb-5 text-md font-bold tracking-wide title-font">
               <InlineTextarea name="tagline" />
-            </h2>
+            </h5>
             <h3
               className={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
             >
-              {data.style.color === "primary" ? (
-                <span
-                  className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-800`}
-                  style={{
-                    textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-600),0.35)`,
-                  }}
-                >
-                  {data.headline}
-                </span>
-              ) : (
-                <span
-                  className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
-                  style={{
-                    textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-600),0.35)`,
-                  }}
-                >
-                  {data.headline}
-                </span>
-              )}
-
-              <span className="-z-1">
+       
+      
                 <InlineTextarea name="headline" />
-              </span>
+            
+            
             </h3>
             <p className="w-full max-w-xl mb-8 opacity-80 transition duration-150 ease-out text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
               <InlineTextarea name="text" />
@@ -71,14 +53,14 @@ export const Hero = ({ data }) => {
   );
 };
 
-export function HeroBlock({ data, index }) {
+export function GEHeroPrimaryBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
       focusRing={{ offset: -12 }}
       insetControls={true}
     >
-      <Hero data={data} />
+      <GEHeroPrimary data={data} />
     </BlocksControls>
   );
 }
@@ -96,17 +78,17 @@ export const IMAGE_FIELDS = [
   },
 ];
 
-export const hero_template = {
-  label: "Hero",
+export const geheroprimary_template = {
+  label: "GE Hero Primary",
   defaultItem: {
-    tagline: "TAGLINE ABOVE TEXT",
-    headline: "This is a large display heading.",
+    tagline: "About us ",
+    headline: "GE Mission Statement & Values",
     text:
       "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
-    image: {
-      src: "/canal.jpg",
-      alt: "Photo from Unsplash",
-    },
+      image: {
+        src: "../static/about_ge.jpg",
+        alt: "General Electric",
+      },
     actions: [
       {
         label: "Primary Action",

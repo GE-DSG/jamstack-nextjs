@@ -1,5 +1,5 @@
 
-import { HeroBlock, hero_template } from "./hero/hero";
+import { GEHeroPrimaryBlock, geheroprimary_template } from "./ge-hero-primary/ge-hero-primary";
 import { TestimonialBlock, testimonial_template } from "./testimonial/testimonial";
 import { GETitledParagraphBlock, getitledparagraph_template } from "./ge-titled-paragraph/ge-titled-paragraph";
 import { GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
@@ -14,9 +14,9 @@ export const PAGE_BLOCKS = {
     Component: GETitledParagraphBlock,
     template: getitledparagraph_template,
   },
-  hero: {
-    Component: HeroBlock,
-    template: hero_template,
+  ge_Hero_Primary: {
+    Component: GEHeroPrimaryBlock,
+    template: geheroprimary_template,
   },
   testimonial: {
     Component: TestimonialBlock,
