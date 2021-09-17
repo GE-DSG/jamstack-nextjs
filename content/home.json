@@ -57,6 +57,33 @@
       }
     },
     {
+      "_template": "ge_grid",
+      "title": "GE Grid Title Text",
+      "items": [
+        {
+          "_template": "ge_small_article",
+          "title": "Longer Information 1",
+          "description": "By eleven o'clock the next day we were well upon our way to the old English capital."
+        },
+        {
+          "_template": "ge_fact_card_variant_2",
+          "title": "Longer Information 2",
+          "description": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. "
+        }
+      ],
+      "actions": [
+        {
+          "label": "Primary Action",
+          "type": "button",
+          "icon": "true"
+        },
+        {
+          "label": "Learn More",
+          "type": "link"
+        }
+      ]
+    },
+    {
       "_template": "testimonial",
       "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ndsfgsdgulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "author": "Marlex Ventura",
@@ -71,28 +98,6 @@
       "style": {
         "color": "primary"
       }
-    },
-    {
-      "_template": "ge_grid",
-      "title": "More on Investor Relations",
-      "items": [
-        {
-          "title": "Stock information",
-          "description": "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
-          "_template": "ge_fact_card_variant_2"
-        },
-        {
-          "_template": "ge_small_article",
-          "title": "Longer Information 1",
-          "description": "By eleven o'clock the next day we were well upon our way to the old English capital."
-        },
-        {
-          "_template": "ge_fact_card_variant_2",
-          "title": "Longer Information 2",
-          "description": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. "
-        }
-      ],
-      "calltoaction": "CALL TO ACTION"
     }
   ]
 }
