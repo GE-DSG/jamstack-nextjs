@@ -14,7 +14,7 @@
     {
       "_template": "ge_Hero_Primary",
       "tagline": "About us ",
-      "headline": "GE Missiodfdn Statement & Values",
+      "headline": "GE Mission Statement & Values",
       "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
       "image": {
         "src": "../static/about_ge.jpg",
@@ -58,7 +58,7 @@
     },
     {
       "_template": "ge_grid",
-      "title": "GE Grid Title #test 1",
+      "title": "GE Grid Title ",
       "items": [
         {
           "_template": "ge_small_article",
@@ -87,22 +87,6 @@
           "type": "link"
         }
       ]
-    },
-    {
-      "_template": "testimonial",
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ndsfgsdgulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "author": "Marlex Ventura",
-      "style": {
-        "color": "primary"
-      }
-    },
-    {
-      "_template": "testimonial",
-      "quote": "There are only two hard things in Computer Science: cache invalidation and naming things.",
-      "author": "Phil Karlton",
-      "style": {
-        "color": "primary"
-      }
     }
   ]
 }
