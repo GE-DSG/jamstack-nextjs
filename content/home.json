@@ -58,17 +58,22 @@
     },
     {
       "_template": "ge_grid",
-      "title": "GE Grid Title Text",
+      "title": "GE Grid Title #test 1",
       "items": [
         {
           "_template": "ge_small_article",
-          "title": "Longer Information 1",
-          "description": "By eleven o'clock the next day we were well upon our way to the old English capital."
+          "title": "GE Small Article Title",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley."
         },
         {
-          "_template": "ge_fact_card_variant_2",
-          "title": "Longer Information 2",
-          "description": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. "
+          "_template": "ge_small_article",
+          "title": "GE Small Article Title",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley."
+        },
+        {
+          "_template": "ge_small_article",
+          "title": "GE Small Article Title",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley."
         }
       ],
       "actions": [
