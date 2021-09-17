@@ -1,5 +1,4 @@
-import styles from './ge-grid.module.scss';
-
+import * as React from "react";
 import { GESmallArticle, gesmallarticle_template } from "./ge-small-article/ge-small-article";
 import { GEFactCardVariant2, gefactcardvariant2_template } from "./ge-fact-card-variant-2/ge-fact-card-variant-2";
 import {
@@ -7,28 +6,40 @@ import {
   InlineTextarea,
   InlineBlocks,
 } from "react-tinacms-inline";
+import { ThemeContext } from "../../utilities/theme";
+import { ACTION_FIELDS, Actions } from "../../utilities/actions";
+import { Section, SectionFields } from "../../utilities/section";
+import styles from './ge-grid.module.scss';
 
 
 export const GEGrid = ({ data }) => {
+  const theme = React.useContext(ThemeContext);
   return (
-    <section id="ge-all-businesses" className={ styles.geGrid } style={{ backgroundColor: "transparent" }}>
-      <div className="grid-stack light-container">
-        <div className="grid-title"><h2 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}><InlineTextarea name="title" /></h2></div>
-        <div className="grid-items">
+    <Section>
+    <section id="ge-all-businesses" className={ styles.geGrid }>
+      <div className="container-fluid-custom no-gutters pt-5 pb-5 ">
+        <div className="grid-title">
+          <h2 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}>
+            <InlineTextarea name="title" />
+            </h2>
+            
+            </div>
+        <div className="">
           <InlineBlocks
+           focusRing={{ offset: 50 }}
             direction="horizontal"
-            className="flex flex-wrap text-left"
+            className={styles.gridItems}
             name="items"
             blocks={GEGRIDITEM_BLOCKS}
           />
         </div>
+     
         <div className="grid-footer">
-          <h6 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}>
-            <a href="https://www.google.com" target="_blank"><InlineTextarea name="calltoaction" /></a>
-          </h6>
+        <Actions actions={data.actions} />
         </div>
       </div>
     </section>
+    </Section>
   );
 };
 
@@ -47,7 +58,7 @@ export function GEGridBlock({ data, index }) {
 export const gegrid_template = {
   label: "GE Grid",
   defaultItem: {
-    title: "More on Investor Relations",
+    title: "GE Grid Title Text",
     items: [
       {
         _template: "ge_small_article",
@@ -62,13 +73,51 @@ export const gegrid_template = {
           "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
       },
     ],
-    calltoaction: "CALL TO ACTION",
+    actions: [
+      {
+        label: "Primary Action",
+        type: "button",
+        icon: "true",
+      },
+      {
+        label: "Learn More",
+        type: "link",
+      },
+    ],
   },
+  
   fields: [
     {
       name: "title",
       label: "Title",
       component: "text",
+    },
+    ...ACTION_FIELDS,
+    {
+      name: "style",
+      label: "Style",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+            {
+              label: "Default",
+              value: "default",
+            },
+            {
+              label: "Tint",
+              value: "tint",
+            },
+            {
+              label: "Primary",
+              value: "primary",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "items",
@@ -86,7 +135,7 @@ export const gegrid_template = {
       name: "calltoaction",
       label: "Call to action",
       component: "text",
-    },
+    },    
   ],
 };
 

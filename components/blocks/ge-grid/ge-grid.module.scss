@@ -1,21 +1,26 @@
 
 // The class name needs to match the names of the category and block
 .geGrid {
-
   position: relative;
-  //margin-top: 2em !important;
-  //margin-bottom: 2em !important;
-  //padding-top: 2em;
-  min-height: 658px;
+  height: auto;
 
-  div.grid-items.row {
-  margin-top:60px;
+
+.gridItems {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
   div.wp-block-custom-ge-small-article {
     padding-left: 0;
     padding-right: 0;
   }
+
+
+  .flex.flex-wrap.text-left [offset="10"] {
+    width: 33%;
+    flex-grow: 1;
+    height: auto;
+}
 
   @media (min-width: 992px) {
     div.wp-block-custom-ge-small-article {

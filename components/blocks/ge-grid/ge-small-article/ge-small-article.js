@@ -21,9 +21,11 @@ export const GESmallArticle = ({ data, index }) => {
           <div className="media-bg" style={{ backgroundColor: "#f0f3f7" }}></div>
         </div>
         <a href="" target="_self" className="">
-          <div className="card-stack article-content" style={{ backgroundColor: "#f0f3f7" }}>
-            <div className="card-title"><h6 className="title" style={{ color: "var(--ge-primary-blue)", textAlign: "left" }}><InlineTextarea name="title" /></h6></div>
-            <div className="card-description"><p className="ge-small-article-para description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p></div>
+          <div className="card-stack article-content" >
+            <div className="card-title">
+              <h4><InlineTextarea name="title" /></h4></div>
+            <div className="card-description">
+              <p className="ge-small-article-para description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p></div>
             <div className="cta-container" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}>
               <div className="call-to-action arrow-right ficon-lg-arrow-right"></div>
             </div>
@@ -41,7 +43,7 @@ export const GESmallArticle = ({ data, index }) => {
 export const gesmallarticle_template = {
   label: "GE Small Article",
   defaultItem: {
-    title: "GE Lighting",
+    title: "GE Small Article Title",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
   },
   fields: [

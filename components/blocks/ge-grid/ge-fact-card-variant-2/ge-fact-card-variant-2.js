@@ -34,7 +34,7 @@ export const GEFactCardVariant2 = ({ data, index }) => {
 export const gefactcardvariant2_template = {
   label: "'GE Fact Card Variant 2",
   defaultItem: {
-    title: "Stock information",
+    title: "GE Fact Card Title",
     description: "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
   },
   fields: [
