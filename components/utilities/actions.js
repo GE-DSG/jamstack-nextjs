@@ -14,15 +14,15 @@ export const Actions = ({ actions }) => {
         insetControls={true}
         fields={ACTION_FIELDS}
       >
-        <div className="flex flex-wrap items-center -mx-3 -my-2">
+        <div className="flex flex-wrap items-center -mx-3 -my-2 mt-5">
           {actions &&
             actions.map(function (action, index) {
               let element = null;
               if (action.type === "button") {
                 element = (
-                <a href={action.href}>  <button
+                <a href={action.href} target={action.target}> <button
                     key={index}
-                    className={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
+                    className={`z-10 button-primary relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
                     } ${
                       theme.button.style === "round" && `rounded-full`
@@ -50,6 +50,7 @@ export const Actions = ({ actions }) => {
                   <a
                     key={index}
                     href= {action.href}
+                    target={action.target}
                     className={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
                     style={{
                       textShadow: `0 3px 7px rgba(var(--color-rgb-${theme.color}-400),0.2)`,
@@ -76,29 +77,33 @@ export const ACTION_FIELDS = [
   {
     label: "Actions",
     name: "actions",
-    href:"https://www.aajtak.in/",
+    href:"https://www.ge.com/",
+    target:"_blank",
     component: "group-list",
     itemProps: (item) => ({
       label: item.label,
     }),
     defaultItem: () => ({
       label: "Action Label",
-      type: "button",
-      link:"#",
+      type: "button",     
     }),
     
     fields: [
+      {
+        label: "Label",
+        name: "label",
+        component: "text",       
+      },
       {
         name: "href",
         label: "Hyperlink URL",
         component: "text",
       },
       {
-        label: "Label",
-        name: "label",
+        name: "target",
+        label: "Page Target ",
         component: "text",
-        link:"#"
-      },
+      },   
       {
         label: "Type",
         name: "type",
