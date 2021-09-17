@@ -24,11 +24,13 @@
         {
           "label": "Primary Action",
           "type": "button",
-          "icon": "true"
+          "icon": "true",
+          "href": "https://www.google.com/"
         },
         {
           "label": "Learn More",
-          "type": "link"
+          "type": "link",
+          "href": "https://www.google.com/"
         }
       ],
       "style": {
