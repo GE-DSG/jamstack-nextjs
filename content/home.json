@@ -25,12 +25,12 @@
           "label": "Primary Action",
           "type": "button",
           "icon": "true",
-          "href": "https://www.google.com/"
+          "href": "https://www.ge.com/"
         },
         {
           "label": "Learn More",
           "type": "link",
-          "href": "https://www.google.com/"
+          "href": "https://www.ge.com/news/"
         }
       ],
       "style": {
