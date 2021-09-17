@@ -18,13 +18,12 @@ export const GEGrid = ({ data }) => {
     <Section>
     <section id="ge-all-businesses" className={ styles.geGrid }>
       <div className="container-fluid-custom no-gutters pt-5 pb-5 ">
-        <div className="grid-title">
-          <h2 className="title" style={{ color: "var(--ge-dark-blue-grey)" }}>
+       
+          <h2 className={styles.gridTitle}>
             <InlineTextarea name="title" />
-            </h2>
+            </h2>            
             
-            </div>
-        <div className="">
+      
           <InlineBlocks
            focusRing={{ offset: 50 }}
             direction="horizontal"
@@ -32,7 +31,7 @@ export const GEGrid = ({ data }) => {
             name="items"
             blocks={GEGRIDITEM_BLOCKS}
           />
-        </div>
+        
      
         <div className="grid-footer">
         <Actions actions={data.actions} />

@@ -16,7 +16,7 @@ export const GESmallArticle = ({ data, index }) => {
     >
 
     <section className={ styles.geSmallArticle }>
-      <div className="card-container card_wrapper" style={{ backgroundColor: "#f0f3f7" }}>
+      <div className={styles.cardContainer} >
         <div className="article-media">
           <div className="media-bg" style={{ backgroundColor: "#f0f3f7" }}></div>
         </div>
