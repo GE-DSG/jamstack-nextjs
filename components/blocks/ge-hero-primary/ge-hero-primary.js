@@ -15,21 +15,19 @@ export const GEHeroPrimary = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
+    <Section variant={data.style.color}>
     <section  className={styles.geHeroPrimary}>
-
-<div className={styles.mainBackground}>
-    <img
-    className={styles.mainBg}
-    alt={data.image.alt}
-    src={data.image.src}
-  />
-</div>
-
-
+    <div className={styles.mainBackground}>
+        <img
+        className={styles.mainBg}
+        alt={data.image.alt}
+        src={data.image.src}
+      />
+    </div>
       <div className="container-fluid-custom no-gutters p-0">
       {/* <div className="bg-overlay" ></div> */}
         <div className={`row pr-0 pl-0 no-gutters ${styles.postEntry}`}>
-          <div className={`col-lg-6 col-md-12 col-sm-12 pr-0 pl-0 no-gutters ${styles.imageWrapper}`}>
+          <div className={`col-lg-6 col-md-12 col-sm-12 pr-0 pl-0 no-gutters ${styles.textWrapper}`}>
             <div className={styles.introText}>
             <main>
             <h5 >
@@ -47,13 +45,13 @@ export const GEHeroPrimary = ({ data }) => {
             </div>          
           </div>
 
-    {/*  */}
+
         <div className={`col-lg-7 col-md-12 col-sm-12 bleed-end-col-lg-7 bleed-full-md bleed-col-12 ${styles.imageWrapper}`}>
 
 
         <div className={styles.headerImage}>
-        <div className={styles.imageIradient}></div>
-    <div className={styles.imageFeature, styles.postImage}>
+        <div className={styles.imageGradient}></div>
+        <div className={styles.imageFeature, styles.postImage}>
         <picture>
             <InlineGroup
             name="image"
@@ -61,8 +59,7 @@ export const GEHeroPrimary = ({ data }) => {
             insetControls={true}
             fields={IMAGE_FIELDS}
           >
-        <img
-          className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
+        <img        
           alt={data.image.alt}
           src={data.image.src}
         />
@@ -77,6 +74,7 @@ export const GEHeroPrimary = ({ data }) => {
         </div>
       </div>
     </section>
+    </Section>
   );
 };
 

@@ -10,7 +10,7 @@ export const Actions = ({ actions }) => {
     <div className="w-full">
       <InlineGroup
         name=""
-        focusRing={{ offset: { x: 16, y: 8 } }}
+        focusRing={{ offset: 10 }}
         insetControls={true}
         fields={ACTION_FIELDS}
       >
@@ -20,7 +20,7 @@ export const Actions = ({ actions }) => {
               let element = null;
               if (action.type === "button") {
                 element = (
-                  <button
+                <a href={action.href}>  <button
                     key={index}
                     className={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
@@ -35,21 +35,21 @@ export const Actions = ({ actions }) => {
                       textShadow: "0 2px 5px rgba(0,0,0,0.1)",
                       boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${theme.color}-600),0.35)`,
                     }}
-                  >
-                    {action.label}
+                  > {action.label}
                     {action.icon && (
                       <BiRightArrowAlt
                         className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
                       />
                     )}
-                  </button>
+                   
+                  </button></a>
                 );
               }
               if (action.type === "link" || action.type === "linkExternal") {
                 element = (
                   <a
                     key={index}
-                    href="#"
+                    href= {action.href}
                     className={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
                     style={{
                       textShadow: `0 3px 7px rgba(var(--color-rgb-${theme.color}-400),0.2)`,
@@ -76,6 +76,7 @@ export const ACTION_FIELDS = [
   {
     label: "Actions",
     name: "actions",
+    href:"https://www.aajtak.in/",
     component: "group-list",
     itemProps: (item) => ({
       label: item.label,
@@ -83,12 +84,20 @@ export const ACTION_FIELDS = [
     defaultItem: () => ({
       label: "Action Label",
       type: "button",
+      link:"#",
     }),
+    
     fields: [
+      {
+        name: "href",
+        label: "Hyperlink URL",
+        component: "text",
+      },
       {
         label: "Label",
         name: "label",
         component: "text",
+        link:"#"
       },
       {
         label: "Type",

@@ -3,7 +3,6 @@ padding            : 12.4em 0 12.4em 0;
 position           : relative;
 color: #fff;
 background-color: #0d1623;
-overflow: hidden;
 margin-bottom: 100px;
 
 // overlay
@@ -15,7 +14,7 @@ margin-bottom: 100px;
   left            : 0;
   right           : 0;
   background-color: black;
- opacity         : 0.5;
+  opacity         : 0.5;
   display         : none;
   z-index         : 0;
 }
@@ -78,6 +77,7 @@ section {
     width   : 100%;
     position: relative;
     height  : auto;
+    
   }
 
   .imageGradient {
@@ -120,7 +120,7 @@ section {
 
 @media only screen and (min-width: 992px) {
 
-  .intro-text {
+ .introText {
     margin: 3em 0 3em 0;   
     min-height: 18.75rem;
 
@@ -140,7 +140,7 @@ section {
 }
 
 @media only screen and (min-width: 1024px) {
-  .intro-text {
+  .introText {
     margin: 3em 0 4em 0;
     min-height: 20.313rem;
     main {
@@ -152,7 +152,7 @@ section {
 }
 
 @media only screen and (min-width: 1070px) {
-  .intro-text {
+ .introText {
     min-height: 21.875rem;
     main {
       h1 {
@@ -164,7 +164,7 @@ section {
 }
 
 @media only screen and (min-width: 1150px) {
-  .intro-text {
+ .introText {
     min-height: 25rem;
     main {
       h1 {
@@ -175,7 +175,7 @@ section {
 }
 
 @media only screen and (min-width: 1200px) {
-  .intro-text {
+ .introText {
     min-height: 26.25rem;
     main {
       h1 {
@@ -187,7 +187,7 @@ section {
 }
 
 @media only screen and (min-width: 1366px) {
-  .intro-text {
+ .introText {
     margin: 3em 0 6em 0;
     min-height: 27.063rem;
 
@@ -208,7 +208,7 @@ section {
 }
 
 @media only screen and (min-width: 1500px) {
-  .intro-text {
+ .introText {
     main {
       h1 {
         font-size: 70px;
@@ -220,7 +220,7 @@ section {
 }
 
 @media only screen and (min-width: 1600px) {
-  .intro-text {
+ .introText {
     min-height: 32.188rem;
     main {
       h1 {
@@ -235,7 +235,7 @@ section {
 }
 
 @media only screen and (min-width: 1700px) {
-  .intro-text {
+ .introText {
     main {
       h1 {
         font-size     : 84px;
@@ -247,7 +247,7 @@ section {
 }
 
 @media only screen and (min-width: 1800px) {
-  .intro-text {
+ .introText {
     main {
       h1 {
         font-size  : 87px;
@@ -258,7 +258,7 @@ section {
 }
 
 @media only screen and (min-width: 1920px) {
-  .intro-text {
+ .introText {
     margin: 6em 0 10em 0;
     min-height: 34rem;
 
@@ -278,14 +278,14 @@ section {
   }
 
   .imageWrapper {
-    .header-image {
+    .headerImage {
       max-height: 900px;
       overflow  : hidden;
     }
   }
 
   @media only screen and (min-width: 2100px) {
-    .intro-text {
+   .introText {
       h1 {
         font-size: 100px;
       }
@@ -294,7 +294,7 @@ section {
 }
 
 @media only screen and (min-width: 2300px) {
-  .intro-text {
+ .introText {
     main {
       h1 {
         font-size: 108px;
@@ -304,7 +304,7 @@ section {
 }
 
 @media only screen and (min-width: 2500px) {
-  .intro-text {
+ .introText {
     main {
       h1 {
         font-size: 130px;
@@ -340,7 +340,7 @@ section {
 
   /// image postion
   .postEntry {
-    .image-wrapper {
+    .imageWrapper {
       position: relative;
       display : block;
       flex    : none;
@@ -374,10 +374,7 @@ section {
   }
 
   /**/
-  .wp-block-button {
-    float : left;
-    margin: 0 1.5em 0 0 !important;
-  }
+
 
   main {
     h1 {
@@ -394,17 +391,14 @@ section {
       padding:4rem 0 1rem 0;
     }
 
-    .intro-text {
+   .introText {
       margin : 0;  
    
 
-      .wp-block-button {
-        float : inherit !important;
-        margin: 1.5em 0 !important;
-      }
+     
     }
 
-    .image-wrapper {
+    .imageWrapper {
       order   : 2;
       position: relative;
       left    : -3%;
