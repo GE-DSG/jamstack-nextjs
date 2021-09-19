@@ -51,6 +51,11 @@ const NavBar = () => (
               </Link>
             </li>
             <li className="nav-item menu-level-one">
+              <Link href="/reports">
+                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Reports">Reports</a>
+              </Link>
+            </li>
+            <li className="nav-item menu-level-one">
               <Link href="/about-us">
                 <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us">About us</a>
               </Link>

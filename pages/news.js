@@ -10,6 +10,7 @@ const News = props => {
     <Layout>
       <div className="articles">
         <h2>News articles</h2>
+        <p>Articles maintained in a single JSON file (<i>/content/articles.json</i>)</p>
         <section>
         {articles.map((article) => (
           <Link key={ article.id } href={{ pathname: `/articles/${article.id}` }}>

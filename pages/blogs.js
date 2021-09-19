@@ -2,20 +2,21 @@ import Link from 'next/link'
 import Layout from "/components/layout/Layout"
 import BlogListItem from '/components/layout/BlogListItem'
 
+
 export default function Blogs({ allBlogs }) {
+
 
   return (
     <Layout>
       <div className="blog_posts">
         <h2>Blog posts</h2>
+        <p>Each post maintained as an individual JSON file in (<i>/public/blogs/</i>) folder</p>
         <section>
-
           <ul className="list">
             {allBlogs.length > 1 && allBlogs.map(post => (
               <BlogListItem post={post} />
             ))}
           </ul>
-
         </section>
       </div>
     </Layout>
