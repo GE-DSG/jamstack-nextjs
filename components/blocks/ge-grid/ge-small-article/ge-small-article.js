@@ -17,20 +17,19 @@ export const GESmallArticle = ({ data, index }) => {
     >
 
     <section className={ styles.geSmallArticle }>
-      <div className={styles.cardContainer} >
-        <div className="articleMedia">
+      <div className={styles.imageContainer} >       
         <InlineGroup
                     name="image"
                     focusRing={{ offset: 0, borderRadius: 0 }}
                     insetControls={true}
                     fields={IMAGE_FIELDS}
                   >
-                  <img className={styles.image} 
+                  <img className={styles.articleMedia} 
                   src={data.image.src}
                   alt={data.image.alt}
                   />
                     </InlineGroup>
-        </div>
+       </div>
         <a href="" target="_self" className="">
           <div className="card-stack article-content" >
             <div className="card-title">
@@ -42,7 +41,7 @@ export const GESmallArticle = ({ data, index }) => {
             </div>
           </div>
         </a>
-      </div>
+      
     </section>
 
     </BlocksControls>
