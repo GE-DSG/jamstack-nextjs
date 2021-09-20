@@ -62,7 +62,7 @@
       "items": [
         {
           "_template": "ge_small_article",
-          "title": "GE Small Article Title",
+          "title": "GE Small Article Title1",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
             "src": "../static/ge-small-article.jpg",
@@ -75,7 +75,7 @@
         },
         {
           "_template": "ge_small_article",
-          "title": "GE Small Article Title",
+          "title": "GE Small Article Title2",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
             "src": "../static/ge-small-article.jpg",
@@ -88,7 +88,7 @@
         },
         {
           "_template": "ge_small_article",
-          "title": "GE Small Article Title",
+          "title": "GE Small Article Title3",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
             "src": "../static/ge-small-article.jpg",
@@ -101,7 +101,7 @@
         },
         {
           "_template": "ge_fact_card_variant_2",
-          "title": "GE Fact Card Title",
+          "title": "GE Fact Card Title1",
           "description": "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
           "link": {
             "link": "Learn More..",
@@ -111,7 +111,7 @@
         },
         {
           "_template": "ge_fact_card_variant_2",
-          "title": "GE Fact Card Title",
+          "title": "GE Fact Card Title2",
           "description": "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
           "link": {
             "link": "Learn More..",
@@ -121,7 +121,7 @@
         },
         {
           "_template": "ge_fact_card_variant_2",
-          "title": "GE Fact Card Title",
+          "title": "GE Fact Card Title3",
           "description": "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse no mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
           "link": {
             "link": "Learn More..",
