@@ -36,7 +36,9 @@ export const GESmallArticle = ({ data, index }) => {
         className={styles.ctaContainer}>
           <div className={styles.cardContent}>
             <div className="card-title">
-            <h6><InlineTextarea name="title" /></h6>
+            <h6><InlineTextarea name="title" 
+            
+            /></h6>
             </div>
             <div className="cardDescription">
               <p className={`${styles.description} body-2`} >
