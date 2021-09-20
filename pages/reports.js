@@ -15,7 +15,7 @@ const Reports = props => {
         <section>
         
         {reports.length > 1 && reports.map(report => (
-          <Link key={ report.data.id } href={{ pathname: `/reports/${report.fileName}` }}>
+          <Link key={ report.data.id } href={{ pathname: `/reports/${report.slug}` }}>
             <a>
               <div className="hero_image">
                 <img src={ report.data.hero_image } alt="" />
