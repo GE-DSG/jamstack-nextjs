@@ -30,11 +30,14 @@ export const GESmallArticle = ({ data, index }) => {
                   />
                     </InlineGroup>
        </div>
-        <a href="" target="_self" className="">
-          <div className="card-stack article-content" >
+        <a 
+        href={data.link.href} 
+        target={data.link.target} 
+        className="">
+          <div className={styles.cardContent}>
             <div className="card-title">
               <h4><InlineTextarea name="title" /></h4></div>
-            <div className="card-description">
+            <div className="cardDescription">
               <p className="ge-small-article-para description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p></div>
             <div className="cta-container" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}>
               <div className="call-to-action arrow-right ficon-lg-arrow-right"></div>
@@ -74,6 +77,19 @@ export const IMAGE_FIELDS = [
   },
 ];
 
+export const ACTION_FIELDS = [
+  {
+    name: "herf",
+    label: "Hyperlink",
+    component: "text",
+  },
+  {
+    name: "target",
+    label: "Target",
+    component: "text",
+  },
+]
+
 export const gesmallarticle_template = {
   label: "GE Small Article",
   defaultItem: {
@@ -83,6 +99,10 @@ export const gesmallarticle_template = {
       src: "../static/ge-small-article.jpg",
       alt: "General Electric",
     },
+    link:{
+      herf:"http://ge.com/",
+      target:"_self",
+    }
   },
   fields: [
     {
@@ -100,6 +120,13 @@ export const gesmallarticle_template = {
       label: "Image",
       component: "group",
       fields: IMAGE_FIELDS,
+    },
+
+    {
+      name: "link",
+      label: "Hyperlink",
+      component: "group",
+      fields: ACTION_FIELDS,
     },
   ],
 };
