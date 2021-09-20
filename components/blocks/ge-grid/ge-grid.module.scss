@@ -26,16 +26,23 @@
     height: auto;
 }
 
-  @media (min-width: 992px) {
-    div.wp-block-custom-ge-small-article {
-      float: left;
-      padding-left: 10px;
-      padding-right: 10px;
+  @media (max-width: 991px) {
+    .gridItems {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 0 30px;
     }
-  }
-
-  @media (min-width: 1200px) {
 
   }
+
+  @media (max-width: 767px) {
+    .gridItems {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 0 0;
+    }
+
+  }
+
 
 }

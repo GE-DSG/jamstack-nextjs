@@ -4,15 +4,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  // padding: 0 20px 0 0;
-
 
   .imageContainer {
     width: 100%;
-    height: 216px;
+    max-height: 300px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     img {
       width: 100%;
@@ -20,7 +18,10 @@
     }
   }
 
-
+  h6 {
+    color: var(--ge-primary-blue);
+    text-align: left;
+  }
 
   a:link,
   a:visited,
@@ -41,7 +42,15 @@
     display: flex;
   }
 
-  .card-feature {
+  .cardContent {
+    position: relative;
+    top: -60px;
+    background-color: var(--ge-grey);
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  .cardFeature {
     width: 31.25%;
     height: 170px;
     float: left;
@@ -49,14 +58,6 @@
 
   .cardStack {
     width: calc(100% - 66px);
-  }
-
-  .card-stack.article-content {
-    margin-top: -20px;
-  }
-
-  h6.title {
-    margin-top: 2px;
   }
 
   .description {
@@ -68,14 +69,23 @@
     -webkit-box-orient: vertical;
   }
 
-  .call-to-action {
+  .callToAction {
     float: left;
     width: 48px;
     height: 19px;
-    margin-top: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
   }
 
-  .cardContent {
+  .ctaContainer:hover {
+    .callToAction {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+
+  .ctaContainer {
     .ficon-lg-arrow-right {
       opacity: 0;
       transition: opacity 0.2s ease-out;
@@ -90,152 +100,15 @@
     }
   }
 
-  @media (min-width: 576px) {}
 
-  @media screen and (min-width: 768px) and (hover: none) {
-    .wp-block-custom-ge-small-article {
-      .card-stack {
-        .ficon-lg-arrow-right {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    position: relative;
-    width: 100%;
-    height: fit-content;
-
-    div.card-container {
-      width: 100%;
-      height: 170px;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    div.card-feature {
-      width: 35.67708333333333%;
-      height: 170px;
-      float: left;
-    }
-
-    h6.title {
-      margin-top: 2px;
-    }
-
-  }
-
-  @media (min-width: 992px) {
-    position: relative;
-    margin-bottom: 64px;
-
-
-    .card_wrapper .article-media {
-      flex: 0 0 100%;
-      max-width: 100%;
-      padding: 0px;
-    }
-
-    div.card-container {
-      width: 100%;
-      //   height                : 658px;
-      margin: 0;
-      padding: 0;
-      display: block;
-    }
-
-    div.card-feature {
-      width: 100%;
-      height: 200px;
-    }
-
-    h6.title {
-      margin-top: 0;
-      letter-spacing: 2px;
-    }
-
-  }
-
-  @media (min-width: 1200px) {
-
-    h6.title {
-      margin-top: 0;
-    }
-
-  }
-
-
-  @media (max-width: 991) {
-    h6.title {
-      letter-spacing: 1.57px;
-    }
-
-    .media-bg {
-      display: none;
-    }
-  }
 
   @media screen and (max-width: 991px) {
-
-    div.card-stack {
-      width: 100%;
-    }
-
-    .article-media {
-      height: auto;
-    }
-
-    p.description {
-      margin-top: 15px;
-      margin-bottom: 17px;
-    }
-
-    h6.title {
-      position: relative;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-
-    .card-container.card_wrapper a.col-md-7 {
-      padding-right: 0;
-    }
-
-    .card-stack.article-content {
-      padding-left: 10px;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .call-to-action {
-      float: left;
-      width: 48px;
-      height: 19px;
-      margin-top: 0px;
-    }
-
-    .media-bg {
-      display: none;
-    }
-
-    div.card-feature {
-      min-width: 175px;
-    }
-
-    .card-stack {
-      .ficon-lg-arrow-right {
-        opacity: 1;
-      }
-    }
-  }
-
-  @media (hover: none) {
-    .card-stack {
-      .ficon-lg-arrow-right {
-        opacity: 1;
+    @media (hover: none) {
+      .ctaContainer {
+        .ficon-lg-arrow-right {
+          opacity: 1;
+          transition: opacity 0.2s ease-out;
+        }
       }
     }
   }

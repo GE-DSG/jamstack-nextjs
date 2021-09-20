@@ -20,7 +20,7 @@ export const GESmallArticle = ({ data, index }) => {
       <div className={styles.imageContainer} >       
         <InlineGroup
                     name="image"
-                    focusRing={{ offset: 0, borderRadius: 0 }}
+                    focusRing={{ offset: 10, borderRadius: 0 }}
                     insetControls={true}
                     fields={IMAGE_FIELDS}
                   >
@@ -31,17 +31,19 @@ export const GESmallArticle = ({ data, index }) => {
                     </InlineGroup>
        </div>
         <a 
-        href={data.link.href} 
+        href={data.link.herf} 
         target={data.link.target} 
-        className="">
+        className={styles.ctaContainer}>
           <div className={styles.cardContent}>
             <div className="card-title">
-              <h4><InlineTextarea name="title" /></h4></div>
-            <div className="cardDescription">
-              <p className="ge-small-article-para description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p></div>
-            <div className="cta-container" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}>
-              <div className="call-to-action arrow-right ficon-lg-arrow-right"></div>
+            <h6><InlineTextarea name="title" /></h6>
             </div>
+            <div className="cardDescription">
+              <p className={`${styles.description} body-2`} >
+                <InlineTextarea name="description" /></p></div>
+           
+              <div className={`${styles.callToAction} arrow-right ficon-lg-arrow-right`}></div>
+            
           </div>
         </a>
       
@@ -100,8 +102,8 @@ export const gesmallarticle_template = {
       alt: "General Electric",
     },
     link:{
-      herf:"http://ge.com/",
-      target:"_self",
+      herf:"https://www.ge.com/",
+      target:"_blank",
     }
   },
   fields: [
