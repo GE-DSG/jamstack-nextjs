@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import Layout from "../../components/layout/Layout";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import styles from "./blogs.module.scss"
 
 
 const BlogTemplate = ({ blog }) => {
@@ -34,7 +35,9 @@ const BlogTemplate = ({ blog }) => {
 
   return (
    <Layout>
-      <section>
+      <section className={styles.blogs} >
+        <div className="container-fluid-custom">
+        <div className={`row ${styles.card}`}>
         <div className="hero_image">
           <img src={ data.hero_image } alt="" />
         </div>
@@ -45,15 +48,22 @@ const BlogTemplate = ({ blog }) => {
           { data.body }
           </p>
         </div>
+        </div>
 
-      </section>
-      <div>
+
+        </div>
+        <div className="row">
+        <div>
         <Link href="/blogs">
           <a>
             <h6>View all blog posts</h6>
           </a>
         </Link>
       </div>
+
+        </div>
+      </section>
+ 
     </Layout>
   )
 };
