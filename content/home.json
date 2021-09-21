@@ -55,7 +55,7 @@
         "target": "_blank"
       },
       "image": {
-        "src": "../static/ge-left-right.jpg",
+        "src": "/static/about_ge.jpg",
         "alt": "Photo from Unsplash"
       }
     },
