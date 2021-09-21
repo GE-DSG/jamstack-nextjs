@@ -2,8 +2,8 @@ import App from 'next/app'
 import '../styles/css/ge_unified.style.css'
 import '../styles/css/iconography.css'
 import '../styles/css/styles.css'
-
 import '../styles/css/social_media_links.theme.css'
+import { useRouter } from 'next/router'
 
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
@@ -26,44 +26,26 @@ export default class Site extends App {
       baseBranch: process.env.BASE_BRANCH, // e.g. 'master' or 'main' on newer repos
     })
 
-    /**
-     * 1. Create the TinaCMS instance
-     */
     this.cms = new TinaCMS({
       enabled: !!props.pageProps.preview,
       apis: {
-        /**
-         * 2. Register the GithubClient
-         */
         github,
       },
-      /**
-       * 3. Register the Media Store
-       */
       media: new GithubMediaStore(github),
-      /**
-       * 4. Use the Sidebar and Toolbar
-       */
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     })
   }
-
+ 
   render() {
     const { Component, pageProps } = this.props
     return (
-      /**
-       * 5. Wrap the page Component with the Tina and Github providers
-       */
       <TinaProvider cms={this.cms}>
         <TinacmsGithubProvider
           onLogin={onLogin}
           onLogout={onLogout}
           error={pageProps.error}
         >
-          {/**
-           * 6. Add a button for entering Preview/Edit Mode
-           */}
           <EditLink cms={this.cms} />
           <Component {...pageProps} />
         </TinacmsGithubProvider>
@@ -98,9 +80,16 @@ export interface EditLinkProps {
 }
 
 export const EditLink = ({ cms }: EditLinkProps) => {
-  return (
-    <button onClick={() => cms.toggle()}>
-      {cms.enabled ? 'Exit Edit Mode' : 'Edit This Site'}
-    </button>
-  )
+  const router = useRouter()
+  if(cms.enabled) {
+    return (
+      <button onClick={() => cms.toggle()}>
+        {cms.enabled ? 'Exit Edit Mode' : 'Edit This Site'}
+      </button>
+    )
+  } else {
+    return (
+      " "
+    )
+  }
 }
