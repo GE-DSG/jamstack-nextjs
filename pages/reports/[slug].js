@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import fs from 'fs';
+import styles from "./reports.module.scss"
+import layoutStyles from "/components/layout/layout.module.scss"
 
 const ReportTemplate = props => {  
 
@@ -12,26 +14,34 @@ const ReportTemplate = props => {
 
   return (
    <Layout>
-      <section>        
-        <div className="hero_image">
-          <img src={ data.hero_image } alt="" />
+      <section className={styles.reports} >
+        <div className="container-fluid-custom">
+          <div className={`row ${styles.card}`}>
+            <div className="hero_image">
+              <img src={ data.hero_image } alt="" />
+            </div>
+            <div className="blog__info">
+              <h2>{ data.title }</h2>
+              <h3>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
+              <h6>{ data.author }</h6>
+              <p>
+              { data.body }
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="blog__info">
-          <h2>{ data.title }</h2>
-          <div>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</div>
-          <p>
-          { data.body }
-          </p>
-        </div>      
+        <div className="row">
+          <div className={`${layoutStyles.viewAllItems}`}>
+            <Link href="/reports">
+              <a>
+                <h6>View all reports</h6>
+              </a>
+            </Link>
+          </div>
+        </div>
       </section>
-      <div>
-        <Link href="/reports">
-          <a>
-            <h6>View all reports</h6>
-          </a>
-        </Link>
-      </div>
     </Layout>
+  
   )
 };
 
