@@ -26,11 +26,6 @@
           "type": "button",
           "icon": "true",
           "href": "https://www.ge.com/"
-        },
-        {
-          "label": "Learn More",
-          "type": "link",
-          "href": "https://www.ge.com/news/"
         }
       ],
       "style": {
@@ -38,9 +33,17 @@
       }
     },
     {
+      "_template": "ge_spacer",
+      "height": "100"
+    },
+    {
       "_template": "ge_titled_paragraph",
       "title": "OUR MISSION",
       "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet."
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "100"
     },
     {
       "_template": "ge_content_left_right_image",
@@ -55,6 +58,10 @@
         "src": "../static/ge-left-right.jpg",
         "alt": "Photo from Unsplash"
       }
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "100"
     },
     {
       "_template": "ge_grid",
