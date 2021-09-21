@@ -7,7 +7,8 @@ import {
   InlineGroup,
 } from "react-tinacms-inline";
 
-export default GESpacer = ({data, index}) =>{
+
+export const GESpacer = ({data, index}) =>{
 return (
     <BlocksControls
     index={index}
@@ -17,13 +18,13 @@ return (
 
 
    <section className={ styles.GESpacer }>
-      <div className={styles.imageContainer} style={{ height: `${data.height}"`, textAlign: "left" }} >    
-    <h1>Hi I am spacer</h1>
+      <div className={styles.imageContainer} style={{height:`${data.height}px"`, textAlign: "left" }} >    
+    {/* <h1>Hi I am spacer</h1> */}
 
     <InlineGroup name="height"  
-     focusRing={{ offset:10, borderRadius: 0 }}
+     focusRing={{ offset:0, borderRadius: 0, height:`${data.height}px"`}}
       insetControls={true}
-                    //   fields={ACTION_FIELDS}
+      fields={HEIGHT_FIELDS}
                      >    
      </InlineGroup>
 
@@ -38,18 +39,25 @@ return (
 
 export function GESpacerBlock({ data, index }) {
     return (
-      <BlocksControls
-        index={index}
-        focusRing={{ offset: -12 }}
-        insetControls={true}
-      >
+    //   <BlocksControls
+    //     index={index}
+    //     focusRing={{ offset: -12 }}
+    //     insetControls={true}
+    //   > </BlocksControls>
         <GESpacer data={data} />
-      </BlocksControls>
+     
     );
   }
 
 
-
+  export const HEIGHT_FIELDS = [
+    {
+      name: "height",
+      label: "Spacer Height",
+      component: "text",
+    },
+    ];
+  
 
 
 export const gespacer_template = { 
@@ -67,9 +75,9 @@ export const gespacer_template = {
         {
           name: "height",
           label: "Height",
-          component: "text",
-        // component: "group",
-        //   fields: IMAGE_FIELDS,
+        //   component: "text",
+        component: "group",
+          fields: HEIGHT_FIELDS,
         },
         
       ],
