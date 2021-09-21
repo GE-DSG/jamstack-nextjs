@@ -10,31 +10,15 @@ import {
 
 export const GESpacer = ({data, index}) =>{
 return (
-//     <BlocksControls
-//     index={index}
-//     focusRing={{ offset: 10 }}
-//     insetControls={true}
-//   >
-//   </BlocksControls>
-
-   <section className={ styles.GESpacer } style={{ height:`${data.height}px` }} >
-          
-    {/* <h1>Hi I am spacer</h1> */}
-
-    <InlineGroup
-     focusRing={{ offset:10, borderRadius:10}}
+   <section className={ styles.GESpacer } style={{ height:`${data.height}px` }} >          
+     <InlineTextarea
+     focusRing={{ offset:0, borderRadius:10}}
       insetControls={true}
       fields={HEIGHT_FIELDS}
-    >    
-    {/* <div className={ styles.GESpacer } style={{ height:`${data.height}px`, textAlign: "left" }} ></div> */}
-     </InlineGroup>
-
-
+    >       
+     </InlineTextarea>
     </section>
-  
-
-)
-
+    )
 }
 
 
@@ -42,7 +26,7 @@ export function GESpacerBlock({ data, index }) {
     return (
       <BlocksControls 
         index={index}
-        focusRing={{ offset: -12 }}
+        focusRing={{ offset: 0 , borderRadius:10}}
         insetControls={false}
         
       > <GESpacer data={data} />
