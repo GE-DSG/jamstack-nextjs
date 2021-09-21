@@ -29,7 +29,7 @@ const User = ({ file, preview }) => {
   /*
    ** Register a JSON Tina Form
    */
-  const [data, form] = useGithubJsonForm(formOptions)
+  const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
 
   useGithubToolbarPlugins()
@@ -48,6 +48,7 @@ const User = ({ file, preview }) => {
       </InlineForm>
       {showModal && (
         <TinaModal
+          data={data}
           close={() => {
             setShowModal(false);
           }}
@@ -61,7 +62,7 @@ export const EditLink = () => {
   const cms = useCMS()  
   if(cms.enabled) {
     return (
-      " "
+      null
     )
   } else {
     return (
@@ -83,7 +84,7 @@ export const EditLink = () => {
     const file = (
       await getGithubPreviewProps({
         ...previewData,
-        fileRelativePath: "content/home.json",
+        fileRelativePath: "content/user.json",
         parse: parseJson,
       })
     ).props
@@ -102,8 +103,8 @@ export const EditLink = () => {
       error: null,
       preview: false,
       file: {
-        fileRelativePath: "content/home.json",
-        data: (await import("../content/home.json")).default,
+        fileRelativePath: "content/user.json",
+        data: (await import("../content/user.json")).default,
       },
       ...global,
     },
