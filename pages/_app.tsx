@@ -89,7 +89,7 @@ export const EditLink = ({ cms }: EditLinkProps) => {
     )
   } else {
     return (
-      " "
+      null
     )
   }
 }
