@@ -20,10 +20,10 @@ export const PAGE_BLOCKS = {
     Component: GEHeroPrimaryBlock,
     template: geheroprimary_template,
   },
-  testimonial: {
-    Component: TestimonialBlock,
-    template: testimonial_template,
-  },
+  // testimonial: {
+  //   Component: TestimonialBlock,
+  //   template: testimonial_template,
+  // },
   ge_grid: {
     Component: GEGridBlock,
     template: gegrid_template,
