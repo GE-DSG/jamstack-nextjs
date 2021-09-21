@@ -89,7 +89,10 @@ export const IMAGE_FIELDS = [
   {
     name: "src",
     label: "Image Source",
-    component: "text",
+    component: "image",
+    parse: media => `/static/${media.filename}`,
+    uploadDir: () => '/public/static/',
+    previewSrc: fullSrc => fullSrc.replace('/public', '')
   },
   {
     name: "alt",
