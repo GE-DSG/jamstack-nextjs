@@ -1,23 +1,34 @@
 import Link from 'next/link'
 import Layout from "/components/layout/Layout"
 import BlogListItem from '/components/layout/BlogListItem'
+import styles from "./page.module.scss"
 
 
 export default function Blogs({ allBlogs }) {
-
-
   return (
     <Layout>
-      <div className="blog_posts">
+      <div className={`${styles.blogs} blog_posts`}>
+      <div className="container-fluid-custom">
+      <div className={`row pb-3`}>
+      <div className="col-12 pl-0">
         <h2>Blog posts</h2>
+        </div>
+        <div className="col-12 pl-0">
         <p>Each post maintained as an individual JSON file in (<i>/public/blogs/</i>) folder</p>
+        </div>
+        </div>
+        </div>
+    <div className="container-fluid-custom">
+      <div className={`row pb-5`}>
         <section>
-          <ul className="list">
+          <ul className={styles.list}>
             {allBlogs.length > 1 && allBlogs.map(post => (
               <BlogListItem post={post} />
             ))}
           </ul>
         </section>
+        </div>
+        </div>
       </div>
     </Layout>
   )

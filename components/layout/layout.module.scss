@@ -1,0 +1,33 @@
+
+
+.list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    .card {
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px 1px rgb(82 82 82 / 15%);
+        border: none;
+        border-radius: 0;
+        background-color: #fff;
+    }
+
+    .heroImage {
+        float: left;
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}

@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
 import { LayoutStyled, LayoutBodyStyled } from "./styles"
+import styles from "./layout.module.scss"
 
 const layoutStyle = {
   display: "flex",
