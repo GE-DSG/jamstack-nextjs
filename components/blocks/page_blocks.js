@@ -4,6 +4,8 @@ import { TestimonialBlock, testimonial_template } from "./testimonial/testimonia
 import { GETitledParagraphBlock, getitledparagraph_template } from "./ge-titled-paragraph/ge-titled-paragraph";
 import { GEContentLeftRightImageBlock, GEContentLeftRightImage_template } from "./ge-content-left-right-image/ge-content-left-right-image"
 import { GEGridBlock, gegrid_template } from "./ge-grid/ge-grid";
+import { GESpacerBlock, gespacer_template } from "./ge-spacer/ge-spacer";
+
 
 export const PAGE_BLOCKS = {
   ge_content_left_right_image: {
@@ -25,5 +27,10 @@ export const PAGE_BLOCKS = {
   ge_grid: {
     Component: GEGridBlock,
     template: gegrid_template,
+  },
+
+  ge_spacer: {
+    Component: GESpacerBlock,
+    template: gespacer_template,
   },
 };
