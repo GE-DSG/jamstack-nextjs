@@ -17,16 +17,16 @@ return (
 //   >
 //   </BlocksControls>
 
-   <section >
+   <section className={ styles.GESpacer } style={{ height:`${data.height}px` }} >
           
     {/* <h1>Hi I am spacer</h1> */}
 
-    <InlineGroup name="height"  
-     focusRing={{ offset:10, borderRadius: 0}}
+    <InlineGroup
+     focusRing={{ offset:10, borderRadius:10}}
       insetControls={true}
       fields={HEIGHT_FIELDS}
     >    
-    <div className={ styles.GESpacer } style={{height:`${data.height}px`, textAlign: "left" }} ></div>
+    {/* <div className={ styles.GESpacer } style={{ height:`${data.height}px`, textAlign: "left" }} ></div> */}
      </InlineGroup>
 
 
@@ -40,10 +40,11 @@ return (
 
 export function GESpacerBlock({ data, index }) {
     return (
-      <BlocksControls name="height" 
+      <BlocksControls 
         index={index}
         focusRing={{ offset: -12 }}
-        insetControls={true}
+        insetControls={false}
+        
       > <GESpacer data={data} />
       </BlocksControls>
         
@@ -62,29 +63,11 @@ export function GESpacerBlock({ data, index }) {
 
 
 export const gespacer_template = { 
-    label: "GE Spacer",    
+    label: "GE Spacer", 
     defaultItem: {
     height: "100",
-    },
+    },    
     fields: HEIGHT_FIELDS,
-    //  {
-    //   title: "GE Small Article Title",
-    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-    //     image: {
-    //     src: "../static/ge-small-article.jpg",
-    //     alt: "General Electric",
-    //   },       
-
-    // fields: [
-    //     {
-    //       name: "height",
-    //       label: "Height",
-    //     //   component: "text",
-    //     component: "group",
-    //       fields: HEIGHT_FIELDS,
-    //     },
-        
-    //   ],
 }
 
 
