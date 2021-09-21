@@ -3,7 +3,7 @@ import Layout from "../../components/layout/Layout";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from "./blogs.module.scss"
-
+import layoutStyles from "/components/layout/layout.module.scss"
 
 const BlogTemplate = ({ blog }) => {
 
@@ -37,33 +37,30 @@ const BlogTemplate = ({ blog }) => {
    <Layout>
       <section className={styles.blogs} >
         <div className="container-fluid-custom">
-        <div className={`row ${styles.card}`}>
-        <div className="hero_image">
-          <img src={ data.hero_image } alt="" />
-        </div>
-        <div className="blog__info">
-          <h2>{ data.title }</h2>
-          <h3>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
-          <p>
-          { data.body }
-          </p>
-        </div>
-        </div>
-
-
+          <div className={`row ${styles.card}`}>
+            <div className="hero_image">
+              <img src={ data.hero_image } alt="" />
+            </div>
+            <div className="blog__info">
+              <h2>{ data.title }</h2>
+              <h3>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
+              <h6>{ data.author }</h6>
+              <p>
+              { data.body }
+              </p>
+            </div>
+          </div>
         </div>
         <div className="row">
-        <div>
-        <Link href="/blogs">
-          <a>
-            <h6>View all blog posts</h6>
-          </a>
-        </Link>
-      </div>
-
+          <div className={`${layoutStyles.viewAllItems}`}>
+            <Link href="/blogs">
+              <a>
+                <h6>View all blog posts</h6>
+              </a>
+            </Link>
+          </div>
         </div>
       </section>
- 
     </Layout>
   )
 };

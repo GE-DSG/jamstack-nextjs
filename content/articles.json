@@ -3,6 +3,7 @@
     "id": 1,
     "title": "Article title 1",
     "description": "Article 1 What the world needs now is people who see things a little bit differently. Seeing how healthcare can be more precise, energy can be modfsgsdre sustainable, and flight can be more efficientsdfgsd. -another test.",
+    "hero_image": "../static/mahkeo-monkey.jpg",
     "published_at": "2021-08-27T18:45:37Z",
     "author": "John Smith"
   },
@@ -10,6 +11,7 @@
     "id": 2,
     "title": "Article title 2",
     "description": "Article 2 What the world needs now is people who see things a little bit differently. Seeing how healthcare can be more precise, energy can be modfsgsdre sustainable, and flight can be more efficientsdfgsd. -another test.",
+    "hero_image": "../static/norris-niman-iceland.jpg",
     "published_at": "2021-08-27T18:45:37Z",
     "author": "Jonathan Walter"
   },
@@ -17,6 +19,7 @@
     "id": 3,
     "title": "GE Reverse Stock Split",
     "description": "GE Reverse Stock Split Frequently Asked Questions As of August 2, 2021 On July 30, 2021, GE announced that it completed the 1-for-8 reverse stock split, a corresponding proportionate reduction in the number of shares of GE common stock, authorized for issuance under the certificate of incorporation, and reduction in the par value of GE common stock to $0.01 per share. The Reverse Stock Split was previously approved by GE shareholders at the annual shareholders meeting on May 4, 2021.",
+    "hero_image": "../static/john-o-nolan-mauritius.jpg",
     "published_at": "2021-08-27T18:45:37Z",
     "author": "Gibson Dunn"
   }  
