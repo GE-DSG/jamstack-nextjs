@@ -141,6 +141,10 @@
           "type": "link"
         }
       ]
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "100"
     }
   ]
 }
