@@ -38,7 +38,7 @@ const News = props => {
                           </div>
 
                           <div className="news__info col-8">
-                            <h2>{ article.title }</h2>
+                            <h2 className={styles.title}>{ article.title }</h2>
                             <h6 className="pb-3">{ new Date(article.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                             <p>
                             { article.description }

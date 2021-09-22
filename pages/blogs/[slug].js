@@ -36,21 +36,39 @@ const BlogTemplate = ({ blog }) => {
   return (
    <Layout>
       <section className={styles.blogs} >
+
+      <div className="container-fluid-custom">
+        <div className="row">
+          <div className={`${layoutStyles.back}`}>
+            <Link href="/blogs">
+              <a>
+                <h6> ← Back</h6>
+              </a>
+            </Link>
+          </div>
+          </div>
+        </div>
+
         <div className="container-fluid-custom">
+          <div className={`${styles.card}`} >
           <div className={`row ${styles.card}`}>
-            <div className="hero_image">
-              <img src={ data.hero_image } alt="" />
+            <div className="pt-3 pb-3 pl-3 pr-3">
+            <div className={styles.heroImage}>
+              <img src={ data.hero_image } alt="general electric" />
             </div>
             <div className="blog__info">
               <h2>{ data.title }</h2>
-              <h3>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
-              <h6>{ data.author }</h6>
+              <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
+              <p>{ data.author }</p>
               <p>
               { data.body }
               </p>
             </div>
+            </div>
+          </div>
           </div>
         </div>
+        <div className="container-fluid-custom">
         <div className="row">
           <div className={`${layoutStyles.viewAllItems}`}>
             <Link href="/blogs">
@@ -58,6 +76,7 @@ const BlogTemplate = ({ blog }) => {
                 <h6>View all blog posts</h6>
               </a>
             </Link>
+          </div>
           </div>
         </div>
       </section>

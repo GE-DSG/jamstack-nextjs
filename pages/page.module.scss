@@ -4,11 +4,19 @@
     .list {
         padding: 0;
     }
-
-  
+ 
     .hero_image {
-        width: 300px;
+        width: 100%;
         height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .title {
+        color: #1e2f46;
     }
 
 }

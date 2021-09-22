@@ -28,31 +28,50 @@ const ArticleTemplate = ({ article }) => {
   return (
    <Layout>
       <section className={styles.articles} >
+
+      <div className="container-fluid-custom">
+        <div className="row">
+          <div className={`${layoutStyles.back}`}>
+            <Link href="/news">
+              <a>
+                <h6> ← Back</h6>
+              </a>
+            </Link>
+          </div>
+          </div>
+        </div>
+
         <div className="container-fluid-custom">
           <div className={`row ${styles.card}`}>
-            <div className="hero_image">
-              <img src={ article.hero_image } alt="" />
+          <div className="pt-3 pb-3 pl-3 pr-3">
+            <div className={styles.heroImage}>
+              <img src={ article.hero_image } alt="general electric" />
             </div>
             <div className="blog__info">
               <h2>{ article.title }</h2>
-              <h3>{ new Date(article.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
-              <h6>{ article.author }</h6>
+              <h6>{ new Date(article.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
+              <p>{ article.author }</p>
               <p>
               { article.description }
               </p>
             </div>
+            </div>
           </div>
         </div>
+
+       <div className="container-fluid-custom">
         <div className="row">
           <div className={`${layoutStyles.viewAllItems}`}>
             <Link href="/news">
               <a>
-                <h6>View all articles</h6>
+                <h6>View all blog posts</h6>
               </a>
             </Link>
           </div>
+          </div>
         </div>
       </section>
+
     </Layout>  
   )
 };

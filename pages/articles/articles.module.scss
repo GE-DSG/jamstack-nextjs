@@ -1,8 +1,29 @@
 .articles {
     padding: 30px 0;
  
- .list{
-     padding: 0;
- }
+    .list{
+        padding: 0;
+    }
+   
+    .title {
+      color: #1e2f46
+    }
+    .card {
+       margin-bottom: 20px;
+       -webkit-box-shadow: 0 2px 10px 1px rgb(82 82 82 / 15%);
+       box-shadow: 0 2px 10px 1px rgb(82 82 82 / 15%);
+       border: none;
+       border-radius: 0;
+       background-color: #fff;
+    }
+    .heroImage {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+        img {
+           width: 100%;
+           height: auto;
+       }
+    }
 
 }

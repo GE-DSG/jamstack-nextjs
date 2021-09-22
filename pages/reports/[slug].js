@@ -15,18 +15,33 @@ const ReportTemplate = props => {
   return (
    <Layout>
       <section className={styles.reports} >
+
+      <div className="container-fluid-custom">
+        <div className="row">
+          <div className={`${layoutStyles.back}`}>
+            <Link href="/reports">
+              <a>
+                <h6> ← Back</h6>
+              </a>
+            </Link>
+          </div>
+          </div>
+        </div>
+
         <div className="container-fluid-custom">
           <div className={`row ${styles.card}`}>
+          <div className="pt-3 pb-3 pl-3 pr-3">
             <div className="hero_image">
-              <img src={ data.hero_image } alt="" />
+              <img src={ data.hero_image } alt="general electric" />
             </div>
             <div className="blog__info">
               <h2>{ data.title }</h2>
-              <h3>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h3>
-              <h6>{ data.author }</h6>
+              <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
+              <p>{ data.author }</p>
               <p>
               { data.body }
               </p>
+            </div>
             </div>
           </div>
         </div>
