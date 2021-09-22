@@ -4,7 +4,10 @@
     .list {
         padding: 0;
     }
- 
+ a,
+    a:link {
+        color: #212529;
+    }
     .hero_image {
         width: 100%;
         height: auto;

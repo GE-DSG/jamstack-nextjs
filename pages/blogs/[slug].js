@@ -35,8 +35,7 @@ const BlogTemplate = ({ blog }) => {
 
   return (
    <Layout>
-      <section className={styles.blogs} >
-
+    <section className={styles.blogs} >
       <div className="container-fluid-custom">
         <div className="row">
           <div className={`${layoutStyles.back}`}>
