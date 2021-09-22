@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
+    "fast-glob": "^3.2.7",
     "next": "10.2.0",
     "next-fonts": "^1.5.1",
     "next-tinacms-github": "^0.41.0",

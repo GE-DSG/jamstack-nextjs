@@ -1,7 +1,7 @@
-import React,{useState,useEffect} from 'react';
+//import React,{useState,useEffect} from 'react';
 import Layout from "../../components/layout/Layout";
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+//import { useRouter } from 'next/router';
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import fs from 'fs';
@@ -10,7 +10,7 @@ import layoutStyles from "/components/layout/layout.module.scss"
 
 const ReportTemplate = props => {  
 
-  const data = props.data;
+  const data = props.file.data;
 
   return (
    <Layout>
@@ -31,7 +31,7 @@ const ReportTemplate = props => {
         <div className="container-fluid-custom">
           <div className={`row ${styles.card}`}>
           <div className="pt-3 pb-3 pl-3 pr-3">
-            <div className={styles.heroImage}>
+            <div className="hero_image">
               <img src={ data.hero_image } alt="general electric" />
             </div>
             <div className="blog__info">
@@ -45,16 +45,17 @@ const ReportTemplate = props => {
             </div>
           </div>
         </div>
+        
         <div className="container-fluid-custom">
-        <div className="row">
-          <div className={`${layoutStyles.viewAllItems}`}>
-            <Link href="/reports">
-              <a>
-                <h6>View all reports</h6>
-              </a>
-            </Link>
+          <div className="row">
+            <div className={`${layoutStyles.viewAllItems}`}>
+              <Link href="/reports">
+                <a>
+                  <h6>View all reports</h6>
+                </a>
+              </Link>
+            </div>
           </div>
-        </div>
         </div>
       </section>
     </Layout>
@@ -94,8 +95,8 @@ export const getStaticProps = async function ({ preview, previewData, params }) 
       preview: false,
       file: {
         fileRelativePath: `/content/reports/${ slug }.json`,        
-      },
-      data: (await import(`/content/reports/${ slug }.json`)).default,
+        data: (await import(`/content/reports/${ slug }.json`)).default,
+      },      
       ...global,
     },
   }
@@ -116,5 +117,6 @@ export const getStaticPaths = async ()=> {
     fallback:false
   }
 }
+
 
 export default ReportTemplate

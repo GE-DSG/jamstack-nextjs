@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import Layout from "/components/layout/Layout"
-import getReports from "../utils/getJsonRecords"
+import getJsonRecords from "../utils/getJsonRecords"
 import styles from "./page.module.scss"
 import layoutStyles from "/components/layout/layout.module.scss"
 
 const Reports = props => {
-  const reports = props.reports;
+  const data = props.records;
 
   return (
     <Layout>
@@ -25,12 +25,12 @@ const Reports = props => {
         <div className="container-fluid-custom">
           <div className={`row pb-5`}>
             <section>
-              {reports.length > 1 && reports.map(report => (
+              {data.length > 1 && data.map(report => (
                 <ul className={`${layoutStyles.list} list`}>
                   <Link
                     key={ report.data.id }
                     href={{ pathname: `/reports/${report.slug}` }}
-                  >      
+                  > 
                     <a>
                       <li>
                         <div className={`row pl-2 pr-2 pt-3 pb-3 ${layoutStyles.card}`}>
@@ -51,7 +51,7 @@ const Reports = props => {
                     </a>
                   </Link>
                 </ul>                  
-              ))}            
+              ))}
             </section>
           </div>
         </div>
@@ -65,24 +65,25 @@ const Reports = props => {
 /**
  * Fetch data with getStaticProps based on 'preview' mode
  */
-export const getStaticProps = async function ({ preview, previewData }) {
-  const reports = await getReports(preview, previewData, "content/reports")
+export const getStaticProps = async function ({ preview, previewData }) {  
   const global = await getGlobalStaticProps(preview, previewData)
-
+  const records = await getJsonRecords("content/reports")
+  
   if (preview) {
     // get data from github
     const file = (
       await getGithubPreviewProps({
         ...previewData,
+        fileRelativePath: "content/user.json",
+        parse: parseJson,
       })
     ).props
 
     return {
       props: {
         ...file,
-        ...global,
-        preview,
-        reports,        
+        ...global,        
+        records,
       },
     }
   }
@@ -93,7 +94,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
       error: null,
       preview: false,
       ...global,
-      reports,
+      records,
     },
   }
 }
