@@ -1,3 +1,6 @@
+
+import * as React from "react";
+import { Section } from "../../utilities/section";
 import styles from './ge-spacer.module.scss';
 
 import {
@@ -10,6 +13,7 @@ import {
 
 export const GESpacer = ({data, index}) =>{
 return (
+  <Section variant={data.style.color} data-section-id="data-section-id" > 
    <section className={ styles.GESpacer } style={{ height:`${data.height}px` }} >          
      <InlineTextarea
      focusRing={{ offset:0, borderRadius:10}}
@@ -18,6 +22,7 @@ return (
     >       
      </InlineTextarea>
     </section>
+    </Section>
     )
 }
 
@@ -30,8 +35,7 @@ export function GESpacerBlock({ data, index }) {
         insetControls={false}
         
       > <GESpacer data={data} />
-      </BlocksControls>
-        
+      </BlocksControls>        
     );
   }
 
@@ -50,8 +54,54 @@ export const gespacer_template = {
     label: "GE Spacer", 
     defaultItem: {
     height: "100",
-    },    
-    fields: HEIGHT_FIELDS,
+    style: {
+      color: "light",
+    },
+    },   
+    
+    fields: [
+      HEIGHT_FIELDS,
+
+      {
+        name: "title",
+        label: "Title",
+        component: "text",
+      },
+      {
+        name: "content",
+        label: "Content",
+        component: "textarea",
+      },
+      {
+        name: "style",
+        label: "Style",
+        component: "group",
+        fields: [
+          {
+            name: "color",
+            label: "Color",
+            component: "select",
+            options: [
+              {
+                label: "Default",
+                value: "default",
+              },
+              {
+                label: "Light",
+                value: "light",
+              },
+              {
+                label: "Dark",
+                value: "dark",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+   
+
+    
 }
 
 
