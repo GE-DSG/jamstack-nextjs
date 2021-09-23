@@ -13,7 +13,7 @@ import {
 
 export const GESpacer = ({data, index}) =>{
 return (
-  <Section variant={data.style.color} data-section-id="data-section-id" > 
+  <Section data-section-id="data-section-id" > 
    <section className={styles.GESpacer } style={{ height:`${data.height}px` }} >          
      <InlineTextarea
      focusRing={{ offset:0, borderRadius:10}}
@@ -68,7 +68,7 @@ export const gespacer_template = {
         fields: [
           {
             name: "color",
-            label: "Color",
+            label: "color",
             component: "select",
             options: [
               {
