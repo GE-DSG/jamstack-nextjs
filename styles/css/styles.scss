@@ -1,0 +1,53 @@
+/* overwrite the BlocksMenuOptions width */
+.cHKrny {
+    min-width: 300px !important;
+}
+
+.button-secondary,
+.button-primary {
+    text-transform: uppercase;
+    width: max-content;
+    
+}
+
+.buttonwrapper { 
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;  
+    gap: 10px;
+}
+
+.user {
+    text-align: center;
+    padding: 60px 0;
+    height: 33vh;  
+}
+
+
+.dark {
+    background-color: var(--ge-dark-indigo);
+    color: var(--ge-white);
+    
+    .geTitledParagraph {
+      color: var(--ge-white);
+    }
+    h2 {
+      margin-top: 20px;
+  }
+
+    h5 {
+      color: var(--ge-primary-blue);
+    }
+  }
+
+
+  .light {
+    background-color: #fff;
+    h5 {
+      color: var(--ge-primary-blue);
+    }
+    
+    h2 {
+      margin-top: 20px;
+  }
+  }
