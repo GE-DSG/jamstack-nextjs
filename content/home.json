@@ -44,7 +44,14 @@
       "title": "OUR MISSION",
       "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",
       "theme": {
-        "color": "dark"
+        "color": "light"
+      }
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "100",
+      "theme": {
+        "color": "light"
       }
     },
     {
@@ -59,6 +66,13 @@
       "image": {
         "src": "/static/about_ge.jpg",
         "alt": "Photo from Unsplash"
+      }
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "50",
+      "theme": {
+        "color": "light"
       }
     },
     {
@@ -146,6 +160,13 @@
           "type": "link"
         }
       ],
+      "theme": {
+        "color": "light"
+      }
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "100",
       "theme": {
         "color": "light"
       }
