@@ -34,7 +34,10 @@
     },
     {
       "_template": "ge_spacer",
-      "height": "150"
+      "height": "150",
+      "style": {
+        "color": "dark"
+      }
     },
     {
       "_template": "ge_titled_paragraph",
