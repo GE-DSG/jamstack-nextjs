@@ -13,8 +13,8 @@ import {
 
 export const GESpacer = ({data, index}) =>{
 return (
-  <Section variant={data.style.color} data-section-id="data-section-id" > 
-   <section className={ styles.GESpacer } style={{ height:`${data.height}px` }} >          
+  <Section  data-section-id="data-section-id" > 
+   <section className={styles.GESpacer } style={{ height:`${data.height}px` }} >          
      <InlineTextarea
      focusRing={{ offset:0, borderRadius:10}}
       insetControls={true}
@@ -61,17 +61,7 @@ export const gespacer_template = {
     
     fields: [
        ...HEIGHT_FIELDS,
-      {
-        name: "title",
-        label: "Title",
-        component: "text",
-      },
-      {
-        name: "content",
-        label: "Content",
-        component: "textarea",
-      },
-      {
+       {
         name: "style",
         label: "Style",
         component: "group",
