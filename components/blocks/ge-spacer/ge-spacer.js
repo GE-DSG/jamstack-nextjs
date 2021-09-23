@@ -16,7 +16,7 @@ return (
    <Section variant={data.theme.color}> 
    <div className={styles.GESpacer } style={{ height:`${data.height}px` }} data-section-id="data-section-id">          
      <InlineTextarea
-     focusRing={{ offset:0, borderRadius:10}}
+     focusRing={{ offset:0, borderRadius:0}}
       insetControls={true}
       fields={HEIGHT_FIELDS}
     >       

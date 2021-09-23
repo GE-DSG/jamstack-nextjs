@@ -15,7 +15,7 @@ import styles from './ge-grid.module.scss';
 export const GEGrid = ({ data }) => {
   const theme = React.useContext(ThemeContext);
   return (
-    <Section>
+    <Section variant={data.theme.color}>
     <section id="ge-all-businesses" className={ styles.geGrid }>
       <div className="container-fluid-custom no-gutters pt-5 pb-5 ">
        
@@ -83,6 +83,10 @@ export const gegrid_template = {
         type: "link",
       },
     ],
+
+    theme: {
+      color: "light",
+    },
   },
   
   fields: [
@@ -93,26 +97,22 @@ export const gegrid_template = {
     },
     ...ACTION_FIELDS,
     {
-      name: "style",
-      label: "Style",
+      name: "theme",
+      label: "Theme",
       component: "group",
       fields: [
         {
           name: "color",
           label: "Color",
           component: "select",
-          options: [
+          options: [       
             {
-              label: "Default",
-              value: "default",
+              label: "Light",
+              value: "light",
             },
             {
-              label: "Tint",
-              value: "tint",
-            },
-            {
-              label: "Primary",
-              value: "primary",
+              label: "Dark",
+              value: "dark",
             },
           ],
         },
@@ -130,11 +130,7 @@ export const gegrid_template = {
         ge_fact_card_variant_2: gefactcardvariant2_template,
       },
     },
-    {
-      name: "calltoaction",
-      label: "Call to action",
-      component: "text",
-    },    
+    
   ],
 };
 
