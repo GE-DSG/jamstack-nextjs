@@ -82,7 +82,7 @@ export function GEHeroPrimaryBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: 20 }}
+      focusRing={{ offset: 0 }}
       insetControls={true}
     >
       <GEHeroPrimary data={data} />
@@ -133,12 +133,12 @@ export const geheroprimary_template = {
     },
   },
   fields: [
-    {
-      name: "",
-      label: "Text",
-      component: "group",
-      fields: [...SectionFields],
-    },
+    // {
+    //   name: "",
+    //   label: "Text",
+    //   component: "group",
+    //   fields: [...SectionFields],
+    // },
     {
       name: "image",
       label: "Image",
