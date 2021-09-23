@@ -15,6 +15,8 @@ import { useRouter } from 'next/router'
 
 import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
 
+import styles from "./page.module.scss"
+
 //export default function Home({ file, preview }) {
 const User = ({ file, preview }) => {
   const formOptions = {
@@ -40,7 +42,7 @@ const User = ({ file, preview }) => {
         <Theme>
           <div className="user">
             <h2>Login Page</h2>
-            <section>
+            <section className={ `${styles.loginbutton} container-fluid-custom`}>
               <EditLink />
             </section>
           </div>    
@@ -66,7 +68,7 @@ export const EditLink = () => {
     )
   } else {
     return (
-      <button onClick={() => cms.toggle()}>
+      <button className={ `${styles.loginbutton} button-primary button-size-medium`} onClick={() => cms.toggle()}>
         {cms.enabled ? 'Exit Edit Mode' : 'Login to Edit'}
       </button>
     )

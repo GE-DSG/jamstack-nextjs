@@ -5,6 +5,8 @@ import '../styles/css/styles.scss'
 import '../styles/css/social_media_links.theme.css'
 import { useRouter } from 'next/router'
 
+import { CreateReportPlugin } from '/components/plugins/reportCreator'
+
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
   GithubClient,
@@ -35,6 +37,7 @@ export default class Site extends App {
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     })
+    this.cms.plugins.add(CreateReportPlugin)
   }
  
   render() {
