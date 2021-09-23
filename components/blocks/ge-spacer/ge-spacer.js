@@ -97,10 +97,7 @@ export const gespacer_template = {
           },
         ],
       },
-    ],
-   
-
-    
+    ],    
 }
 
 
