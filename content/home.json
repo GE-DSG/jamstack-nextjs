@@ -39,7 +39,10 @@
     {
       "_template": "ge_titled_paragraph",
       "title": "OUR MISSION",
-      "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet."
+      "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",
+      "style": {
+        "color": "primary"
+      }
     },
     {
       "_template": "ge_spacer",
