@@ -1,7 +1,7 @@
 import App from 'next/app'
 import '../styles/css/ge_unified.style.css'
 import '../styles/css/iconography.css'
-import '../styles/css/styles.css'
+import '../styles/css/styles.scss'
 import '../styles/css/social_media_links.theme.css'
 import { useRouter } from 'next/router'
 
