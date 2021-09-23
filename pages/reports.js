@@ -35,7 +35,7 @@ const Reports = props => {
                       <li>
                         <div className={`row pl-2 pr-2 pt-3 pb-3 ${layoutStyles.card}`}>
                           <div className={`${layoutStyles.heroImage} col-4`}>
-                            <img src={ report.data.hero_image } alt="" />
+                            <img src={ report.data.hero_image.src } alt={ report.data.hero_image.alt } />
                           </div>
 
                           <div className="report__info col-8">
