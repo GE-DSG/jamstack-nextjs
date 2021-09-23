@@ -60,8 +60,7 @@ export const gespacer_template = {
     },   
     
     fields: [
-      HEIGHT_FIELDS,
-
+       ...HEIGHT_FIELDS,
       {
         name: "title",
         label: "Title",
