@@ -36,7 +36,7 @@
       "_template": "ge_spacer",
       "height": "110",
       "theme": {
-        "color": "dark"
+        "color": "light"
       }
     },
     {
@@ -135,7 +135,6 @@
           }
         }
       ],
-    
       "actions": [
         {
           "label": "Primary Action",
