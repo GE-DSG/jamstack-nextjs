@@ -41,7 +41,7 @@ export const getitledparagraph_template = {
     title: "OUR MISSION",
     content: "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",     
     style: {
-      color: "tint",
+      color: "light",
     },
   },
   fields: [
@@ -70,12 +70,12 @@ export const getitledparagraph_template = {
               value: "default",
             },
             {
-              label: "Tint",
-              value: "tint",
+              label: "Light",
+              value: "light",
             },
             {
-              label: "Primary",
-              value: "primary",
+              label: "Dark",
+              value: "dark",
             },
           ],
         },

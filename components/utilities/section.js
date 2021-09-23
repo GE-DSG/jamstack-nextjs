@@ -6,11 +6,11 @@ export const Section = ({ variant = "default", children }) => {
 
   let variantClasses = `relative transition duration-150 ease-out overflow-hidden`;
 
-  if (variant === "tint") {
+  if (variant === "light") {
     variantClasses = `light relative transition duration-150 ease-out overflow-hidden`;
   }
 
-  if (variant === "primary") {
+  if (variant === "dark") {
     variantClasses = `dark relative transition duration-150 ease-out overflow-hidden `;
     // variantClasses = `relative transition duration-150 ease-out text-gray-700 dark:text-gray-100 bg-${theme.color}-700 bg-gradient-to-br from-${theme.color}-500 to-${theme.color}-300 dark:from-${theme.color}-500 dark:to-${theme.color}-700 body-font overflow-hidden`;
  
@@ -30,12 +30,12 @@ export const SectionFields = [
         value: "default",
       },
       {
-        label: "Tint",
-        value: "tint",
+        label: "Light",
+        value: "light",
       },
       {
-        label: "Primary",
-        value: "primary",
+        label: "Dark",
+        value: "dark",
       },
     ],
   },
