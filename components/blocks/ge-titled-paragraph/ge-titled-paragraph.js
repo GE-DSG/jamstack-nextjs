@@ -1,3 +1,6 @@
+
+import * as React from "react";
+import { ThemeContext } from "../../utilities/theme";
 import { Section, SectionFields } from "../../utilities/section";
 import styles from './ge-titled-paragraph.module.scss';
 import {
@@ -8,6 +11,7 @@ import {
 
 
 export const GETitledParagraph = ({ data }) => {
+  const theme = React.useContext(ThemeContext);
 
   return (
     <Section variant={data.style.color}>
