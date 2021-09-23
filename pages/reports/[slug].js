@@ -1,4 +1,3 @@
-//import React,{useState,useEffect} from 'react';
 import * as React from "react";
 import Layout from "../../components/layout/Layout";
 import Link from 'next/link';
@@ -11,7 +10,6 @@ import layoutStyles from "/components/layout/layout.module.scss"
 import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
 
-//import { ThemeContext } from "/components/utilities/theme";
 
 import {
   InlineForm,
@@ -25,15 +23,7 @@ import {
 import { TinaModal } from "/components/utilities/modal";
 
 const ReportTemplate = ({ file, preview }) => {
-//const ReportTemplate = props => {
-//console.log('ReportTemplate')  
-//console.log(file)
-//console.log(file.data)
-//console.log(preview)
-  //const report = file.data;
-//console.log(report)  
-  //const theme = React.useContext(ThemeContext);
-  
+
   const formOptions = {
     label: 'Report Page',
     fields: [
@@ -55,14 +45,16 @@ const ReportTemplate = ({ file, preview }) => {
       },
       {
         name: 'hero_image',
-        label: 'Hero image',        
+        label: 'Hero image',
         component: "group",
-        fields: IMAGE_FIELDS,        
+        fields: IMAGE_FIELDS,
       },
       {
         name: 'date',
         label: 'Date',
         component: 'date',
+        dateFormat: 'MMMM DD, YYYY',
+        timeFormat: false,
       },
       {
         name: 'author',
@@ -75,22 +67,19 @@ const ReportTemplate = ({ file, preview }) => {
         component: 'textarea',
       },
     ],
-    
+
     onSubmit: (values) => {
       setShowModal(true);
     },
   }
-  
+
   const [showModal, setShowModal] = React.useState(false);
 
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
-console.log('usePlugin')  
-console.log(data)
-//console.log(form)
   useGithubToolbarPlugins()
 
-  
+
   return (
 
     <Layout>
@@ -111,19 +100,19 @@ console.log(data)
 
           <div className="container-fluid-custom">
             <div className={`row ${styles.card}`}>
-              <div className="pt-3 pb-3 pl-3 pr-3">            
-                <div className="hero_image">                  
+              <div className="pt-3 pb-3 pl-3 pr-3">
+                <div className="hero_image">
                   <InlineGroup
                     name="hero_image"
                     focusRing={{ offset: 0, borderRadius: 0 }}
                     insetControls={true}
                     fields={ IMAGE_FIELDS }
                   >
-                  <img className={styles.image} 
+                  <img className={styles.image}
                   src={data.hero_image.src}
                   alt={data.hero_image.alt}
-                  />           
-                  </InlineGroup>                  
+                  />
+                  </InlineGroup>
                 </div>
                 <div className="blog__info">
                   <h2><InlineTextarea name="title" /></h2>
@@ -136,7 +125,7 @@ console.log(data)
               </div>
             </div>
           </div>
-          
+
           <div className="container-fluid-custom">
             <div className="row">
               <div className={`${layoutStyles.viewAllItems}`}>
@@ -148,9 +137,9 @@ console.log(data)
               </div>
             </div>
           </div>
-          
+
         </section>
-      
+
       </InlineForm>
       {showModal && (
         <TinaModal
@@ -159,9 +148,9 @@ console.log(data)
             setShowModal(false);
           }}
         />
-      )}          
+      )}
     </Layout>
-    
+
   )
 };
 
@@ -183,11 +172,11 @@ export const IMAGE_FIELDS = [
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode
- */  
+ */
 export const getStaticProps = async function ({ preview, previewData, params }) {
   const global = await getGlobalStaticProps(preview, previewData)
   const { slug } = params
-  
+
   if (preview) {
     // get data from github
     const file = (
@@ -212,9 +201,9 @@ export const getStaticProps = async function ({ preview, previewData, params }) 
       error: null,
       preview: false,
       file: {
-        fileRelativePath: `/content/reports/${ slug }.json`,        
+        fileRelativePath: `/content/reports/${ slug }.json`,
         data: (await import(`/content/reports/${ slug }.json`)).default,
-      },      
+      },
       ...global,
     },
   }
