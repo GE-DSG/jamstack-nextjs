@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ThemeContext } from "./theme";
 
-export const Section = ({ variant = "default", children }) => {
+export const Section = ({ variant = "light", children }) => {
   const theme = React.useContext(ThemeContext);
 
   let variantClasses = `relative transition duration-150 ease-out overflow-hidden`;
@@ -25,10 +25,10 @@ export const SectionFields = [
     label: "Color",
     component: "select",
     options: [
-      {
-        label: "Default",
-        value: "default",
-      },
+      // {
+      //   label: "Default",
+      //   value: "default",
+      // },
       {
         label: "Light",
         value: "light",

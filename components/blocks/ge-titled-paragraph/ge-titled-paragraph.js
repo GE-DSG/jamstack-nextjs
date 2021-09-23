@@ -10,7 +10,7 @@ import {
 
 export const GETitledParagraph = ({ data }) => {
   return (
-    <Section variant={data.style.color} data-section-id="data-section-id" >    
+    <Section variant={data.theme.color} data-section-id="data-section-id" >    
       <div className={ `${styles.geTitledParagraph} container-fluid-custom`}>
         <div className="row">      
           <div className="col-12 col-lg-9">
@@ -40,7 +40,7 @@ export const getitledparagraph_template = {
   defaultItem: {
     title: "OUR MISSION",
     content: "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",     
-    style: {
+    theme: {
       color: "light",
     },
   },
@@ -56,7 +56,7 @@ export const getitledparagraph_template = {
       component: "textarea",
     },
     {
-      name: "style",
+      name: "theme",
       label: "Style",
       component: "group",
       fields: [
@@ -65,11 +65,7 @@ export const getitledparagraph_template = {
           label: "Color",
           component: "select",
           options: [
-            {
-              label: "Default",
-              value: "default",
-            },
-            {
+             {
               label: "Light",
               value: "light",
             },

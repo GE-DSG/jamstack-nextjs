@@ -13,7 +13,7 @@ import {
 
 export const GESpacer = ({data}) =>{
 return (
-  <Section> 
+   <Section > 
    <div className={styles.GESpacer } style={{ height:`${data.height}px` }} data-section-id="data-section-id">          
      <InlineTextarea
      focusRing={{ offset:0, borderRadius:10}}
@@ -54,7 +54,7 @@ export const gespacer_template = {
     label: "GE Spacer", 
     defaultItem: {
     height: "100",
-    style: {
+    theme: {
       color: "light",
     },
     },   
@@ -62,8 +62,8 @@ export const gespacer_template = {
     fields: [
        ...HEIGHT_FIELDS,
        {
-        name: "style",
-        label: "Style",
+        name: "theme",
+        label: "Theme",
         component: "group",
         fields: [
           {
@@ -71,10 +71,10 @@ export const gespacer_template = {
             label: "color",
             component: "select",
             options: [
-              {
-                label: "Default",
-                value: "default",
-              },
+              // {
+              //   label: "Default",
+              //   value: "default",
+              // },
               {
                 label: "Light",
                 value: "light",
