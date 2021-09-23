@@ -14,19 +14,16 @@ export const Actions = ({ actions }) => {
         insetControls={true}
         fields={ACTION_FIELDS}
       >
-        <div className="flex flex-wrap items-center -mx-3 -my-2 mt-5">
+        <div className="buttonwrapper">
           {actions &&
             actions.map(function (action, index) {
               let element = null;
               if (action.type === "button") {
                 element = (
-                <a href={action.href} target={action.target}> <button
-                    key={index}
-                    className={`z-10 button-primary relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
-                      theme.button.style === "rounded" && `rounded-lg`
-                    } ${
-                      theme.button.style === "round" && `rounded-full`
-                    } transform bg-${theme.color}-500 hover:bg-${
+                <a href={action.href} target={action.target}> 
+                  <button key={index}
+                    className={`button-primary relative transition duration-150 ease-out text-white transition duration-500 ease-in-out 
+                      transform bg-${theme.color}-500 hover:bg-${
                       theme.color
                     }-600 bg-gradient-to-r from-${theme.color}-400 to-${
                       theme.color
@@ -36,15 +33,31 @@ export const Actions = ({ actions }) => {
                       boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${theme.color}-600),0.35)`,
                     }}
                   > {action.label}
-                    {action.icon && (
-                      <BiRightArrowAlt
-                        className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
-                      />
-                    )}
-                   
+                                  
                   </button></a>
                 );
               }
+
+              if (action.type === "secondarybutton") {
+                element = (
+                <a href={action.href} target={action.target}> 
+                  <button key={index}
+                    className={`button-secondary relative transition duration-150 ease-out text-white transition duration-500 ease-in-out 
+                     transform bg-${theme.color}-500 hover:bg-${
+                      theme.color
+                    }-600 bg-gradient-to-r from-${theme.color}-400 to-${
+                      theme.color
+                    }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
+                    style={{
+                      textShadow: "0 2px 5px rgba(0,0,0,0.1)",
+                      boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${theme.color}-600),0.35)`,
+                    }}
+                  > {action.label}
+                                  
+                  </button></a>
+                );
+              }
+
               if (action.type === "link" || action.type === "linkExternal") {
                 element = (
                   <a
@@ -57,11 +70,11 @@ export const Actions = ({ actions }) => {
                     }}
                   >
                     {action.label}
-                    {action.icon && (
+                    {/* {action.icon && (
                       <BiRightArrowAlt
                         className={`ml-0 mr-0 w-6 h-6 text-${theme.color}-500`}
                       />
-                    )}
+                    )} */}
                   </a>
                 );
               }
@@ -110,15 +123,16 @@ export const ACTION_FIELDS = [
         component: "radio-group",
         variant: "button",
         options: [
-          { label: "Button", value: "button" },
-          { label: "Link", value: "link" },
+          { label: "Primary Button", value: "button" },
+          { label: "Secondary Button", value: "secondarybutton" },
+          { label: "link", value: "link" },
         ],
       },
-      {
-        label: "Icon",
-        name: "icon",
-        component: "toggle",
-      },
+      // {
+      //   label: "Icon",
+      //   name: "icon",
+      //   component: "toggle",
+      // },
     ],
   },
 ];

@@ -31,7 +31,7 @@ const ReportTemplate = props => {
         <div className="container-fluid-custom">
           <div className={`row ${styles.card}`}>
           <div className="pt-3 pb-3 pl-3 pr-3">
-            <div className="hero_image">
+            <div className={styles.heroImage}>
               <img src={ data.hero_image } alt="general electric" />
             </div>
             <div className="blog__info">

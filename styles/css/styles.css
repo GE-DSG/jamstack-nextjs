@@ -3,10 +3,22 @@
     min-width: 300px !important;
 }
 
+.button-secondary,
 .button-primary {
     text-transform: uppercase;
+    width: max-content;
+    
 }
 
-/* a:hover {
-    text-decoration: none;
-} */
+.buttonwrapper { 
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;  
+    gap: 10px;
+}
+
+.user {
+    text-align: center;
+    padding: 60px 0;
+    height: 33vh;  
+}
