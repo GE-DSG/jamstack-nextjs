@@ -34,9 +34,9 @@
     },
     {
       "_template": "ge_spacer",
-      "height": "100",
+      "height": "110",
       "style": {
-        "color": "dark"
+        "color": "light"
       }
     },
     {
