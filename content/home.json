@@ -154,10 +154,6 @@
           "label": "Primary Action",
           "type": "button",
           "icon": "true"
-        },
-        {
-          "label": "Learn More",
-          "type": "link"
         }
       ],
       "theme": {
@@ -166,7 +162,7 @@
     },
     {
       "_template": "ge_spacer",
-      "height": "100",
+      "height": "150",
       "theme": {
         "color": "light"
       }
