@@ -27,7 +27,7 @@
 .dark {
     background-color: var(--ge-dark-indigo);
     color: var(--ge-white);
-    
+    .geSpacer,
     .geTitledParagraph {
       color: var(--ge-white);
     }
@@ -42,7 +42,10 @@
 
 
   .light {
-    background-color: #fff;
+    .geTitledParagraph, 
+    .geSpacer{
+    background-color: var(--ge-white);
+    }
     h5 {
       color: var(--ge-primary-blue);
     }

@@ -11,17 +11,17 @@ import {
 } from "react-tinacms-inline";
 
 
-export const GESpacer = ({data, index}) =>{
+export const GESpacer = ({data}) =>{
 return (
-  <Section data-section-id="data-section-id" > 
-   <section className={styles.GESpacer } style={{ height:`${data.height}px` }} >          
+  <Section variant={data.style.color}> 
+   <div className={styles.GESpacer } style={{ height:`${data.height}px` }} data-section-id="data-section-id">          
      <InlineTextarea
      focusRing={{ offset:0, borderRadius:10}}
       insetControls={true}
       fields={HEIGHT_FIELDS}
     >       
      </InlineTextarea>
-    </section>
+    </div>
     </Section>
     )
 }
