@@ -1,16 +1,15 @@
 
-//import toMarkdownString from '../utils/toMarkdownString'
-
 const MISSING_FILENAME_MESSAGE =
   'createRemarkButton must be given `filename(form): string`'
 const MISSING_FIELDS_MESSAGE =
   'createRemarkButton must be given `fields: Field[]` with at least 1 item'
 
+
+
 export class ReportCreatorPlugin {
   __type = 'content-creator'
   name
   fields
-
   // Json Specific
   filename
 
@@ -31,21 +30,17 @@ export class ReportCreatorPlugin {
     this.filename = options.filename
   }
 
-  async onSubmit(form, cms) {
-    const fileRelativePath = await this.filename(form)    
-    //const jsonBody = await this.body(form)
 
-    cms.api.git.onChange({
-      fileRelativePath,
-      content: JSON.parse ({
-        fileRelativePath,
-        //jsonBody,
-      }),
-    })
+
+  async onSubmit(form, cms) {
+
+    const fileRelativePath = await this.filename(form)
+
+    const res = await cms.api.github.upload(fileRelativePath, JSON.stringify(form), `Commit from Tina: Upload ${fileRelativePath}`, false)
   }
 }
 
-const IMAGE_FIELDS = [
+export const IMAGE_FIELDS = [
   {
     name: "src",
     label: "Image Source",
@@ -63,12 +58,12 @@ const IMAGE_FIELDS = [
 
 
 export const CreateReportPlugin = new ReportCreatorPlugin({
+
   label: 'Add New Report',
   filename: form => {
     const slug = form.title.replace(/\s+/g, '-').toLowerCase()
-    return `reports/${slug}.json`
+    return `content/reports/${slug}.json`
   },
-  
   fields: [
     {
       label: 'ID',
@@ -77,7 +72,7 @@ export const CreateReportPlugin = new ReportCreatorPlugin({
       validation(id) {
         if (!id) return 'Required.'
       },
-    },  
+    },
     {
       label: 'Title',
       name: 'title',
@@ -91,30 +86,26 @@ export const CreateReportPlugin = new ReportCreatorPlugin({
       name: 'hero_image',
       component: "group",
       fields: IMAGE_FIELDS,
-    },    
+    },
     {
       label: 'Date',
       name: 'date',
       component: 'date',
       description: 'The default will be today.',
       dateFormat: 'MMMM DD, YYYY',
-      timeFormat: false,      
+      timeFormat: false,
     },
     {
       label: 'Author',
-      name: 'author_name',
+      name: 'author',
       component: 'text',
-      description: 'Who wrote this, yo?',
     },
     {
       label: 'Body',
       name: 'body',
-      component: 'textarea',
-    },    
-  ],  
+      component: 'html',
+    },
+  ],
 
-  //body: () => `New post, who dis?`,
 })
-
-
 

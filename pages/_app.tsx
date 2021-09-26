@@ -37,9 +37,14 @@ export default class Site extends App {
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview,
     })
+
+    import("react-tinacms-editor").then(({ HtmlFieldPlugin }) => {
+      this.cms.plugins.add(HtmlFieldPlugin)
+    })
+
     this.cms.plugins.add(CreateReportPlugin)
   }
- 
+
   render() {
     const { Component, pageProps } = this.props
     return (

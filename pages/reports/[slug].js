@@ -6,6 +6,7 @@ import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import fs from 'fs';
 import styles from "./reports.module.scss"
 import layoutStyles from "/components/layout/layout.module.scss"
+import { InlineWysiwyg } from "/components/utilities/InlineWysiwyg"
 
 import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
@@ -19,6 +20,7 @@ import {
   InlineTextarea,
   InlineGroup
 } from "react-tinacms-inline";
+
 
 import { TinaModal } from "/components/utilities/modal";
 
@@ -64,7 +66,7 @@ const ReportTemplate = ({ file, preview }) => {
       {
         name: 'body',
         label: 'Body',
-        component: 'textarea',
+        component: 'html',
       },
     ],
 
@@ -119,7 +121,7 @@ const ReportTemplate = ({ file, preview }) => {
                   <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                   <p><InlineTextarea name="author" /></p>
                   <p>
-                  <InlineTextarea name="body" />
+                    <InlineTextarea name="body" format="html" />
                   </p>
                 </div>
               </div>
@@ -153,6 +155,8 @@ const ReportTemplate = ({ file, preview }) => {
 
   )
 };
+
+
 
 export const IMAGE_FIELDS = [
   {
