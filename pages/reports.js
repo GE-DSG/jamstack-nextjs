@@ -30,7 +30,7 @@ const Reports = props => {
                   <Link
                     key={ report.data.id }
                     href={{ pathname: `/reports/${report.slug}` }}
-                  > 
+                  >
                     <a>
                       <li>
                         <div className={`row pl-2 pr-2 pt-3 pb-3 ${layoutStyles.card}`}>
@@ -42,7 +42,7 @@ const Reports = props => {
                             <h2>{ report.data.title }</h2>
                             <h6 className="pb-3">{ new Date(report.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                             <p>
-                            { report.data.body }
+                              <div dangerouslySetInnerHTML={{__html: report.data.body }}/>
                             </p>
                             <h6>{ report.data.author }</h6>
                           </div>
@@ -50,14 +50,14 @@ const Reports = props => {
                       </li>
                     </a>
                   </Link>
-                </ul>                  
+                </ul>
               ))}
             </section>
           </div>
         </div>
       </div>
     </Layout>
-    
+
   )
 }
 
@@ -65,10 +65,10 @@ const Reports = props => {
 /**
  * Fetch data with getStaticProps based on 'preview' mode
  */
-export const getStaticProps = async function ({ preview, previewData }) {  
+export const getStaticProps = async function ({ preview, previewData }) {
   const global = await getGlobalStaticProps(preview, previewData)
   const records = await getJsonRecords("content/reports")
-  
+
   if (preview) {
     // get data from github
     const file = (
@@ -82,7 +82,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
     return {
       props: {
         ...file,
-        ...global,        
+        ...global,
         records,
       },
     }

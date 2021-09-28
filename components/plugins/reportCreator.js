@@ -1,18 +1,16 @@
-
 const MISSING_FILENAME_MESSAGE =
-  'createRemarkButton must be given `filename(form): string`'
+  'Filename must be defined `filename(form): string`'
 const MISSING_FIELDS_MESSAGE =
-  'createRemarkButton must be given `fields: Field[]` with at least 1 item'
-
+  'Report fields must be defined `fields: Field[]` with at least 1 item'
 
 
 export class ReportCreatorPlugin {
   __type = 'content-creator'
   name
   fields
-  // Json Specific
   filename
-
+  //data
+  //frontmatter
 
   constructor(options) {
     if (!options.filename) {
@@ -28,6 +26,8 @@ export class ReportCreatorPlugin {
     this.name = options.label
     this.fields = options.fields
     this.filename = options.filename
+    //this.data = options.data
+    //this.frontmatter = options.frontmatter
   }
 
 
@@ -36,10 +36,25 @@ export class ReportCreatorPlugin {
 
     const fileRelativePath = await this.filename(form)
 
-    const res = await cms.api.github.upload(fileRelativePath, JSON.stringify(form), `Commit from Tina: Upload ${fileRelativePath}`, false)
+    form.hero_image = {
+      src: form.hero_image_src,
+      alt: form.hero_image_alt,
+    }
+    delete form.hero_image_src
+    delete form.hero_image_alt
+    form.date = new Date()
+
+    const res = await cms.api.github.githubFileApi(
+      fileRelativePath,
+      JSON.stringify(form),
+      `Commit from Tina: Create new file ${fileRelativePath}`,
+      false,
+      'PUT', // Add File
+    )
   }
 }
 
+/*
 export const IMAGE_FIELDS = [
   {
     name: "src",
@@ -55,7 +70,7 @@ export const IMAGE_FIELDS = [
     component: "text",
   },
 ]
-
+*/
 
 export const CreateReportPlugin = new ReportCreatorPlugin({
 
@@ -83,9 +98,16 @@ export const CreateReportPlugin = new ReportCreatorPlugin({
     },
     {
       label: 'Hero image',
-      name: 'hero_image',
-      component: "group",
-      fields: IMAGE_FIELDS,
+      name: 'hero_image_src',
+      component: "image",
+      parse: media => `/static/${media.filename}`,
+      uploadDir: () => '/public/static/',
+      previewSrc: fullSrc => fullSrc.replace('/public', '')
+    },
+    {
+      label: 'Alternate text',
+      name: 'hero_image_alt',
+      component: "text",
     },
     {
       label: 'Date',
@@ -104,8 +126,26 @@ export const CreateReportPlugin = new ReportCreatorPlugin({
       label: 'Body',
       name: 'body',
       component: 'html',
+      parse: media => `/static/${media.filename}`,
+      uploadDir: () => '/public/static/',
+      previewSrc: fullSrc => fullSrc.replace('/public', '')
     },
   ],
-
+/*
+  data: form => {
+    title: `${form.title}`
+    id: `${form.id}`
+    title: `${form.title}`
+    date: `${form.date}`
+    author: `${form.author}`
+    body: `${form.body}`
+  },
+  frontmatter: postInfo => ({
+    id: postInfo.id,
+    title: postInfo.title,
+    date: new Date(),
+    author: postInfo.author,
+    body: postInfo.body,
+  }),
+*/
 })
-

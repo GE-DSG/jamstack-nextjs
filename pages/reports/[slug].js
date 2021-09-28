@@ -1,16 +1,16 @@
-import * as React from "react";
-import Layout from "../../components/layout/Layout";
-import Link from 'next/link';
+import * as React from "react"
+import Layout from "../../components/layout/Layout"
+import Link from 'next/link'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
-import fs from 'fs';
+import fs from 'fs'
 import styles from "./reports.module.scss"
 import layoutStyles from "/components/layout/layout.module.scss"
-import { InlineWysiwyg } from "/components/utilities/InlineWysiwyg"
+//import { InlineWysiwyg } from "/components/utilities/InlineWysiwyg"
+//import { InlineWysiwyg } from 'react-tinacms-editor'
 
-import { useCMS, withTina, useForm, usePlugin } from "tinacms";
+import { useCMS, withTina, useForm, usePlugin } from "tinacms"
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-
 
 import {
   InlineForm,
@@ -81,7 +81,6 @@ const ReportTemplate = ({ file, preview }) => {
   usePlugin(form)
   useGithubToolbarPlugins()
 
-
   return (
 
     <Layout>
@@ -121,7 +120,7 @@ const ReportTemplate = ({ file, preview }) => {
                   <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                   <p><InlineTextarea name="author" /></p>
                   <p>
-                    <InlineTextarea name="body" format="html" />
+                    <div dangerouslySetInnerHTML={{__html: data.body }}/>
                   </p>
                 </div>
               </div>
