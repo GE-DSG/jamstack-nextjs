@@ -1,1 +1,11 @@
-{"id":"1","title":"Export Search","author":"Marlex","body":"<p>This is a <strong>Test</strong> message.</p>","hero_image":{"src":"/static/about_ge.jpg","alt":"General Electric"},"date":"2021-09-28T20:55:44.307Z"}
+{
+  "id": "1",
+  "title": "Export Search",
+  "author": "Marlex",
+  "body": "<p>This is a <strong>Test</strong> message.</p>",
+  "hero_image": {
+    "src": "/static/johannes-andersson-joshua-tree.jpg",
+    "alt": "General Electric"
+  },
+  "date": "2021-09-28T20:55:44.307Z"
+}
