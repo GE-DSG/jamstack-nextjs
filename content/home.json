@@ -17,12 +17,12 @@
       "headline": "GE Mission Statement & Values",
       "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
       "image": {
-        "src": "../static/about_ge.jpg",
+        "src": "/static/about_ge.jpg",
         "alt": "General Electric"
       },
       "actions": [
         {
-          "label": "Primary Action",
+          "label": "Primary test",
           "type": "button",
           "icon": "true",
           "href": "https://www.ge.com/"
@@ -81,19 +81,6 @@
       "items": [
         {
           "_template": "ge_small_article",
-          "title": "GE Small Article Title1",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
-          "image": {
-            "src": "../static/ge-small-article.jpg",
-            "alt": "General Electric"
-          },
-          "link": {
-            "herf": "http://ge.com/",
-            "target": "_self"
-          }
-        },
-        {
-          "_template": "ge_small_article",
           "title": "GE Small Article Title2",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
@@ -108,6 +95,19 @@
         {
           "_template": "ge_small_article",
           "title": "GE Small Article Title3",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+          "image": {
+            "src": "../static/ge-small-article.jpg",
+            "alt": "General Electric"
+          },
+          "link": {
+            "herf": "http://ge.com/",
+            "target": "_self"
+          }
+        },
+        {
+          "_template": "ge_small_article",
+          "title": "GE Small Article Title1",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
             "src": "../static/ge-small-article.jpg",
