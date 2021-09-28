@@ -126,9 +126,6 @@ export const CreateReportPlugin = new ReportCreatorPlugin({
       label: 'Body',
       name: 'body',
       component: 'html',
-      parse: media => `/static/${media.filename}`,
-      uploadDir: () => '/public/static/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
     },
   ],
 /*
