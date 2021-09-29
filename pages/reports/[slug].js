@@ -101,8 +101,8 @@ const ReportTemplate = ({ file, preview }) => {
 
           <div className="container-fluid-custom">
             <div className={`row ${styles.card}`}>
-              <div className="pt-3 pb-3 pl-3 pr-3">
-                <div className="hero_image">
+              <div className="col-12 pt-3 pb-3 pl-3 pr-3">
+                <div className={styles.heroImage}>
                   <InlineGroup
                     name="hero_image"
                     focusRing={{ offset: 0, borderRadius: 0 }}
