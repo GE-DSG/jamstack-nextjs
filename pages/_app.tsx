@@ -91,7 +91,7 @@ export const EditLink = ({ cms }: EditLinkProps) => {
   const router = useRouter()
   if(cms.enabled) {
     return (
-      <button onClick={() => cms.toggle()}>
+      <button className="button-primary button-position" onClick={() => cms.toggle()}>
         {cms.enabled ? 'Exit Edit Mode' : 'Edit This Site'}
       </button>
     )

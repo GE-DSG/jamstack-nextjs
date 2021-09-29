@@ -2,13 +2,23 @@
 .cHKrny {
     min-width: 300px !important;
 }
-
-
 .button-secondary,
 .button-primary {
     text-transform: uppercase;
-    width: max-content;
-    
+    width: max-content;   
+}
+
+button.button-primary.button-position {
+  position: fixed;
+  top: 12px;
+  left: 180px;
+  z-index: 9999;
+  font-size: 13px !important;
+  height: 40px;
+  line-height: 40px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-family: 'Inter',sans-serif;
 }
 
 .buttonwrapper { 

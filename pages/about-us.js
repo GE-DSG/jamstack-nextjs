@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from 'next/link'
+import styles from "./page.module.scss"
 
 //import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 //import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
@@ -11,10 +12,10 @@ const AboutUs = props => {
   
   return (
     <Layout>
-      <div className="about-us">
-        <h2>AboutUs</h2>
+      <div className={styles.aboutusPage}>      
         <section>
-        
+        <h2>AboutUs</h2>
+        <p>coming soon!</p>
         </section>
       </div>    
     </Layout>
