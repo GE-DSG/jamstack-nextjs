@@ -66,6 +66,9 @@
       "image": {
         "src": "/static/about_ge.jpg",
         "alt": "Photo from Unsplash"
+      },
+      "theme": {
+        "color": "light"
       }
     },
     {

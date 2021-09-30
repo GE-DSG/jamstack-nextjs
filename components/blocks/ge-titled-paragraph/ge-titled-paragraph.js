@@ -57,7 +57,7 @@ export const getitledparagraph_template = {
     },
     {
       name: "theme",
-      label: "Style",
+      label: "Theme",
       component: "group",
       fields: [
         {

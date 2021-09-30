@@ -1,3 +1,4 @@
+import { Section } from "../../utilities/section";
 import {
   BlocksControls,
   InlineText,
@@ -14,16 +15,15 @@ import { features } from "process";
 export const GEContentLeftRightImage = ({ data, index }) => {
   const cms = useCMS();
 
-  return (
-    <section className={styles.geContentLeftRightImage}>
+  return (      
+    <Section variant={data.theme.color} data-section-id="data-section-id" className={styles.geContentLeftRightImage}>
       <div className="container-fluid-custom">
        
         <section className={"image-left"}>
             <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
                 <main>
                     <h3 className="has-text-color Large-Title-ESG"><InlineTextarea name="title" /></h3>
-                    <p className="has-text-color"><InlineTextarea name="content" />​</p>
-                  
+                    <p className="has-text-color"><InlineTextarea name="content" />​</p>                  
                     <div  className="link-secondary-light">
                      <InlineGroup name="button_text"  
                      focusRing={{ offset:10, borderRadius: 0 }}
@@ -34,7 +34,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                   <a href={data.button_text.href} target={data.button_text.target}>{data.button_text.link} </a>
                   </h6> </InlineGroup>
                      
-                     </div>
+                 </div>
 
                      
                 </main>
@@ -51,25 +51,12 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                   src={data.image.src}
                   alt={data.image.alt}
                   />
-                    </InlineGroup>
-
-
-                    {/* <InlineImage
-                    name="src"
-                    previewSrc={fieldValue => cms.media.previewSrc(`public${fieldValue}`)}
-                    parse={media => `/img/${media.filename}`}
-                    uploadDir={() => '/public/img/'}
-                    className="img--wrap"
-                    alt={data.alt}
-                    focusRing={false}
-                  /> */}
-                  {/* {props => <img src={props.src} alt={data.alt} />} */}
-
+                  </InlineGroup>
                 </div>
             </div>
         </section>    
       </div>
-    </section>
+    </Section>
   );
 };
 
@@ -132,7 +119,10 @@ export const GEContentLeftRightImage_template = {
     },
     image: {
       src: "../static/ge-left-right.jpg",
-      alt: "Photo from Unsplash",
+      alt: "General Electric",
+    },
+    theme: {
+      color: "light",
     },
   },
 
@@ -159,6 +149,28 @@ export const GEContentLeftRightImage_template = {
       label: "Image",
       component: "group",
       fields: IMAGE_FIELDS,
+    },
+    {
+      name: "theme",
+      label: "Theme",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+             {
+              label: "Light",
+              value: "light",
+            },
+            {
+              label: "Dark",
+              value: "dark",
+            },
+          ],
+        },
+      ],
     },
   ],
 };
