@@ -131,7 +131,7 @@
             "target": "_blank"
           },
           "theme": {
-            "color": "dark"
+            "color": "light"
           }
         },
         {
@@ -144,7 +144,7 @@
             "target": "_blank"
           },
           "theme": {
-            "color": "dark"
+            "color": "light"
           }
         },
         {
@@ -157,7 +157,7 @@
             "target": "_blank"
           },
           "theme": {
-            "color": "dark"
+            "color": "light"
           }
         }
       ],
