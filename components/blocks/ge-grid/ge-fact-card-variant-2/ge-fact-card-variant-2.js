@@ -1,4 +1,5 @@
 import styles from './ge-fact-card-variant-2.module.scss';
+import { Section } from "../../../utilities/section";
 
 import {
   BlocksControls,
@@ -15,7 +16,7 @@ export const GEFactCardVariant2 = ({ data, index }) => {
       focusRing={{ offset: 10 }}
       insetControls={true}
     >
-
+ <Section variant={data.theme.color} data-section-id="data-section-id" >
     <div className={ styles.geFactCardVariant2 } >
 
       <div className="theme">
@@ -24,7 +25,7 @@ export const GEFactCardVariant2 = ({ data, index }) => {
           <InlineTextarea name="description" /></p>
         <span className="call-to-action">
             
-                   <div  className="link-secondary-light">
+        { data.theme.color === "dark" && <div  className="link-secondary">
                      <InlineGroup name="link"  
                      focusRing={{ offset:10, borderRadius: 0 }}
                       insetControls={true}
@@ -35,12 +36,24 @@ export const GEFactCardVariant2 = ({ data, index }) => {
                   </h6> </InlineGroup>
                      
                      </div>
-           
+  }
+            { data.theme.color === "light" && <div  className="link-secondary-light">
+                     <InlineGroup name="link"  
+                     focusRing={{ offset:10, borderRadius: 0 }}
+                      insetControls={true}
+                      fields={ACTION_FIELDS}
+                     >      
+                     <h6>
+                  <a href={data.link.href} target={data.link.target}>{data.link.link} </a>
+                  </h6> </InlineGroup>
+                     
+                     </div>
+  }       
            </span>
       </div>
 
     </div>
-
+    </Section>
     </BlocksControls>
 
   );
@@ -75,7 +88,11 @@ export const gefactcardvariant2_template = {
       link: "Learn More..",
       href:"https://www.ge.com/",
       target:"_blank",
-    }
+    },
+
+    theme: {
+      color: "light",
+    },
   },
   fields: [
     {
@@ -94,6 +111,28 @@ export const gefactcardvariant2_template = {
       label: "Hyperlink",
       component: "group",
       fields: ACTION_FIELDS,
+    },
+    {
+      name: "theme",
+      label: "Theme",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+             {
+              label: "Light",
+              value: "light",
+            },
+            {
+              label: "Dark",
+              value: "dark",
+            },
+          ],
+        },
+      ],
     },
 
 

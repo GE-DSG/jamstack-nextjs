@@ -129,6 +129,9 @@
             "link": "Learn More..",
             "href": "https://www.ge.com/",
             "target": "_blank"
+          },
+          "theme": {
+            "color": "dark"
           }
         },
         {
@@ -139,6 +142,9 @@
             "link": "Learn More..",
             "href": "https://www.ge.com/",
             "target": "_blank"
+          },
+          "theme": {
+            "color": "dark"
           }
         },
         {
@@ -149,6 +155,9 @@
             "link": "Learn More..",
             "href": "https://www.ge.com/",
             "target": "_blank"
+          },
+          "theme": {
+            "color": "dark"
           }
         }
       ],
