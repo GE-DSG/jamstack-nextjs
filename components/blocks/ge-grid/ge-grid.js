@@ -19,9 +19,7 @@ export const GEGrid = ({ data }) => {
     <section id="ge-all-businesses" className={ styles.geGrid }>
       <div className="container-fluid-custom no-gutters pt-5 pb-5 ">
        
-          <h2 className={styles.gridTitle}>
-            <InlineTextarea name="title" />
-            </h2>            
+          <h2 className={styles.gridTitle}><InlineTextarea name="title" /> </h2>            
             
       
           <InlineBlocks

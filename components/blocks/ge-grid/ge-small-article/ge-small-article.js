@@ -34,7 +34,7 @@ export const GESmallArticle = ({ data, index }) => {
         href={data.link.herf} 
         target={data.link.target} 
         className={styles.ctaContainer}>
-          <div className={styles.cardContent}>
+          <div className={`${styles.cardContent} card-content`}>
             <div className="card-title">
             <h6><InlineTextarea name="title" 
             

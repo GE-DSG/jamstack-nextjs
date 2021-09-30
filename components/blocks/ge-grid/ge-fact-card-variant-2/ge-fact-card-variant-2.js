@@ -16,13 +16,13 @@ export const GEFactCardVariant2 = ({ data, index }) => {
       insetControls={true}
     >
 
-    <div className={ styles.geFactCardVariant2 } style={{ backgroundColor: "#f0f3f7" }}>
+    <div className={ styles.geFactCardVariant2 } >
 
-      <div className="theme-light">
+      <div className="theme">
         <h4 className={styles.title}><InlineTextarea name="title" /></h4>
-        <p className="description body-2" style={{ color: "var(--ge-dark-blue-grey)", textAlign: "left" }}><InlineTextarea name="description" /></p>
-        <span className="call-to-action" style={{ color: "var(--ge-dark-blue-grey)" }}>
-
+        <p className="description body-2">
+          <InlineTextarea name="description" /></p>
+        <span className="call-to-action">
             
                    <div  className="link-secondary-light">
                      <InlineGroup name="link"  

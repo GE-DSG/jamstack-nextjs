@@ -1,11 +1,12 @@
 /* overwrite the BlocksMenuOptions width */
 .cHKrny {
-    min-width: 300px !important;
+  min-width: 300px !important;
 }
+
 .button-secondary,
 .button-primary {
-    text-transform: uppercase;
-    width: max-content;   
+  text-transform: uppercase;
+  width: max-content;
 }
 
 button.button-primary.button-position {
@@ -18,51 +19,68 @@ button.button-primary.button-position {
   line-height: 40px;
   text-transform: capitalize;
   letter-spacing: 0px;
-  font-family: 'Inter',sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-.buttonwrapper { 
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;  
-    gap: 10px;
+.buttonwrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .user {
-    text-align: center;
-    padding: 60px 0;
-    height: 33vh;  
-    min-height: 20rem;
+  text-align: center;
+  padding: 60px 0;
+  height: 33vh;
+  min-height: 20rem;
 }
 
 
 .dark {
-    background-color: var(--ge-dark-indigo);
+  background-color: var(--ge-dark-indigo);
+  color: var(--ge-white);
+
+  .theme,
+  .description,
+  .geSpacer,
+  .geTitledParagraph {
     color: var(--ge-white);
-    .geSpacer,
-    .geTitledParagraph {
-      color: var(--ge-white);
-    }
-    h2 {
-      margin-top: 20px;
   }
 
-    h5 {
-      color: var(--ge-primary-blue);
-    }
+  h2 {
+    margin-top: 20px;
   }
 
+  h5 {
+    color: var(--ge-primary-blue);
+  }
 
-  .light {
-    .geTitledParagraph, 
-    .geSpacer{
+  .theme,
+  .card-content {
+    background-color: var(--ge-dark-indigo);
+  }
+
+}
+
+
+.light {
+  .theme,
+  .card-content {
+    background-color: var(--ge-grey);
+
+  }
+
+  .geTitledParagraph,
+  .geSpacer {
     background-color: var(--ge-white);
-    }
-    h5 {
-      color: var(--ge-primary-blue);
-    }
-    
-    h2 {
-      margin-top: 20px;
   }
+
+  h5 {
+    color: var(--ge-primary-blue);
   }
+
+  h2 {
+    margin-top: 20px;
+  }
+}

@@ -47,16 +47,14 @@ export function GESpacerBlock({ data, index }) {
       component: "text",
     },
     ];
-  
-
-
+ 
 export const gespacer_template = { 
     label: "GE Spacer", 
     defaultItem: {
     height: "100",
     theme: {
       color: "light",
-    },
+      },
     },   
     
     fields: [
@@ -68,13 +66,9 @@ export const gespacer_template = {
         fields: [
           {
             name: "color",
-            label: "color",
+            label: "Color",
             component: "select",
             options: [
-              // {
-              //   label: "Default",
-              //   value: "default",
-              // },
               {
                 label: "Light",
                 value: "light",

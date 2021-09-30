@@ -16,15 +16,15 @@ export const GEContentLeftRightImage = ({ data, index }) => {
   const cms = useCMS();
 
   return (      
-    <Section variant={data.theme.color} data-section-id="data-section-id" className={styles.geContentLeftRightImage}>
-      <div className="container-fluid-custom">
-       
+    <Section variant={data.theme.color} data-section-id="data-section-id" >
+      <div className={`${styles.geContentLeftRightImage} container-fluid-custom`}>       
         <section className={"image-left"}>
             <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
                 <main>
-                    <h3 className="has-text-color Large-Title-ESG"><InlineTextarea name="title" /></h3>
-                    <p className="has-text-color"><InlineTextarea name="content" />​</p>                  
-                    <div  className="link-secondary-light">
+                    <h3><InlineTextarea name="title" /></h3>
+                    <p><InlineTextarea name="content" />​</p>                  
+                   
+                    { data.theme.color === "dark" && <div  className="link-secondary">
                      <InlineGroup name="button_text"  
                      focusRing={{ offset:10, borderRadius: 0 }}
                       insetControls={true}
@@ -34,7 +34,22 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                   <a href={data.button_text.href} target={data.button_text.target}>{data.button_text.link} </a>
                   </h6> </InlineGroup>
                      
-                 </div>
+                 </div> 
+                   
+                  }
+
+                    { data.theme.color === "light" && <div  className="link-secondary-light">
+                     <InlineGroup name="button_text"  
+                     focusRing={{ offset:10, borderRadius: 0 }}
+                      insetControls={true}
+                      fields={ACTION_FIELDS}
+                     >      
+                     <h6>
+                  <a href={data.button_text.href} target={data.button_text.target}>{data.button_text.link} </a>
+                  </h6> </InlineGroup>                     
+                 </div>                    
+                  }
+               
 
                      
                 </main>
