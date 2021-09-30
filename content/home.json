@@ -36,7 +36,7 @@
       "_template": "ge_spacer",
       "height": "110",
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
@@ -44,14 +44,14 @@
       "title": "OUR MISSION",
       "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
       "_template": "ge_spacer",
       "height": "100",
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
@@ -68,14 +68,14 @@
         "alt": "Photo from Unsplash"
       },
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
       "_template": "ge_spacer",
       "height": "50",
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
@@ -160,14 +160,14 @@
         }
       ],
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     },
     {
       "_template": "ge_spacer",
       "height": "150",
       "theme": {
-        "color": "light"
+        "color": "dark"
       }
     }
   ]
