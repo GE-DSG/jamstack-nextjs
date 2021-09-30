@@ -1,1 +1,11 @@
-{"body":"<p></p><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p><p><a href=\"http://ge.com/\" title=\"GE\"><img src=\"public/static/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg\" title=\"GE \" alt=\"General Electric\"></a></p>","id":"999","title":"Ganesh test 2","author":"ganesh","hero_image":{"alt":"ge"},"date":"2021-09-30T12:51:06.675Z"}
+{
+  "body": "<p></p><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p><p><a href=\"http://ge.com/\" title=\"GE\"><img src=\"public/static/mathew-schwartz-7YiZKj9A3DM-unsplash.jpg\" title=\"GE \" alt=\"General Electric\"></a></p>",
+  "id": "999",
+  "title": "Ganesh test #2",
+  "author": "ganesh",
+  "hero_image": {
+    "alt": "ge",
+    "src": "/static/about_ge.jpg"
+  },
+  "date": "2021-09-30T12:51:06.675Z"
+}
