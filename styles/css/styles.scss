@@ -37,38 +37,9 @@ button.button-primary.button-position {
 }
 
 
-.dark {
-  background-color: var(--ge-dark-indigo);
-  color: var(--ge-white);
-
-  .theme,
-  .description,
-  .geSpacer,
-  .geTitledParagraph {
-    color: var(--ge-white);
-  }
-
-  h2 {
-    margin-top: 20px;
-  }
-
-  h5 {
-    color: var(--ge-primary-blue);
-  }
-
-  .theme,
-  .card-content {
-    background-color: var(--ge-dark-indigo);
-  }
-
-}
-
-
 .light {
-  .theme,
   .card-content {
     background-color: var(--ge-grey);
-
   }
 
   .geTitledParagraph,
@@ -84,3 +55,29 @@ button.button-primary.button-position {
     margin-top: 20px;
   }
 }
+
+
+.dark {
+  background-color: var(--ge-dark-indigo);
+  color: var(--ge-white);
+
+  .description,
+  .geSpacer,
+  .geTitledParagraph {
+    color: var(--ge-white);
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  h5 {
+    color: var(--ge-primary-blue);
+  }
+
+  .card-content {
+    background-color: var(--ge-dark-indigo);
+  }
+
+}
+
