@@ -1,46 +1,13 @@
-// import * as React from "react";
-// import Link from 'next/link'
-// import styles from "./page.module.scss"
-
-//import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-//import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-//import getGlobalStaticProps from "../utils/getGlobalStaticProps"
-// import Layout from "/components/layout/Layout"
-//import ArticleList from '/components/ArticleList'
-
-// const AboutUs = props => {
-  
-//   return (
-//     <Layout>
-//       <div className={styles.aboutusPage}>      
-//         <section>
-//         <h2>AboutUs</h2>
-//         <p>coming soon!</p>
-//         </section>
-//       </div>    
-//     </Layout>
-//   )
-// }
-
-
-// export default AboutUs
-
-
-
 import * as React from "react";
-
 import Head from 'next/head'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import Layout from "../components/layout/Layout";
-
 import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { Theme } from "../components/utilities/theme";
 import { TinaModal } from "../components/utilities/modal";
-
 import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
 
 //export default function Home({ file, preview }) {
@@ -80,8 +47,6 @@ const AboutUs = ({ file, preview }) => {
     </Layout>
   )
 }
-
-
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode
