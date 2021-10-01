@@ -23,7 +23,7 @@ export const GEGrid = ({ data }) => {
             
       
           <InlineBlocks
-           focusRing={{ offset: 50 }}
+           focusRing={{ offset:-10 }}
             direction="horizontal"
             className={styles.gridItems}
             name="items"
@@ -44,7 +44,7 @@ export function GEGridBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: 10 }}
+      focusRing={{ offset: -10 }}
       insetControls={true}
     >
       <GEGrid data={data} />

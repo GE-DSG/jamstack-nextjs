@@ -16,7 +16,7 @@ return (
    <Section variant={data.theme.color}> 
    <div className={styles.GESpacer } style={{ height:`${data.height}px` }} data-section-id="data-section-id">          
      <InlineTextarea
-     focusRing={{ offset:0, borderRadius:0}}
+     focusRing={{ offset:-10, borderRadius:0}}
       insetControls={true}
       fields={HEIGHT_FIELDS}
     >       
@@ -31,7 +31,7 @@ export function GESpacerBlock({ data, index }) {
     return (
       <BlocksControls 
         index={index}
-        focusRing={{ offset: 0 , borderRadius:10}}
+        focusRing={{ offset: -10 , borderRadius:10}}
         insetControls={false}
         
       > <GESpacer data={data} />

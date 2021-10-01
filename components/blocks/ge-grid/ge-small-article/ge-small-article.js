@@ -20,7 +20,7 @@ export const GESmallArticle = ({ data, index }) => {
       <div className={styles.imageContainer} >       
         <InlineGroup
                     name="image"
-                    focusRing={{ offset: 10, borderRadius: 0 }}
+                    focusRing={{ offset:-10, borderRadius: 0 }}
                     insetControls={true}
                     fields={IMAGE_FIELDS}
                   >
@@ -60,7 +60,7 @@ export function GESmallArticleBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: -12 }}
+      focusRing={{ offset: -10 }}
       insetControls={true}
     >
       <GESmallArticle data={data} />

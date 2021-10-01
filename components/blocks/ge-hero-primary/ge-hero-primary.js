@@ -55,7 +55,7 @@ export const GEHeroPrimary = ({ data }) => {
         <picture>
             <InlineGroup
             name="image"
-            focusRing={{ offset: 0, borderRadius: 0 }}
+            focusRing={{ offset: -10, borderRadius: 0 }}
             insetControls={true}
             fields={IMAGE_FIELDS}
           >
@@ -82,7 +82,7 @@ export function GEHeroPrimaryBlock({ data, index }) {
   return (
     <BlocksControls
       index={index}
-      focusRing={{ offset: 0 }}
+      focusRing={{ offset:-10 }}
       insetControls={true}
     >
       <GEHeroPrimary data={data} />

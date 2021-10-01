@@ -58,7 +58,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                 <div className={styles.imagefeature}>
                    <InlineGroup
                     name="image"
-                    focusRing={{ offset: 0, borderRadius: 0 }}
+                    focusRing={{ offset: -10, borderRadius: 0 }}
                     insetControls={true}
                     fields={IMAGE_FIELDS}
                   >
