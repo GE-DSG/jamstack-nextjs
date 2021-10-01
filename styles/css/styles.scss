@@ -1,13 +1,13 @@
 /* overwrite the BlocksMenuOptions width */
-.cHKrny {
+.ge-block-menu .BlocksMenuOptions-sc-1u4drqe {
   min-width: 300px !important;
 }
 
-// model popup style
-.PopupModal-sc-hygjqb
-{
+// overwrite the model popup width
+.PopupModal-sc-hygjqb {
   width: 50% !important;
 }
+
 .button-secondary,
 .button-primary {
   text-transform: uppercase;
@@ -85,4 +85,3 @@ button.button-primary.button-position {
   }
 
 }
-

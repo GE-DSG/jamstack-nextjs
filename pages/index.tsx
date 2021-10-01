@@ -37,7 +37,7 @@ const Home = ({ file, preview }) => {
     <Layout>
       <InlineForm form={form}>
         <Theme>
-          <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
+          <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} className="ge-block-menu" />
         </Theme>
       </InlineForm>
       {showModal && (
