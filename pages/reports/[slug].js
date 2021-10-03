@@ -71,12 +71,26 @@ export const REPORT_FIELDS = [
     name: 'body',
     label: 'Body',
     component: 'html',
+/*
+    parse: media => `/static/${media.filename}`,
+    uploadDir: () => '/public/static/',
+    previewSrc: fullSrc => fullSrc.replace('/public', '')
+
+
+    //imageProps: [{
+    props: [{
+      parse: (media) => `static/${media.filename}`,
+      uploadDir: () => 'public/static/',
+      previewSrc: fullSrc => fullSrc.replace('/public', '')
+    }],
+*/
+
   },
 ];
 
 
 const ReportTemplate = ({ file, preview }) => {
-console.log(file);
+//console.log(file);
   const formOptions = {
     label: 'Report Page',
     fields: REPORT_FIELDS,
@@ -138,9 +152,21 @@ console.log(file);
                   <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                   <p><InlineText name="author" focusRing={{ offset: 5, borderRadius: 10}} /></p>
                   <p>
-                  {/*<InlineWysiwyg name="body" format="html" >*/}
+                  {/*<InlineWysiwyg
+                    name="body"
+                    //children="ReactMarkdown"
+                    children={ data.body }
+                    format="html"
+                    focusRing={{ offset: 10, borderRadius: 10}}
+                    sticky="2rem"
+                    imageProps={{
+                      parse: (media) => `static/${media.filename}`,
+                      uploadDir: () => 'public/static/',
+                      previewSrc: fullSrc => fullSrc.replace('/public', '')
+                    }}
+                  >*/}
                     <div dangerouslySetInnerHTML={{__html: data.body }}/>
-                  {/*</InlineWysiwyg>*/}
+                      {/*</InlineWysiwyg>*/}
                   </p>
                 </div>
 
