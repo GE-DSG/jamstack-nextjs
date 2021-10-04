@@ -15,9 +15,11 @@ const NavBar = () => (
       </button>
       <ul className="nav d-lg-none ge-nav-icons-mobile">
         <li className="nav-item icon d-none">
-          <a href="https://www.ge.com/directory" className="nav-link px-3 text-white" id="globe-icon">
-            <i className="ficon-globe"><span className="hidden">Globe</span></i>
-          </a>
+          <Link href="https://www.ge.com/directory">
+            <a className="nav-link px-3 text-white" id="globe-icon">
+              <i className="ficon-globe"><span className="hidden">Globe</span></i>
+            </a>
+          </Link>
         </li>
         <li className="nav-item icon pl-3 search-icon">
           <a href="javascript:void(0);" className="nav-link px-3 text-white enable" id="ge-search-component-init">
@@ -27,9 +29,11 @@ const NavBar = () => (
       </ul>
       <ul className="nav d-none d-lg-flex ge-nav-icons-mobile">
         <li className="nav-item icon d-none">
-          <a href="https://www.ge.com/directory" className="nav-link px-3 text-white" id="globe-icon">
-            <i className="ficon-globe"><span className="hidden">Globe</span></i>
-          </a>
+          <Link href="https://www.ge.com/directory">
+            <a className="nav-link px-3 text-white" id="globe-icon">
+              <i className="ficon-globe"><span className="hidden">Globe</span></i>
+            </a>
+          </Link>
         </li>
         <li className="nav-item icon pl-3 search-icon">
           <a href="javascript:void(0);" className="nav-link px-3 text-white enable" id="ge-search-component-init">
@@ -65,55 +69,60 @@ const NavBar = () => (
           </ul>
         </div>
       </div>
-     {/* mobile Nav */}
-     <div className="mobile-navbar overlay d-lg-none">
-    <div className="wrap_overlay collapse show" id="navbarSupportedContent">
-      <div className="inner--wrapper" >
-        <ul className="list-unstyled nav--list--level1 col-md-6 col-sm-12">
-        <li className="nav-item ">
-              <Link href="/news">
-                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="News">News</a>
-              </Link>
-            </li>
-            <li className="nav-item ">
-              <Link href="/blogs">
-                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Blogs">Blogs</a>
-              </Link>
-            </li>
-            <li className="nav-item ">
-              <Link href="/reports">
-                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Reports">Reports</a>
-              </Link>
-            </li>
-            <li className="nav-item ">
-              <Link href="/about-us">
-                <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us">About us</a>
-              </Link>
-            </li> 
+      {/* mobile Nav */}
+      <div className="mobile-navbar overlay d-lg-none">
+        <div className="wrap_overlay collapse show" id="navbarSupportedContent">
+          <div className="inner--wrapper" >
+            <ul className="list-unstyled nav--list--level1 col-md-6 col-sm-12">
+              <li className="nav-item ">
+                <Link href="/news">
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="News">News</a>
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link href="/blogs">
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Blogs">Blogs</a>
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link href="/reports">
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Reports">Reports</a>
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link href="/about-us">
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us">About us</a>
+                </Link>
+              </li>
 
-            <li className="nav-item icon">
-        <a href="https://www.ge.com/directory" className="mobilenav-link text-white" id="globe-icon">
-          <i className="ficon-globe"><span className="hidden">Globe</span></i>
-        </a>
-      </li>
-      
-      <li className="nav-item header-stock-ticker">
-          <a id="ge-stock-ticker" className="nav-link ge-stock-ticker" href="https://www.ge.com/investor-relations/stocks" target="_self">
-            GE <img src="/images/arrow-up.png" width="11" height="8"/> <span className="stock-ticker__status">102.16</span></a>
-        </li>
-      
-          </ul>
-  
+              <li className="nav-item icon">
+                <Link href="https://www.ge.com/directory">
+                  <a className="mobilenav-link text-white" id="globe-icon">
+                    <i className="ficon-globe"><span className="hidden">Globe</span></i>
+                  </a>
+                </Link>
+              </li>
+
+              <li className="nav-item header-stock-ticker">
+                <Link href="https://www.ge.com/investor-relations/stocks">
+                  <a id="ge-stock-ticker" className="nav-link ge-stock-ticker" target="_self">
+                    GE
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-          {/* end mobile Nav */}
-     
+      {/* end mobile Nav */}
+
       <ul className="nav d-none d-lg-flex ge-nav-icons-desktop">
         <li className="nav-item icon">
-					<a href="https://www.ge.com/directory" className="nav-link px-3 text-white" id="globe-icon">
-						<i className="ficon-globe"><span className="hidden">Globe</span></i>
-					</a>
+          <Link href="https://www.ge.com/directory">
+            <a className="nav-link px-3 text-white" id="globe-icon">
+              <i className="ficon-globe"><span className="hidden">Globe</span></i>
+            </a>
+          </Link>
 				</li>
         <li className="nav-item icon search-icon">
 					<a id="ge-search-component-init" className="nav-link enable">
@@ -121,8 +130,11 @@ const NavBar = () => (
 					</a>
 				</li>
         <li className="nav-item header-stock-ticker">
-          <a id="ge-stock-ticker" className="nav-link ge-stock-ticker" href="https://www.ge.com/investor-relations/stocks" target="_self">
-            GE <img src="/images/arrow-up.png" width="11" height="8"/> <span className="stock-ticker__status">102.16</span></a>
+          <Link href="https://www.ge.com/investor-relations/stocks">
+            <a id="ge-stock-ticker" className="nav-link ge-stock-ticker" target="_self">
+            GE
+            </a>
+          </Link>
         </li>
       </ul>
     </div>
