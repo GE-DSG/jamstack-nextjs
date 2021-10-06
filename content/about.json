@@ -12,6 +12,13 @@
   },
   "blocks": [
     {
+      "_template": "ge_spacer",
+      "height": "100",
+      "theme": {
+        "color": "light"
+      }
+    },
+    {
       "_template": "ge_content_left_right_image",
       "title": "About us ",
       "content": "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
@@ -27,8 +34,8 @@
       "theme": {
         "color": "light"
       },
-      "mediaPlacement":{
-        "align":"image-left"
+      "mediaPlacement": {
+        "align": "image-left"
       }
     },
     {
@@ -51,6 +58,26 @@
       "height": "100",
       "theme": {
         "color": "light"
+      }
+    },
+    {
+      "_template": "ge_content_left_right_image",
+      "title": "About us ",
+      "content": "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
+      "button_text": {
+        "link": "Learn More..",
+        "href": "https://www.google.com",
+        "target": "_blank"
+      },
+      "image": {
+        "src": "/static/ge-left-right.jpg",
+        "alt": "Photo from Unsplash"
+      },
+      "theme": {
+        "color": "light"
+      },
+      "mediaPlacement": {
+        "align": "image-right"
       }
     },
     {
