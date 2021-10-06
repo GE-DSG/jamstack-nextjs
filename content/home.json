@@ -70,8 +70,8 @@
       "theme": {
         "color": "dark"
       },
-      "mediaPlacement":{
-        "align":"image-left"
+      "mediaPlacement": {
+        "align": "image-left"
       }
     },
     {
@@ -79,6 +79,34 @@
       "height": "50",
       "theme": {
         "color": "dark"
+      }
+    },
+    {
+      "_template": "ge_titled_paragraph",
+      "title": "OUR MISSION",
+      "content": "GE drives the world forward by tackling its biggest challenges, bringing real progress and possibility to every corner of the planet.",
+      "theme": {
+        "color": "dark"
+      }
+    },
+    {
+      "_template": "ge_content_left_right_image",
+      "title": "GE's leadership",
+      "content": "GE’s test people are diverse and dedicated, operating with the highest level of integrity and focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
+      "button_text": {
+        "link": "Learn More..",
+        "href": "https://www.google.com",
+        "target": "_blank"
+      },
+      "image": {
+        "src": "../static/ge-left-right.jpg",
+        "alt": "General Electric"
+      },
+      "theme": {
+        "color": "dark"
+      },
+      "mediaPlacement": {
+        "align": "image-right"
       }
     },
     {
