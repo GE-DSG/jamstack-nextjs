@@ -170,7 +170,7 @@ export const GEContentLeftRightImage_template = {
     },
     {
       name:"mediaPlacement",
-      label:"ImagePlacement",
+      label:"Image Placement",
       component: "group",
       fields: [
         {

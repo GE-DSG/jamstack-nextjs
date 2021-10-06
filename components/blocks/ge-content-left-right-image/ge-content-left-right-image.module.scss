@@ -24,37 +24,7 @@
     height: auto;
   }
 
-  
-// Layout variations
-.image-left {
-  .image-wrapper {
-    clear: none;
-    margin-left: 0;
-    order: 1;
-  }
-
-  .text-wrapper {
-    // float     : right;
-    order: 2;
-    padding-left: 10.2%;
-    padding-right: 0;
-  }
-
-}
-
-.image-right {
-  .image-wrapper {
-    clear: none;
-    margin-right: 0;
-    order: 2;
-  }
-
-  .text-wrapper {
-     order: 1;
-    padding-right: 10.2%;
-    padding-left: 0;
-  }
-}
+ 
   // overlay
   .bg-overlay {
     position: absolute;
