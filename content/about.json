@@ -26,6 +26,9 @@
       },
       "theme": {
         "color": "light"
+      },
+      "mediaPlacement":{
+        "align":"image-left"
       }
     },
     {

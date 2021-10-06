@@ -18,7 +18,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
   return (      
     <Section variant={data.theme.color} data-section-id="data-section-id" >
       <div className={`${styles.geContentLeftRightImage} container-fluid-custom`}>       
-        <section className={"image-left"}>
+        <section className={data.mediaPlacement.align}>
             <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
                 <main>
                     <h3><InlineTextarea name="title" /></h3>
@@ -138,7 +138,10 @@ export const GEContentLeftRightImage_template = {
     },
     theme: {
       color: "light",
-    },
+    },    
+    mediaPlacement:{
+      align:"image-left",
+    }
   },
 
   fields: [
@@ -164,6 +167,28 @@ export const GEContentLeftRightImage_template = {
       label: "Image",
       component: "group",
       fields: IMAGE_FIELDS,
+    },
+    {
+      name:"mediaPlacement",
+      label:"ImagePlacement",
+      component: "group",
+      fields: [
+        {
+          name: "align",
+          label: "Align",
+          component: "select",
+          options: [
+             {
+              label: "image-left",
+              value: "image-left",
+            },
+            {
+              label: "image-right",
+              value: "image-right",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "theme",
