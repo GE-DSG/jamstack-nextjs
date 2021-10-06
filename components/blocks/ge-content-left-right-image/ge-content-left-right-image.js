@@ -140,7 +140,7 @@ export const GEContentLeftRightImage_template = {
       color: "light",
     },    
     mediaPlacement:{
-      align:"image-left",
+      align:"image-right",
     }
   },
 
