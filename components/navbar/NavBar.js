@@ -1,8 +1,11 @@
 // components/navbar/NavBar.js
+import React from 'react';
+import Link from 'next/link';
 
-import Link from 'next/link'
+const NavBar = () => {
+  const [isOpen, setOpen] = React.useState(false);
 
-const NavBar = () => (
+  return(
   <nav id="block-ge-unified-main-menu" className="contextual-region navbar navbar-dark navbar-expand-lg ge-menu-main bg-transparent text-white px-3 px-lg-4" data-block-plugin-id="system_menu_block:main">
     <div className="container-fluid">
       <Link href="/">
@@ -10,7 +13,7 @@ const NavBar = () => (
           <img className="d-inline-block img-fluid" alt="General Electric" title="General Electric Logo" src="/logo.svg" />
         </a>
       </Link>
-      <button className="navbar-toggler ml-auto rounded-0 collapsed" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button onClick={() => setOpen(!isOpen)} className={`hamburger-button ${isOpen ? "open collapsed" : "close"} navbar-toggler ml-auto rounded-0`} type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <ul className="nav d-lg-none ge-nav-icons-mobile">
@@ -70,6 +73,7 @@ const NavBar = () => (
         </div>
       </div>
       {/* mobile Nav */}
+      <div className={`panel ${isOpen ? "open active-nav" : "close"}`} >
       <div className="mobile-navbar overlay d-lg-none">
         <div className="wrap_overlay collapse show" id="navbarSupportedContent">
           <div className="inner--wrapper" >
@@ -114,8 +118,8 @@ const NavBar = () => (
           </div>
         </div>
       </div>
+      </div>
       {/* end mobile Nav */}
-
       <ul className="nav d-none d-lg-flex ge-nav-icons-desktop">
         <li className="nav-item icon">
           <Link href="https://www.ge.com/directory">
@@ -140,5 +144,6 @@ const NavBar = () => (
     </div>
   </nav>
 );
+};
 
 export default NavBar;
