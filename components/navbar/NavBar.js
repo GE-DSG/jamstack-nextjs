@@ -13,7 +13,7 @@ const NavBar = () => {
           <img className="d-inline-block img-fluid" alt="General Electric" title="General Electric Logo" src="/logo.svg" />
         </a>
       </Link>
-      <button onClick={() => setOpen(!isOpen)} className={`hamburger-button ${isOpen ? "open collapsed" : "close"} navbar-toggler ml-auto rounded-0`} type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button onClick={() => setOpen(!isOpen)} className={`hamburger-button ${isOpen ? "open " : "collapsed"} navbar-toggler ml-auto rounded-0`} type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <ul className="nav d-lg-none ge-nav-icons-mobile">

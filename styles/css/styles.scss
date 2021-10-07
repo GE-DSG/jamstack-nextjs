@@ -168,3 +168,15 @@ button.button-primary.button-position {
     }
   }
 }
+@media screen and (max-width: 991px) {
+  nav.ge-menu-main a#ge-stock-ticker {
+    color: var(--ge-white);
+    width: 125px;
+    margin: inherit;
+    text-align: left;
+}
+
+div.mobile-navbar ul.list-unstyled.nav--list--level1 {
+  padding-top: 40px !important;
+}
+}
