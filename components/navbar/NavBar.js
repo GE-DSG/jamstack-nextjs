@@ -80,22 +80,23 @@ const NavBar = () => {
             <ul className="list-unstyled nav--list--level1 col-md-6 col-sm-12">
               <li className="nav-item ">
                 <Link href="/news">
-                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="News">News</a>
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="News"><h3>News
+                    </h3></a>
                 </Link>
               </li>
               <li className="nav-item ">
                 <Link href="/blogs">
-                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Blogs">Blogs</a>
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Blogs"><h3>Blogs</h3></a>
                 </Link>
               </li>
               <li className="nav-item ">
                 <Link href="/reports">
-                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Reports">Reports</a>
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="Reports"><h3>Reports</h3></a>
                 </Link>
               </li>
               <li className="nav-item ">
                 <Link href="/about-us">
-                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us">About us</a>
+                  <a target="_self" className="nav-link px-auto px-lg-3 text-white" title="About us"><h3>About us</h3></a>
                 </Link>
               </li>
 

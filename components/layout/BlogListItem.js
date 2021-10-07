@@ -38,7 +38,7 @@ export default function BlogListItem({ post }) {
             <a>
             <li>
           <div className={`row pl-2 pr-2 pt-3 pb-3 ${styles.card}`}>
-              <div className={`${styles.heroImage} col-lg-4 col-md-4 col-sm-12`}>
+              <div className={`${styles.heroImage} col-lg-4 col-md-4 col-sm-12 mb-4 mb-md-0`}>
                 <img src={ data.hero_image } alt="general electric" />
               </div>
 
