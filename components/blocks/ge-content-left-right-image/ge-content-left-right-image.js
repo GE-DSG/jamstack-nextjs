@@ -18,8 +18,8 @@ export const GEContentLeftRightImage = ({ data, index }) => {
   return (      
     <Section variant={data.theme.color} data-section-id="data-section-id" >
       <div className={`${styles.geContentLeftRightImage} container-fluid-custom`}>       
-        <section className={data.mediaPlacement.align}>
-            <div className="col-lg-6 col-md-6 col-sm-12 text-wrapper">
+        <section className={`${data.mediaPlacement.align} ${styles.contentwrapper}`} >
+          <div className={`col-lg-6 col-md-6 col-sm-12 text-wrapper ${styles.textWrapper}`}>
                 <main>
                     <h3><InlineTextarea name="title" /></h3>
                     <p><InlineTextarea name="content" />​</p>                  
@@ -54,7 +54,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
                      
                 </main>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 image-wrapper">
+            <div className={`col-lg-6 col-md-6 col-sm-12 image-wrapper ${styles.imageWrapper}`}>
                 <div className={styles.imagefeature}>
                    <InlineGroup
                     name="image"
