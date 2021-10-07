@@ -1,5 +1,5 @@
 .geHeroPrimary{
-padding            : 12.4em 0 12.4em 0;
+padding            : 12.4em 0 0 0;
 position           : relative;
 color: #fff;
 background-color: #0d1623;
@@ -118,7 +118,7 @@ section {
 /* ***************************** media Query **************************************************/
 
 @media only screen and (min-width: 992px) {
-
+  padding            : 12.4em 0 12.4em 0;
  .introText {
     margin: 3em 0 3em 0;   
     min-height: 18.75rem;
