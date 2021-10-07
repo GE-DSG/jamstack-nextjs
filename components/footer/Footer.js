@@ -1,5 +1,5 @@
 // components/footer/Footer.js
-
+import Link from 'next/link';
 
 const Footer = () => (
   <footer className="ge-footer pt-5 px-md-0 px-lg-0 pb-0 align-items-start" role="footer">
@@ -21,22 +21,27 @@ const Footer = () => (
             <div className="block block--footermenucustom1">
               <ul data-region="footer_left_in" className="ge-footer-menu-custom-1">
 							  <li>
-                  <a href="https://www.ge.com/contact/general" className="body-2">Contact us</a>
+                  <Link href="https://www.ge.com/contact/general">
+                    <a className="body-2">Contact us</a>
+                  </Link>
                 </li>
-					      <li>
-                  <a href="http://info.evidon.com/pub_info/3428" target="_blank" rel="noopener noreferrer" className="evidon_cookie iexternal body-2">
-                    Cookies
-                    <span className="fa-ext extlink">
-                      <span className="ficon-external-link-rd" title="(link is external)"></span>
-                      <span className="visually-hidden">(link is external)</span>
-                    </span>
-                  </a>
-                </li>
-					      <li>
-                  <a href="https://www.ge.com/investor-relations/ir-contact" className="body-2">Investor contacts</a>
+                <li>
+                  <Link href="//info.evidon.com/pub_info/3428">
+                    <a className="body-2 evidon_cookie iexternal" target="_blank" rel="noopener noreferrer">
+                      Cookies
+                      <span className="fa-ext extlink"><span className="ficon-external-link-rd" title="(link is external)"></span></span>
+                    </a>
+                  </Link>
 								</li>
 					      <li>
-                  <a href="https://www.ge.com/privacy" className="body-2">Privacy</a>
+                  <Link href="https://www.ge.com/investor-relations/ir-contact">
+                    <a className="body-2">Investor contacts</a>
+                  </Link>
+								</li>
+					      <li>
+                  <Link href="https://www.ge.com/privacy">
+                    <a className="body-2">Privacy</a>
+                  </Link>
                 </li>
 				      </ul>
             </div>
@@ -47,19 +52,29 @@ const Footer = () => (
             <div className="block block--footermenucustom2">
               <ul data-region="footer_right_in" className="ge-footer-menu-custom-2">
 							  <li>
-                  <a href="https://www.ge.com/terms" className="body-2">Terms</a>
+                  <Link href="https://www.ge.com/terms">
+                    <a className="body-2">Terms</a>
+                  </Link>
                 </li>
 					      <li>
-                  <a href="https://www.ge.com/sitemap" className="body-2">Site map</a>
+                  <Link href="https://www.ge.com/sitemap">
+                    <a className="body-2">Site map</a>
+                  </Link>
                 </li>
 					      <li>
-                  <a href="https://jobs.gecareers.com/global/en/accessibility" className="body-2">Accessibility</a>
+                  <Link href="https://jobs.gecareers.com/global/en/accessibility">
+                    <a className="body-2">Accessibility</a>
+                  </Link>
         				</li>
 					      <li>
-                  <a href="https://www.ge.com/pay-transparency" className="body-2">Pay transparency</a>
+                  <Link href="https://www.ge.com/pay-transparency">
+                    <a className="body-2">Pay transparency</a>
+                  </Link>
         				</li>
 					      <li>
-                  <a href="https://www.ge.com/careers/fraud" className="body-2">Fraud alert</a>
+                  <Link href="https://www.ge.com/careers/fraud">
+                    <a className="body-2">Fraud alert</a>
+                  </Link>
                 </li>
 				      </ul>
 	          </div>
@@ -82,29 +97,39 @@ const Footer = () => (
               <div className="block-social-media-links block block--social-media-links">
                 <ul className="social-media-links--platforms platforms inline horizontal">
                   <li>
-                    <a href="https://www.facebook.com/ge" aria-label="General Electric Facebook page" title="General Electric Facebook page">
-                      <span className="fa fa-facebook fa-in"></span>
-                    </a>
+                    <Link href="https://www.facebook.com/ge">
+                      <a aria-label="General Electric Facebook page" title="General Electric Facebook page">
+                        <span className="fa fa-facebook fa-in"></span>
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/ge" aria-label="General Electric YouTube page" title="General Electric YouTube page">
-                      <span className="fa fa-youtube fa-in"></span>
-                    </a>
+                    <Link href="https://www.youtube.com/ge">
+                      <a aria-label="General Electric YouTube page" title="General Electric YouTube page">
+                        <span className="fa fa-youtube fa-in"></span>
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/generalelectric" aria-label="General Electric Instagram page" title="General Electric Instagram page">
-                      <span className="fa fa-instagram fa-in"></span>
-                    </a>
+                    <Link href="https://www.instagram.com/generalelectric">
+                      <a aria-label="General Electric Instagram page" title="General Electric Instagram page">
+                        <span className="fa fa-instagram fa-in"></span>
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.twitter.com/generalelectric" aria-label="General Electric Twitter page" title="General Electric Twitter page">
-                      <span className="fa fa-twitter fa-in"></span>
-                    </a>
+                    <Link href="https://www.twitter.com/generalelectric">
+                      <a aria-label="General Electric Twitter page" title="General Electric Twitter page">
+                        <span className="fa fa-twitter fa-in"></span>
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/company/ge" aria-label="General Electric LinkedIn page" title="General Electric LinkedIn page">
-                      <span className="fa fa-linkedin fa-in"></span>
-                    </a>
+                    <Link href="https://www.linkedin.com/company/ge">
+                      <a aria-label="General Electric LinkedIn page" title="General Electric LinkedIn page">
+                        <span className="fa fa-linkedin fa-in"></span>
+                      </a>
+                    </Link>
                  </li>
                 </ul>
               </div>
