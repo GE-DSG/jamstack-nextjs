@@ -1,15 +1,25 @@
-import * as React from "react"
-import Layout from "../../components/layout/Layout"
+//import * as React from "react"
+import React, { useState, useEffect } from "react";
+import Layout from "/components/layout/Layout"
 import Link from 'next/link'
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
+import getGlobalStaticProps from "/utils/getGlobalStaticProps"
 import fs from 'fs'
 import styles from "./reports.module.scss"
 import layoutStyles from "/components/layout/layout.module.scss"
 
 import { useCMS, withTina, useForm, usePlugin } from "tinacms"
 import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
+
+import Editor from "/components/utilities/Editor"
+
+//import dynamic from 'next/dynamic'
 //import { InlineWysiwyg } from "/components/utilities/InlineWysiwyg"
+//import { InlineWysiwyg } from "react-tinacms-editor"
+
+//import RichText from "/components/utilities/rich-text"
+//import MarkdownWrapper from "/components/utilities/markdown-wrapper"
+
 
 import {
   InlineForm,
@@ -90,18 +100,28 @@ export const REPORT_FIELDS = [
 
 
 const ReportTemplate = ({ file, preview }) => {
+
+  //const ReactMarkdown = dynamic(() => import("react-markdown"), { ssr: false });
+
 //console.log(file);
   const formOptions = {
     label: 'Report Page',
     fields: REPORT_FIELDS,
   }
 
-  //const cms = useCMS();
+  const cms = useCMS();
   //const [showModal, setShowModal] = React.useState(false);
 
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
   useGithubToolbarPlugins()
+
+  const [editorLoaded, setEditorLoaded] = useState(false);
+  const [editordata, setData] = useState("");
+
+  useEffect(() => {
+    setEditorLoaded(true);
+  }, []);
 
   return (
 
@@ -127,53 +147,55 @@ const ReportTemplate = ({ file, preview }) => {
           <div className="container-fluid-custom">
             <div className={`row ${styles.card}`}>
               <InlineGroup
-                  focusRing={{ offset: 20 }}
-                  insetControls={true}
-                  name="."
-                  fields={ REPORT_FIELDS }
+                focusRing={{ offset: 20 }}
+                insetControls={true}
+                name="."
+                fields={ REPORT_FIELDS }
               >
-              <div className="col-12 pt-3 pb-3 pl-3 pr-3">
-                <div className={styles.heroImage}>
-                 <InlineGroup
-                    name="hero_image"
-                    focusRing={{ offset: 0, borderRadius: 10 }}
-                    insetControls={true}
-                    fields={IMAGE_FIELDS}
-                  >
-                  <img className={styles.image}
-                  src={data.hero_image.src}
-                  alt={data.hero_image.alt}
-                  />
-                  </InlineGroup>
+                <div className="col-12 pt-3 pb-3 pl-3 pr-3">
+                  <div className={styles.heroImage}>
+                   <InlineGroup
+                      name="hero_image"
+                      focusRing={{ offset: 0, borderRadius: 10 }}
+                      insetControls={true}
+                      fields={IMAGE_FIELDS}
+                    >
+                    <img className={styles.image}
+                    src={data.hero_image.src}
+                    alt={data.hero_image.alt}
+                    />
+                    </InlineGroup>
 
+                  </div>
+                  <div className="blog__info">
+                    <h2><InlineText name="title" focusRing={{ offset: 5, borderRadius: 10}} /></h2>
+                    <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
+                    <p><InlineText name="author" focusRing={{ offset: 5, borderRadius: 10}} /></p>
+
+                      <InlineField name="body">
+                      {({ body }) => {
+                        if (cms.enabled) {
+                          return (
+                            <Editor
+                              data={ data.body }
+                              onChange={(editordata) => {
+                                setData(editordata);
+                                data.body = editordata;
+                                form.finalForm.blur('body');
+                              }}
+                              editorLoaded={editorLoaded}
+                            />
+                          )
+                        }
+                        else {
+                          return <div dangerouslySetInnerHTML={{__html: data.body }}/>
+                        }
+                      }}
+                      </InlineField>
+                      {/*JSON.stringify(editordata)*/}
+                  </div>
                 </div>
-                <div className="blog__info">
-                  <h2><InlineText name="title" focusRing={{ offset: 5, borderRadius: 10}} /></h2>
-                  <h6>{ new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
-                  <p><InlineText name="author" focusRing={{ offset: 5, borderRadius: 10}} /></p>
-                  <p>
-                  {/*<InlineWysiwyg
-                    name="body"
-                    //children="ReactMarkdown"
-                    children={ data.body }
-                    format="html"
-                    focusRing={{ offset: 10, borderRadius: 10}}
-                    sticky="2rem"
-                    imageProps={{
-                      parse: (media) => `static/${media.filename}`,
-                      uploadDir: () => 'public/static/',
-                      previewSrc: fullSrc => fullSrc.replace('/public', '')
-                    }}
-                  >*/}
-                    <div dangerouslySetInnerHTML={{__html: data.body }}/>
-                      {/*</InlineWysiwyg>*/}
-                  </p>
-                </div>
-
-              </div>
-
               </InlineGroup>
-
             </div>
           </div>
 
@@ -198,9 +220,12 @@ const ReportTemplate = ({ file, preview }) => {
 
   )
 };
-
-
-
+/*
+export const onChange = async function ({ data }) {
+  console.log('onChange');
+  console.log(data);
+}
+*/
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode

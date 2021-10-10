@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^30.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.3",
     "dotenv": "^10.0.0",
     "fast-glob": "^3.2.7",
     "next": "10.2.0",
