@@ -54,8 +54,9 @@ const Editor = (props) => {
         'insertTable',
         'htmlEmbed',
         //'image',
-        'imageInsert',
-        'imageUpload',
+        //'imageInsert',
+        //'imageUpload',
+        'uploadImage',
         'mediaEmbed',
         '|',
         'undo',
@@ -66,20 +67,11 @@ const Editor = (props) => {
     table: {
       contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
     },
-    simpleUpload: {
-      // The URL that the images are uploaded to.
-      uploadUrl: 'http://localhost:3000/static'
-/*
-      // Enable the XMLHttpRequest.withCredentials property.
-      withCredentials: true,
-
-      // Headers sent along with the XMLHttpRequest to the upload server.
-      headers: {
-        'X-CSRF-TOKEN': 'CSRF-Token',
-        Authorization: 'Bearer <JSON Web Token>'
-      }
-*/
-    }
+    ckfinder: {
+      // Upload the images to the server using the CKFinder QuickUpload command.
+      uploadUrl: 'http://localhost:3000/static/'
+      //uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+    }    
   };
 
   if (loaded) {
@@ -102,7 +94,10 @@ const Editor = (props) => {
           props.onChange(data)
         }}
         onBlur={(event, editor) => {
-          //console.log("Blur.", editor);
+          const data = editor.getData();
+          //console.log({ event, editor, data });
+          //onChange(data);
+          props.onChange(data)
         }}
         onFocus={(event, editor) => {
           //console.log("Focus.", editor);
@@ -110,7 +105,7 @@ const Editor = (props) => {
       />
     );
   } else {
-    return <h2> Editor is loading </h2>;
+    return <h6> Editor is loading </h6>;
   }
 }
 

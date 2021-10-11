@@ -183,6 +183,11 @@ const ReportTemplate = ({ file, preview }) => {
                                 data.body = editordata;
                                 form.finalForm.blur('body');
                               }}
+                              onBlur={(editordata) => {
+                                setData(editordata);
+                                data.body = editordata;
+                                form.finalForm.blur('body');
+                              }}
                               editorLoaded={editorLoaded}
                             />
                           )
