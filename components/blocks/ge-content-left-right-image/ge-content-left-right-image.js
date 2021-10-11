@@ -22,7 +22,7 @@ export const GEContentLeftRightImage = ({ data, index }) => {
           <div className={`col-lg-6 col-md-6 col-sm-12 text-wrapper ${styles.textWrapper}`}>
                 <main>
                     <h3><InlineTextarea name="title" /></h3>
-                    <p><InlineTextarea name="content" />​</p>                  
+                    <p className="body-2 pb-3 pt-3"><InlineTextarea name="content"  />​</p>                  
                    
                     { data.theme.color === "dark" && <div  className="link-secondary">
                      <InlineGroup name="button_text"  
