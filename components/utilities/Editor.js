@@ -20,7 +20,7 @@ const Editor = (props) => {
     // Solution-2 start
     editorRef.current = {
       CKEditor: require("@ckeditor/ckeditor5-react").CKEditor, // v3+
-      //ClassicEditor: require("@ckeditor/ckeditor5-build-classic"),      
+      //ClassicEditor: require("@ckeditor/ckeditor5-build-classic"),
       CustomEditor: require("ckeditor5-custom-build"),
       //CKEditor5: require("ckeditor5-custom-build/build/ckeditor").CKEditor5,
     };
@@ -38,20 +38,26 @@ const Editor = (props) => {
         'italic',
         'underline',
         '|',
+        'fontFamily',
+        'fontSize',
+        '|',
+        'horizontalLine',
         'bulletedList',
-        'numberedList',        
-        'indent',        
+        'numberedList',
+        '|',
+        'outdent',
+        'indent',
         'alignment',
         '|',
-        'link',        
-        'horizontalLine',
+        'link',
         'blockQuote',
         'insertTable',
-        '|',
-        'image',
+        'htmlEmbed',
+        //'image',
         'imageInsert',
         'imageUpload',
         'mediaEmbed',
+        '|',
         'undo',
         'redo'
         //'sourceEditing'
@@ -72,7 +78,7 @@ const Editor = (props) => {
         'X-CSRF-TOKEN': 'CSRF-Token',
         Authorization: 'Bearer <JSON Web Token>'
       }
-*/      
+*/
     }
   };
 
@@ -81,7 +87,7 @@ const Editor = (props) => {
       <CKEditor
         //editor={ClassicEditor}
         editor={CustomEditor}
-               
+
         data={props.data}
         config={editorConfiguration}
         onReady={(editor) => {
