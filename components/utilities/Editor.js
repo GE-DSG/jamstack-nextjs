@@ -54,7 +54,7 @@ const Editor = (props) => {
         'insertTable',
         'htmlEmbed',
         //'image',
-        'imageInsert',
+        //'imageInsert',
         'imageUpload',
         //'uploadImage',
         'mediaEmbed',
