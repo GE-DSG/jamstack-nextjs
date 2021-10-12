@@ -22,10 +22,12 @@
       },
       "actions": [
         {
-          "label": "Primary test",
-          "type": "button",
-          "icon": "true",
-          "href": "https://www.ge.com/"
+          "label": "Action Label",
+          "type": "button"
+        },
+        {
+          "label": "Action Label",
+          "type": "secondarybutton"
         }
       ],
       "style": {
@@ -71,7 +73,7 @@
         "color": "dark"
       },
       "mediaPlacement": {
-        "align": "image-right"
+        "align": "image-left"
       }
     },
     {
@@ -128,7 +130,7 @@
         },
         {
           "_template": "ge_small_article",
-          "title": "GE Small Article Title3",
+          "title": "GE Small Article Title3test ",
           "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.",
           "image": {
             "src": "/static/john-o-nolan-mauritius.jpg",
