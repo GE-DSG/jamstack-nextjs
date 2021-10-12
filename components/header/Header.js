@@ -1,7 +1,22 @@
 // components/header/Header.js
 import NextHead from "next/head"
+import{ useEffect} from "react";
 
-const Header = () => (
+const Header = () => { 
+useEffect(() => {
+      const script = document.createElement("script");
+      script.src = "/js/ge_stock_ticker.js";
+      script.async = true;
+      document.body.appendChild(script);
+      console.log('stock loaded'); 
+      return () => {
+        document.body.removeChild(script);
+      }
+    }, []);
+// }, ["/js/ge_stock_ticker.js"]);
+
+
+  return (
   <NextHead>
     <title>GE | Building a world that works | General Electric</title>
     <link rel="icon" href="/favicon.ico" />
@@ -60,9 +75,10 @@ e.appendChild(s);
 ` }} />
 
     <script src="/js/ge_unified.script.js"></script>
-    <script src="/js/ge_stock_ticker.js"></script>
+    {/* <script src="/js/ge_stock_ticker.js"></script> */}
     <script src="https://stage-unifiedsearch.geapps.io/ge-component-client.js" async importance="high"></script>
+
   </NextHead>
 );
-
+}
 export default Header;
