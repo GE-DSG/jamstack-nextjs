@@ -54,9 +54,9 @@ const Editor = (props) => {
         'insertTable',
         'htmlEmbed',
         //'image',
-        //'imageInsert',
-        //'imageUpload',
-        'uploadImage',
+        'imageInsert',
+        'imageUpload',
+        //'uploadImage',
         'mediaEmbed',
         '|',
         'undo',
@@ -67,11 +67,13 @@ const Editor = (props) => {
     table: {
       contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
     },
+/*
     ckfinder: {
       // Upload the images to the server using the CKFinder QuickUpload command.
       uploadUrl: 'http://localhost:3000/static/'
       //uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-    }    
+    }
+*/
   };
 
   if (loaded) {
