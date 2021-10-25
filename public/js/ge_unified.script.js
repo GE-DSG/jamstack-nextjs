@@ -5,10 +5,13 @@
 **
 *******************************************************************************/
 
-import 'popper.js';
-import 'bootstrap';
+// import 'popper.js';
+// import 'bootstrap';
+import * as jQuery from 'jquery';
+window.$ = jQuery;
 
-
+  // browser code
+  // if (window !== undefined) {
 (function ($) {
 
   /* mobile-nav togler */
@@ -306,5 +309,6 @@ import 'bootstrap';
 
 
 
-
 })(jQuery);
+// }
+

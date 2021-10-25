@@ -1,5 +1,4 @@
-// components/layout/Layout.js
-
+import ExternalScript from "../header/ExternalScript";
 import Header from "../header/Header";
 import NavBar from "../navbar/NavBar";
 import Footer from "../footer/Footer";
@@ -21,14 +20,17 @@ const contentStyle = {
 
 const Layout = props => (
   <div className="Layout" style={layoutStyle}>
+   
     <Header />
+      <ExternalScript/>
     <div className="page ge-page landing-page">
       <NavBar />
-      <main className="ge-main" role="main">
+      <main className="ge-main" id="ge-main" role="main" >
           {props.children}
       </main>
     </div>
     <Footer />
+   
   </div>
 );
 

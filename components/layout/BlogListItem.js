@@ -55,9 +55,7 @@ export default function BlogListItem({ post }) {
             </a>
           </Link>
       </ul>
-
     </>
-  );
- 
+  ); 
 };
 

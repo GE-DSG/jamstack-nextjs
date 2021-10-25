@@ -11,7 +11,6 @@ import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { Theme } from "../components/utilities/theme";
 import { TinaModal } from "../components/utilities/modal";
-
 import { PAGE_BLOCKS } from "../components/blocks/page_blocks";
 
 //export default function Home({ file, preview }) {

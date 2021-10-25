@@ -63,8 +63,8 @@ export default class Site extends App {
 }
 
 const onLogin = async () => {
-  const token = localStorage.getItem('tinacms-github-token') || null
-  const headers = new Headers()
+const token = localStorage.getItem('tinacms-github-token') || null
+const headers = new Headers()
 
   if (token) {
     headers.append('Authorization', 'Bearer ' + token)

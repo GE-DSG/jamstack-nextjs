@@ -130,7 +130,6 @@ const ReportTemplate = ({ file, preview }) => {
       <InlineForm form={form} >
 
         <section className={styles.reports} >
-
           <div className="container-fluid-custom">
             <div className="row">
               <div className={`${layoutStyles.back}`}>
@@ -153,7 +152,7 @@ const ReportTemplate = ({ file, preview }) => {
                 fields={ REPORT_FIELDS }
               >
                 <div className="col-12 pt-3 pb-3 pl-3 pr-3">
-                  <div className={styles.heroImage}>
+                 <div className={styles.heroImage}>
                    <InlineGroup
                       name="hero_image"
                       focusRing={{ offset: 0, borderRadius: 10 }}
@@ -216,11 +215,8 @@ const ReportTemplate = ({ file, preview }) => {
               </div>
             </div>
           </div>
-
         </section>
-
       </InlineForm>
-
     </Layout>
 
   )

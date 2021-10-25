@@ -38,7 +38,7 @@ const Reports = props => {
                             <img src={ report.data.hero_image.src } alt={ report.data.hero_image.alt } />
                           </div>
 
-                          <div className="report__info col-lg-8 col-md-8 col-sm-12">
+                          <div className={`${styles.reportInfo} col-lg-8 col-md-8 col-sm-12`}>
                             <h2>{ report.data.title }</h2>
                             <h6 className="pb-3">{ new Date(report.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: '2-digit' }) }</h6>
                             <p>
@@ -57,7 +57,6 @@ const Reports = props => {
         </div>
       </div>
     </Layout>
-
   )
 }
 
