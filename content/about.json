@@ -192,6 +192,19 @@
           "theme": {
             "color": "light"
           }
+        },
+        {
+          "_template": "ge_fact_card_variant_2",
+          "title": "GE Fadasfasdfasct Card Title",
+          "description": "An porro adolescens ius. Affert ridens nam eu. Regione legimus liberavisse ndasfsdfo mea, sensibus delicata nec ne. Animal integre ei cum, vel no epicurei phaedrum referrentur. Ut quas inani eos.",
+          "link": {
+            "link": "Learn More..",
+            "href": "https://www.ge.com/",
+            "target": "_blank"
+          },
+          "theme": {
+            "color": "light"
+          }
         }
       ],
       "actions": [
