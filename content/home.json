@@ -13,14 +13,18 @@
   "blocks": [
     {
       "_template": "ge_Hero_Primary",
-      "tagline": "General Electric",
+      "tagline": "General Electrics",
       "headline": "GE Mission Statement & Values",
       "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
       "image": {
-        "src": "/static/about_ge.jpg",
+        "src": "/static/ge-left-right.jpg",
         "alt": "General Electric"
       },
       "actions": [
+        {
+          "label": "Action Label",
+          "type": "button"
+        },
         {
           "label": "Action Label",
           "type": "button"
