@@ -13,11 +13,11 @@
   "blocks": [
     {
       "_template": "ge_Hero_Primary",
-      "tagline": "General Electrics",
-      "headline": "GE Mission Statement & Values",
+      "tagline": "General Electricssdfgdsgsd",
+      "headline": "GE Mission Statement & Valuesfgd",
       "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
       "image": {
-        "src": "/static/ge-left-right.jpg",
+        "src": "/static/about_ge.jpg",
         "alt": "General Electric"
       },
       "actions": [
@@ -28,10 +28,57 @@
         {
           "label": "Action Label",
           "type": "button"
+        }
+      ],
+      "style": {
+        "color": "tint"
+      }
+    },
+    {
+      "_template": "ge_spacer",
+      "height": "200",
+      "theme": {
+        "color": "dark"
+      }
+    },
+    {
+      "_template": "ge_content_left_right_image",
+      "title": "GE's leadersCZhip",
+      "content": "GE’s test people are diverse and dedicated, operating with the highest level of integrity anxZcd focus to fulfill GE’s mission and deliver for its customers. Our leadership team and the Board are committed to this mission.",
+      "button_text": {
+        "link": "Learn More..",
+        "href": "https://www.google.com",
+        "target": "_blank"
+      },
+      "image": {
+        "src": "../static/ge-left-right.jpg",
+        "alt": "General Electric"
+      },
+      "theme": {
+        "color": "light"
+      },
+      "mediaPlacement": {
+        "align": "image-left"
+      }
+    },
+    {
+      "_template": "ge_Hero_Primary",
+      "tagline": "About us ",
+      "headline": "GE Mission Statement & Values",
+      "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
+      "image": {
+        "src": "../static/about_ge.jpg",
+        "alt": "General Electric"
+      },
+      "actions": [
+        {
+          "label": "Primary Action",
+          "type": "button",
+          "icon": "true"
         },
         {
-          "label": "Action Label",
-          "type": "secondarybutton"
+          "label": "Learn More",
+          "type": "link"
         }
       ],
       "style": {
